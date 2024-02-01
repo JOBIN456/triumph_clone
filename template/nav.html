@@ -7,7 +7,7 @@ style="background-color: black">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
 <div class="dropdown1">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white ;">
         MOTORCYCLES
       </a>
         <i class="fa fa-caret-down"></i>
@@ -42,10 +42,7 @@ style="background-color: black">
                 </div>
               </div>
             </div>
-            <!-- <h3>FINANCE & OFFERS</h3>
-            <a href="#">FINANCE & OFFERS</a>
-            <a href="#">OFFERS</a>
-            <a href="#">FIND OUT MORE</a> -->
+           
           </div>
           
         </div>
@@ -53,7 +50,7 @@ style="background-color: black">
     </div>
 
     <div class="dropdown1">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" href="{% url 'access' %}" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white;">
         ACCESSORIES
       </a>
         <i class="fa fa-caret-down"></i>
@@ -104,7 +101,7 @@ style="background-color: black">
     </div>
 
     <div class="dropdown1">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" href=" {% url 'clothes' %} " id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false" style="color: white;">
         CLOTHING
       </a>
         <i class="fa fa-caret-down"></i>
@@ -145,7 +142,7 @@ style="background-color: black">
     </div>
 
     <div class="dropdown1">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" href="{% url 'owner' %}" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false" style="color: white;">
         OWNER
       </a>
         <i class="fa fa-caret-down"></i>
@@ -201,62 +198,124 @@ style="background-color: black">
         </div>
       </div>
     </div>
-
-
-
-
-
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Discover
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-
-
-          <li class="navitem ml-auto">
-            <a class="nav-link" href="#">Dealer</a>
-          </li>
-      
-        <li class="navitem ml-auto">
-            <a class="nav-link" href="#">Customize</a>
-          </li>
-          <li class="navitem ml-auto">
-            <a class="nav-link" href="#">Offers</a>
-          </li>
-          <li class="navitem ml-auto">
-            <a class="nav-link" href="#">Book Now</a>
-          </li>
-
-          
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="/static/images/ic.png" width="30" height="30">India
+    <div class="dropdown1">
+      <a class="nav-link dropdown-toggle" href="{% url 'discover' %}" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false" style="color: white;">
+        DISCOVER
+      </a>
+        <i class="fa fa-caret-down"></i>  
+      <div class="dropdown-content">
+        <div class="row">
+          <div class="column pp">
+            <h3>  NEWS</h3>
+            <div class="dropdown-divider"></div>
+            <a href="#">Latest News</a>
+            <a href="#">Motorcycles</a>
+            <a href="#">Brand</a>
+            <a href="#">Racing
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"><img src="/static/images/ic.png" width="30" height="30">Australia</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><img src="/static/images/ic.png" width="30" height="30">Singapore</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><img src="/static/images/ic.png" width="30" height="30">Singapore</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><img src="/static/images/ic.png" width="30" height="30">Singapore</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><img src="/static/images/ic.png" width="30" height="30">Singapore</a>
-              </div>
-            </li>
+            <a href="#">Epic Adventures></a>
+            <a href="#">OVERVIEW ></a>
           </div>
-          
-          
-        </ul>
+          <div class="column pp">
+            <h3> RACING</h3>
+            <div class="dropdown-divider"></div>
+            <a href="#">
+              Tyre Selector</a>
+            <a href="#">
+              Motocross and Enduro</a>
+            <a href="#">MXGP</a>
+            <a href="#">US RACING</a>
+            <a href="#">Moto2™</a>
+            <a href="#">PTR Triumph></a>
+            <a href="#">OVERVIEW ></a>
+           </div>
+          <div class="column pp">
+            <h3>BRAND</h3>
+            <div class="dropdown-divider"></div>
+            <a href="#">
+              James Bond Partnership</a>
+            <a href="#">Triumph & Gibson</a>
+            <a href="#">Distinguished Gentleman's Ride ></a>
+            <a href="#">Triumph and Breitling</a>
+            <a href="#">120 Years Celebration</a>
+            <a href="#">Timeline</a>
+            <a href="#">OVERVIEW ></a>
+          </div>
+         <div class="column pp">
+            <h3>EXPERIENCES</h3>
+            <div class="dropdown-divider"></div>
+            <a href="#">
+              Factory Visitor Experience</a>
+            <a href="#">Adventure Riding Experience</a>
+            <a href="#">Distinguished Gentleman's Ride ></a>
+            <a href="#">OVERVIEW ></a>  
+          </div>
+            <div class="column pp">
+            <img src="/static/images/discover1.avif" height="400px">
+              </div>
+          <div class="column pp">
+            <img src="/static/images/discover2.avif">
+          </div>
+          <div class="dropdown-divider"></div>
+        </div>
+      </div>
+    </div>
+      </ul>
+
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item"> 
+            <a class="nav-link" href="#" style="color: white;"> 
+              Dealer
+            </a> 
+        </li> 
+        <li class="nav-item"> 
+            <a class="nav-link" href="#" style="color: white;"> 
+              Customize
+            </a> 
+        </li> 
+        <li class="nav-item"> 
+            <a class="nav-link" href="#" style="color: white;"> 
+              Offers
+            </a> 
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link" href="#" style="color: white;"> 
+            Book Now
+          </a> 
+      </li>
+      <li class="nav-item">
+        <div class="dropdown1">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                <img src="/static/images/ic.png" width="30" height="30">India
+                <i class="fa fa-caret-down"></i>
+            </a>
     
+            <div class="dropdown-content" style="right: 0; width: 250px;">
+                <div class="row">
+                    <div class="column">
+                        <h3>Select Your Region</h3>
+                        <div class="btn-group dropright">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropright
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
     
+   
+    
+
+        
         
         
       

@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="news_head">
+    <div class="home_log">
+        <a style="position: relative;top: 10px;left: 10px;" class="home" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 32 32">
+            <path d="M 16 2.59375 L 15.28125 3.28125 L 2.28125 16.28125 L 3.71875 17.71875 L 5 16.4375 L 5 28 L 14 28 L 14 18 L 18 18 L 18 28 L 27 28 L 27 16.4375 L 28.28125 17.71875 L 29.71875 16.28125 L 16.71875 3.28125 Z M 16 5.4375 L 25 14.4375 L 25 26 L 20 26 L 20 16 L 12 16 L 12 26 L 7 26 L 7 14.4375 Z"></path>
+        </svg>
+        </a >
+        <a style="color:black;left: 10px;position: relative;" href="{% url 'discover' %}" style="color:black;"> >FOR THE RIDE> </a>
+    </div>
+    <div class="home_head">
+        <h1 style="text-align:center ;">Latest News</h1>
+    </div>
+</div>
+<div class="news_nav">
+    <ul class="news_ul">
+        
+        <li class="news_li"><a class="news_a" href=" {% url 'news' %}">All News</a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'brand' %}"> Brand</a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'inspiration' %}">Inspiration</a></li>
+        <li class="news_li"><a class="news_a" href="#">Experiences </a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'racing' %}">Racing </a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'motorcycles' %}">Motorcycles</a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'events' %}">Events</a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'epic_a' %}">Epic Adventures </a></li>   
+    </ul>
+</div>
+<div class="news_banner" style="/*! padding: 120px; */margin-top: 2cm;margin-left: 3cm;margin-bottom: 2cm;">
+    <div class="row">
+        <div class="col-md-4 padding-0" style="background-color: black;/*! text-color: white;  justify-items: center; */display: inline;/*! justify-content: center; */">
+            <div class="news_head" style="position:absolute; top:20%; height: auto;">
+            <h4 style="color: #717376;">EPIC ADVENTURE | 29TH JAN 2024</h4>
+            <h2 style="color: white;">NEW TRIUMPH 400's RIDDEN TO HIGHEST ROAD IN THE WORLD</h2>
+            <h4 style="color: white;">Revzilla Co-Hosts Put New 400’s to the Ultimate Test for CTXP Episode</h4>
+            </div>
+    </div>
+    <div class="image-container">
+        <img id="zoomImage" src="/static/images/news.avif" style="height: 600px; width: 800px;" onmouseover="zoomIn()" onmouseout="zoomOut()">
+    </div>
+</div>
+</div>
+<div class="news_card" style="/*! padding:20px; */padding-left: 2cm;padding-right: 2cm;padding-bottom: 3cm;/*! padding-top: ; */">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/newsbigc1.avif" style="height:550px; width:650px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>BRAND | 12TH DEC 2023</h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4> STAR OF THE SILVER SCREEN
+                </h4></div>
+            </div>
+            </div>
+    
+    
+        <div class="col-md-6">
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc6.avif" style="height:550px; width:650px;" alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>BRAND | 10TH OCT 2023</h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4> TRIUMPH AND AKRAPOVIČ ANNOUNCE LONG TERM COLLABORATION 
+                </h4></div>
+            </div>
+          
+        </div>
+        
+    </div> 
+</div>
+
+<div  style="padding: 40px;row-gap: 2cm;display: grid;">
+    <div class="row">
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Racing | 1st Dec 2023</h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>PEDRO ACOSTA WINS THE 2023 TRIUMPH TRIPLE TROPHY​
+                </h4></div>
+            </div>
+
+        </div>
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc1.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Epic Adventures | 15th Nov 2023
+                </h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>TRIUMPH UNLEASHES THE TIGER 1200 RALLY PRO RANGE IN AUSTRALIA
+                </h4></div>
+            </div>
+
+        </div>
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc2.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Racing | 9th Nov 2023
+
+                </h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>MONSTER ENERGY TRIUMPH RACING RIDERS REVEALED
+                </h4></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc4.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Epic Adventures | 25th Oct 2023</h7>
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>RICKY CARMICHAEL'S SUMMER ADVENTURE 2023</h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc5.avif" style="height:350px; width:450px;"alt="Card image cap" >
+            </div>
+            <div>
+                <h7>Motorcycles | 24th Oct 2023</h7>
+                 <div onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">
+                  <h4>EIGHT TRIUMPH STEALTH EDITIONS FOR 2024</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc6.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Brand | 10th Oct 2023
+
+
+                </h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>TRIUMPH AND AKRAPOVIČ ANNOUNCE LONG TERM COLLABORATION
+
+                </h4></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc7.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Motorcycles | 9th Oct 2023</h7>
+                 <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>PRICE REVEALED FOR NEW SPEED 400 AND SCRAMBLER 400 X </h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc8.avif" style="height:350px; width:450px;"alt="Card image cap" >
+            </div>
+            <div>
+                <h7>Racing | 4th Oct 2023</h7>
+                 <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>TRIUMPH RACING & MONSTER ENERGY FOR MX2 WORLD CHAMPIONSHIP</h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc9.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Epic Adventures | 22nd Sep 2023</h7>
+
+                <div onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">
+                  <h4>VIVE LE TIGRE
+
+                </h4></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

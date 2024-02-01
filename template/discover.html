@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="color:red;"><i>FOR THE RIDE</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Overview <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'news' %}">news</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'RACE' %}">Racing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Brand</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reviews</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+            <button class="btn  btn-danger">KEEP INFORMED</button>
+ 
+                </li></ul>
+          </li>
+      </form>
+    </div>
+  </nav>
+
+<div class="container-fluid">
+    <a class="home" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 32 32">
+        <path d="M 16 2.59375 L 15.28125 3.28125 L 2.28125 16.28125 L 3.71875 17.71875 L 5 16.4375 L 5 28 L 14 28 L 14 18 L 18 18 L 18 28 L 27 28 L 27 16.4375 L 28.28125 17.71875 L 29.71875 16.28125 L 16.71875 3.28125 Z M 16 5.4375 L 25 14.4375 L 25 26 L 20 26 L 20 16 L 12 16 L 12 26 L 7 26 L 7 14.4375 Z"></path>
+        </svg></a>
+    <img src="/static/images/disB.avif" width="1600px" height="800px">
+    
+    <div class="centerf">
+        <h3 style="color:white ;" class="h3">FOR THE RIDE </h3>
+
+        <p class="p">We are driven to make the best motorcycles in the world.
+            Creating bikes with the perfect balance of power, handling and style.
+            <br>We are chasing the same thing as our riders
+            THE PERFECT RIDE
+            </p>
+        
+            
+    </div>
+</div>
+<div class="container u">
+    <!-- <iframe width="750px" height="500px" src="https://www.youtube.com/embed/EKsb6btKQAg?autoplay=1&mute=1&controls=0&loop=1&playlist=EKsb6btKQAg"  frameborder="0" allow=" autoplay;  encrypted-media; gyroscope; " allowfullscreen></iframe> -->
+
+    <iframe width="1200px" height="700px" src="https://www.youtube.com/embed/G2jNRxb9y-U?autoplay=1&mute=1&controls=0&loop=1&playlist=EKsb6btKQAg"  frameborder="0" allow=" autoplay;  encrypted-media; gyroscope;  " allowfullscreen></iframe>
+</div>
+
+<div class="container-fluid c"style="background-image:url('/static/images/DB_2.avif') ;">
+
+    <div class="centerh" >
+        <h3 style="color:white ;">Explore the latest news articles from Triumph</h3>
+
+        <h1 style="color:white ;">TRIUMPH NEWS</h1>
+        <button class="btn btn-primary" style="color: aliceblue;">EXPLORE</button>
+        
+    </div></div>
+
+    <div class="card_c">
+        <div class="row">
+            <div class="col-md">
+              <div class="card" style="width:28rem;height: 38rem;">
+                <img class="card-img-top" src="/static/images/ovcard.avif" style="height:350px ;" alt="Card image cap">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h4>RACING</h4></div>
+                  <p class="card-text">Race winning. Record breaking. History making. <br>Find out about Triumph racing past and present.  </p>
+                  <h4> DISCOVER MORE -></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card" style="width:28rem;height: 38rem">
+                <img class="card-img-top" src="/static/images/ovcard1.avif" style="height:350px ;"alt="Card image cap">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h4>REVIEWS</h4></div>
+                  <p class="card-text">Find out about Triumph racing past and present.</p>
+                  <h4> DISCOVER MORE -></h4>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card" style="width:28rem;height: 38rem">
+                <img class="card-img-top" src="/static/images/ovcard3.avif" style="height:350px ;" alt="Card image cap">
+                <div class="card-body">
+                  <div class="card-body">
+                    <div class="card-title">
+                      <h4>BRAND</h4></div>
+                  <p class="card-text">An incredible motorcycle journey that began in 1902</p>
+                  <h4> DISCOVER MORE -></h4>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+    </div>
+
+    <div class="ban">
+        <div class="row">
+            <div class="col-md-6">
+        <img src="/static/images/dgr.avif">
+        <h3>DISTINGUISHED GENTLEMAN'S RIDE</h3>
+        <button class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</button>
+
+            </div>
+            <div class="col-md-6">
+                <img src="/static/images/dgr1.avif" height="500px" width="500px">
+              <h3>PROJECT TRIUMPH TE-1</h3>
+              <button class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</button>
+            </div>
+          </div>
+    </div>
+
+    <div class="sub" style="text-align: center; display: grid; justify-content: center;">
+
+            <h3 >keep in touch</h3>
+
+            <p>Submit your email address below and we'll keep you updated with new and relevant <br>Triumph motorcycle content directly to your inbox.</p>
+        <div class="row" style="justify-content:center ;">
+            <p style="text-align: center; flex-basis:100%; position: relative; left:-70px;">EMAIL</p>
+            <input title="text" placeholder="Enter the email address">
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="news_head">
+    <div class="home_log">
+        <a style="position: relative;top: 10px;left: 10px;" class="home" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 32 32">
+            <path d="M 16 2.59375 L 15.28125 3.28125 L 2.28125 16.28125 L 3.71875 17.71875 L 5 16.4375 L 5 28 L 14 28 L 14 18 L 18 18 L 18 28 L 27 28 L 27 16.4375 L 28.28125 17.71875 L 29.71875 16.28125 L 16.71875 3.28125 Z M 16 5.4375 L 25 14.4375 L 25 26 L 20 26 L 20 16 L 12 16 L 12 26 L 7 26 L 7 14.4375 Z"></path>
+        </svg>
+        </a >
+        <a style="color:black;left: 10px;position: relative;" href="{% url 'discover' %}" style="color:black;"> >FOR THE RIDE> </a>
+    </div>
+    <div class="home_head">
+        <h1 style="text-align:center ;">Latest News</h1>
+    </div>
+</div>
+<div class="news_nav">
+    <ul class="news_ul">
+        <li class="news_li"><a class="news_a" href=" {% url 'news' %}">All News</a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'brand' %}"> Brand</a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'inspiration' %}">Inspiration</a></li>
+        <li class="news_li"><a class="news_a" href="#">Experiences </a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'racing' %}">Racing </a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'motorcycles' %}">Motorcycles</a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'events' %}">Events</a></li>
+        <li class="news_li"><a class="news_a" href="{% url 'epic_a' %}">Epic Adventures </a></li>  
+    </ul>
+</div>
+<div class="news_banner" style="/*! padding: 120px; */margin-top: 2cm;margin-left: 3cm;margin-bottom: 2cm;">
+    <div class="row">
+        <div class="col-md-4 padding-0" style="background-color: black;/*! text-color: white;  justify-items: center; */display: inline;/*! justify-content: center; */">
+            <div class="news_head" style="position:absolute; top:20%; height: auto;">
+            <h4 style="color: #717376;">EVENT | 16TH NOV 2022</h4>
+            <h2 style="color: white;">TRIUMPH AT EICMA 2022</h2>
+            <p style="color: white">To explore the stand and see the stunning chrome collection, the new Street Triple 765 line up and many other limited edition motorcycles immerse yourself in a virtual tour of the Triumph Stand below.</p>
+            </div>
+    </div>
+    <div class="image-container">
+        <img id="zoomImage" src="/static/images/EV.avif" style="height: 600px; width: 800px;" onmouseover="zoomIn()" onmouseout="zoomOut()">
+    </div>
+</div>
+</div>
+
+
+{% endblock %}
