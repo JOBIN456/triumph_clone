@@ -16,6 +16,8 @@ urlpatterns = [
      path('events/',views.events,name="events"),
      path('epic_a/',views.epic_a,name="epic_a"),
      path('RACE/',views.RACE,name="RACE"),
+     path('MOTO/',views.MOTO,name="MOTO"),
+
 
 
 

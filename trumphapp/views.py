@@ -43,5 +43,8 @@ def epic_a(request):
 def RACE(request):
     return render(request,'RACE.html')
 
+def MOTO(request):
+    return render(request,'MOTO.html')
+
 
 
