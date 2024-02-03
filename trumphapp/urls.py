@@ -17,6 +17,11 @@ urlpatterns = [
      path('epic_a/',views.epic_a,name="epic_a"),
      path('RACE/',views.RACE,name="RACE"),
      path('MOTO/',views.MOTO,name="MOTO"),
+     path('engine/',views.engine,name="engine"),
+      path('trophy/',views.trophy,name="trophy"),
+      path('testing/',views.testing,name="testing"),
+     path('calender/',views.calender,name="calender"),
+
 
 
 

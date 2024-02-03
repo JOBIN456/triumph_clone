@@ -46,5 +46,14 @@ def RACE(request):
 def MOTO(request):
     return render(request,'MOTO.html')
 
-
+def engine(request):
+    return render(request,'engine.html')
+def engine(request):
+    return render(request,'engine.html')
+def trophy(request):
+    return render(request,'trophy.html')
+def testing(request):
+    return render(request,'testing.html')
+def calender(request):
+    return render(request,'calender.html')
 

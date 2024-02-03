@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:sticky; top:0; z-index: 5;">
+    <a class="navbar-brand" href="#" style="color:red;"><i>Moto2™</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'MOTO' %}">Overview <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'engine' %}">ENGINE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'trophy' %}">TRIUMPH TRIPLE TROPHY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'testing' %}">TESTING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'calender' %}">CALENDAR</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+            <button class="btn  btn-danger">STREET TRIPLE</button>
+ 
+                </li></ul>
+          </li>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container-fluid" style="margin-top:-70px;">
+    
+    <a class="home" style="margin-top:2cm ;" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+        <g transform=""><g fill="#efe6e6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M16,2.59375l-0.71875,0.6875l-13,13l1.4375,1.4375l1.28125,-1.28125v11.5625h9v-10h4v10h9v-11.5625l1.28125,1.28125l1.4375,-1.4375l-13,-13zM16,5.4375l9,9v11.5625h-5v-10h-8v10h-5v-11.5625z"></path></g></g></g>
+        </svg></a>
+        <div style="left: 70px;position: relative;top: 80px; "><a href="{% url 'discover' %}" style="color: rgb(255, 255, 255);"> >  FOR THE RIDE ></a></div>
+        <div style="left: 210px;position: relative;top: 55px; "><a href="{% url 'RACE' %}" style="color: rgb(255, 255, 255);"> >  RACING ></a></div>
+        <div style="left: 310px;position: relative;top: 30px; "><a href="{% url 'MOTO' %}" style="color: rgb(253, 251, 251);"> >  Moto2™></a></div>
+
+         <img src="/static/images/ENGINE.avif" width="1600px" height="700px">
+    
+        <div class="centerf" style="top: 75%;">
+        <h3 style="color:white ;" class="h3">ENGINE </h3>
+        
+            
+    </div>
+</div>
+
+
+<div class="engine_vedio" style="position: relative;margin-top: 1cm;margin-top: 2cm;margin-bottom: 2cm;left: 150px;/*! right: 150px; */">
+    <iframe width="1200px" height="600px" src="https://www.youtube.com/embed/EKsb6btKQAg?autoplay=1&mute=1&controls=0&loop=1&playlist=EKsb6btKQAg"  frameborder="0" allow=" autoplay;  encrypted-media; gyroscope; " allowfullscreen></iframe>
+
+</div>
+
+
+<div class="moto-card" style="margin-bottom:2cm ;">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="/static/images/engine-card.avif" style="width: 710px;margin-left: 100px;height: 710px;">
+        
+      </div>
+      <div class="col-md-6">
+        <div style="padding-left:8cm;padding-top: 2cm;">
+            <h3>EXCLUSIVE ENGINE SUPPLIER </h3>
+          <p >The new Moto2™ engine is a race-developed 765cc Triple engine based on the powerplant from the class-leading Street Triple RS, with improvements that allow the engine to breathe more freely and rev harder than the production bike, and a peak power figure of more than 140PS.
+          </p>
+            
+        </div>
+      </div>
+  </div>
+  </div>
+
+  <div class="engine-head" style="padding-left: 400px;padding-right: 400px; margin-bottom: 2cm;">
+    <h3 style="text-align: center;font-size: xxx-large;font-weight: bold;">ENGINE COMPONENTS</h3>
+    <p>Developed from Triumph’s class-leading 765cc Street Triple RS powerplant, there are a number of race modifications that have been made to the Moto2™ engine to directly enhance performance, including:</p>
+  </div>
+
+<div class="engine-drop " style="margin-bottom:4cm">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+  {% endblock %}
