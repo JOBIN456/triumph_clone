@@ -519,3 +519,53 @@ background: linear-gradient(90deg, rgba(215,5,5,1) 0%, rgba(233,12,12,1) 23%, rg
 .accordion-button[aria-expanded="true"]::after {
   content: '\25BC'; /* Unicode character for a down-pointing triangle when the item is expanded */
 }
+
+.bg,
+.button {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+
+
+.bg {
+    animation: pulse 1.2s ease infinite;
+    background: #ff3466;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* z-index: 99; */
+    border: none;
+    background: #e6023b;
+    background-size: 90px;
+    cursor: pointer;
+    outline: none;
+}
+
+.button a {
+    position: absolute;
+    color: #FFF;
+    font-size: 17px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+

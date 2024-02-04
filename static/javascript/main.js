@@ -4,3 +4,5 @@ function zoomIn() {
 function zoomOut() {
     document.getElementById('zoomImage').classList.remove('zoomed');
 }
+
+
