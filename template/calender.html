@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:sticky; top:0; z-index: 5;">
+    <a class="navbar-brand" href="#" style="color:red;"><i>Moto2™</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'MOTO' %}">Overview <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'engine' %}">ENGINE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'trophy' %}">TRIUMPH TRIPLE TROPHY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'testing' %}">TESTING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'calender' %}">CALENDAR</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+            <button class="btn  btn-danger">STREET TRIPLE</button>
+ 
+                </li></ul>
+          </li>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container-fluid" style="margin-top:-70px;">
+    
+    <a class="home" style="margin-top:2cm ;" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+        <g transform=""><g fill="#efe6e6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M16,2.59375l-0.71875,0.6875l-13,13l1.4375,1.4375l1.28125,-1.28125v11.5625h9v-10h4v10h9v-11.5625l1.28125,1.28125l1.4375,-1.4375l-13,-13zM16,5.4375l9,9v11.5625h-5v-10h-8v10h-5v-11.5625z"></path></g></g></g>
+        </svg></a>
+        <div style="left: 70px;position: relative;top: 80px; "><a href="{% url 'discover' %}" style="color: rgb(255, 255, 255);"> >  FOR THE RIDE ></a></div>
+        <div style="left: 210px;position: relative;top: 55px; "><a href="{% url 'RACE' %}" style="color: rgb(255, 255, 255);"> >  RACING ></a></div>
+        <div style="left: 310px;position: relative;top: 30px; "><a href="{% url 'MOTO' %}" style="color: rgb(253, 251, 251);"> >  Moto2™></a></div>
+
+         <img src="/static/images/calender.avif" width="1536px" height="700px">
+    
+        <div class="centerf" style="top: 75%; width: 1200px;">
+            <h5>MOTO2™</h5>
+            <div class="red-line"></div>
+        <h3 style="color:white ;font-size: 50px;" class="h3" >
+            2023 SEASON CALENDAR
+         </h3>
+        
+            
+    </div>
+</div>
+
+
+<div class="calender-head">
+    <div class="c-title">
+        <h3>RACE SUMMARY</h3>
+    </div>
+    
+</div>
+
+
+<div class="months">
+    <div class="row">
+        <div class="col-md-3">
+            <div><h3 style="font-size: xxx-large;font-weight: bold;">23 <sup style="font-weight: lighter;"> March </sup></h3></div>
+            <div class="red-line-1"></div>
+            <p style="margin-top: 50px;">1 - Grande Prémio de Portugal - Autódromo Internacional do Algarve, Portugal </p>
+        </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">02 <sup style="font-weight: lighter;"> April</sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">2 - Gran Premio de la República Argentina - Termas de Río Hondo, Argentina </p>
+            </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">16 <sup style="font-weight: lighter;"> April </sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">3 - Grand Prix of the Americas - Circuit Of The Americas, United States of America </p>
+            </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">30 <sup style="font-weight: lighter;"> April </sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">4 -Gran Premio de España - Circuito de Jerez-Ángel Nieto, Spain </p>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div><h3 style="font-size: xxx-large;font-weight: bold;">23 <sup style="font-weight: lighter;"> March </sup></h3></div>
+            <div class="red-line-1"></div>
+            <p style="margin-top: 50px;">1 - Grande Prémio de Portugal - Autódromo Internacional do Algarve, Portugal </p>
+        </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">02 <sup style="font-weight: lighter;"> April</sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">2 - Gran Premio de la República Argentina - Termas de Río Hondo, Argentina </p>
+            </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">16 <sup style="font-weight: lighter;"> April </sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">3 - Grand Prix of the Americas - Circuit Of The Americas, United States of America </p>
+            </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">30 <sup style="font-weight: lighter;"> April </sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">4 -Gran Premio de España - Circuito de Jerez-Ángel Nieto, Spain </p>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div><h3 style="font-size: xxx-large;font-weight: bold;">23 <sup style="font-weight: lighter;"> March </sup></h3></div>
+            <div class="red-line-1"></div>
+            <p style="margin-top: 50px;">1 - Grande Prémio de Portugal - Autódromo Internacional do Algarve, Portugal </p>
+        </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">02 <sup style="font-weight: lighter;"> April</sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">2 - Gran Premio de la República Argentina - Termas de Río Hondo, Argentina </p>
+            </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">16 <sup style="font-weight: lighter;"> April </sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">3 - Grand Prix of the Americas - Circuit Of The Americas, United States of America </p>
+            </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">30 <sup style="font-weight: lighter;"> April </sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">4 -Gran Premio de España - Circuito de Jerez-Ángel Nieto, Spain </p>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div><h3 style="font-size: xxx-large;font-weight: bold;">23 <sup style="font-weight: lighter;"> March </sup></h3></div>
+            <div class="red-line-1"></div>
+            <p style="margin-top: 50px;">1 - Grande Prémio de Portugal - Autódromo Internacional do Algarve, Portugal </p>
+        </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">02 <sup style="font-weight: lighter;"> April</sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">2 - Gran Premio de la República Argentina - Termas de Río Hondo, Argentina </p>
+            </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">16 <sup style="font-weight: lighter;"> April </sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">3 - Grand Prix of the Americas - Circuit Of The Americas, United States of America </p>
+            </div>
+            <div class="col-md-3">
+                <div><h3 style="font-size: xxx-large;font-weight: bold;">30 <sup style="font-weight: lighter;"> April </sup></h3></div>
+                <div class="red-line-1"></div>
+                <p style="margin-top: 50px;">4 -Gran Premio de España - Circuito de Jerez-Ángel Nieto, Spain </p>
+            </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div><h3 style="font-size: xxx-large;font-weight: bold;">23 <sup style="font-weight: lighter;"> March </sup></h3></div>
+            <div class="red-line-1"></div>
+            <p style="margin-top: 50px;">1 - Grande Prémio de Portugal - Autódromo Internacional do Algarve, Portugal </p>
+        </div>
+    </div>
+</div>
+<div class="moto-card">
+    <div class="row">
+      <div class="col-md-6">
+        <div style="padding-top:100px;padding-left: 200px;">
+            <h3> STREET TRIPLE 765 </h3>
+            <p >Powered by Moto2™ race engine evolution, for the highest performance, highest specification and most agile Street Triple line-up ever.
+            </p>
+            <button class="btn btn-dark" style="background-color: black; color: white;">DISCOVER MORE</button>
+
+            <button class="btn btn-dark" style="background-color: black; color: white;">CONFIGURE</button>
+        </div>
+        
+      </div>
+      <div class="col-md-6">
+  
+        <img src="/static/images/moto-card8.avif" style="width: 800px;">
+        
+       
+      </div>
+    </div>
+    </div>
+{% endblock %}

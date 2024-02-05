@@ -580,4 +580,53 @@ background: linear-gradient(90deg, rgba(215,5,5,1) 0%, rgba(233,12,12,1) 23%, rg
   margin-top: 1cm;
   padding-left: 400px;
   padding-right: 400px;
+  margin-bottom: 2cm;
+}
+
+.test-1{
+  margin-top: 3cm;
+  padding-left: 400px;
+  padding-right: 400px;
+  margin-bottom: 2cm;
+}
+.test-1 p {
+  font-size: 1rem;
+}
+
+
+                                 /* CALENDER */
+
+.red-line{
+  width:2cm;
+  height: 4px;
+  background-color: red;
+  position: relative;
+  left: 560px;
+}                                 
+
+.calender-head{
+  width: 100%;
+  height: 200px;
+  
+}
+.c-title{
+  left: 700px;
+  position: relative;
+  margin-top: 200px;
+}
+
+.months{
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.months .row {
+  margin-bottom: 170px;
+}
+
+.red-line-1{
+  width: 1cm;
+  height: 4px;
+  background-color: red;
+  position: relative;
 }
