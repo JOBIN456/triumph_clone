@@ -100,7 +100,7 @@
               <div class="card" style="width:28rem;height: 38rem">
                 <img class="card-img-top" src="/static/images/ovcard3.avif" style="height:350px ;" alt="Card image cap">
                 <div class="card-body">
-                  <div class="card-body">
+                
                     <div class="card-title">
                       <h4>BRAND</h4></div>
                   <p class="card-text">An incredible motorcycle journey that began in 1902</p>
@@ -111,7 +111,7 @@
             </div>
           </div>
         </div> 
-    </div>
+    
 
     <div class="ban">
         <div class="row">
@@ -129,15 +129,24 @@
           </div>
     </div>
 
-    <div class="sub" style="text-align: center; display: grid; justify-content: center;">
-
-            <h3 >keep in touch</h3>
-
-            <p>Submit your email address below and we'll keep you updated with new and relevant <br>Triumph motorcycle content directly to your inbox.</p>
-        <div class="row" style="justify-content:center ;">
-            <p style="text-align: center; flex-basis:100%; position: relative; left:-70px;">EMAIL</p>
-            <input title="text" placeholder="Enter the email address">
-        </div>
+    <div class="foot" style="background-color: #ffffff;">
+      <div class="sub" style="text-align: center; display: grid; justify-content: center;">
+    
+        <h3 >keep in touch</h3>
+    
+        <p>Submit your email address below and we'll keep you updated with new and relevant <br>Triumph motorcycle content directly to your inbox.</p>
+    <div class="row" style="justify-content:center ;">
+        <p style="text-align: center; flex-basis:100%; position: relative; left:-181px;">EMAIL</p>
+        <form id="myForm">
+        <input style="width: 11cm;height: 1cm;" type="email" id="email" name="email" placeholder="Enter the email address" required>
+    </div>
+    <div>
+      <button class="rc_b" type="submit">KEEP ME INFORMED</button>
+  
+    </div>
+    </form>
+    </div>
+    
     </div>
 
 {% endblock %}

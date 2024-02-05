@@ -569,3 +569,15 @@ background: linear-gradient(90deg, rgba(215,5,5,1) 0%, rgba(233,12,12,1) 23%, rg
     }
 }
 
+.tophy-region{
+  padding-left: 400px;
+  padding-right: 400px;
+  margin-top: 2cm;
+  margin-bottom: 4cm;
+
+}
+.test{
+  margin-top: 1cm;
+  padding-left: 400px;
+  padding-right: 400px;
+}

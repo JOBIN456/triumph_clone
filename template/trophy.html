@@ -1,0 +1,574 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:sticky; top:0; z-index: 5;">
+    <a class="navbar-brand" href="#" style="color:red;"><i>Moto2™</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'MOTO' %}">Overview <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'engine' %}">ENGINE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'trophy' %}">TRIUMPH TRIPLE TROPHY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'testing' %}">TESTING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'calender' %}">CALENDAR</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+            <button class="btn  btn-danger">STREET TRIPLE</button>
+ 
+                </li></ul>
+          </li>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container-fluid" style="margin-top:-70px;">
+    
+    <a class="home" style="margin-top:2cm ;" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+        <g transform=""><g fill="#efe6e6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M16,2.59375l-0.71875,0.6875l-13,13l1.4375,1.4375l1.28125,-1.28125v11.5625h9v-10h4v10h9v-11.5625l1.28125,1.28125l1.4375,-1.4375l-13,-13zM16,5.4375l9,9v11.5625h-5v-10h-8v10h-5v-11.5625z"></path></g></g></g>
+        </svg></a>
+        <div style="left: 70px;position: relative;top: 80px; "><a href="{% url 'discover' %}" style="color: rgb(255, 255, 255);"> >  FOR THE RIDE ></a></div>
+        <div style="left: 210px;position: relative;top: 55px; "><a href="{% url 'RACE' %}" style="color: rgb(255, 255, 255);"> >  RACING ></a></div>
+        <div style="left: 310px;position: relative;top: 30px; "><a href="{% url 'MOTO' %}" style="color: rgb(253, 251, 251);"> >  Moto2™></a></div>
+
+         <img src="/static/images/trophy.avif" width="1536px" height="700px">
+    
+        <div class="centerf" style="top: 75%; width: 1200px;">
+        <h3 style="color:white ;" class="h3">
+            TRIUMPH TRIPLE TROPHY
+         </h3>
+        
+            
+    </div>
+</div>
+<div class="tophy-region">
+    <p>In the incredibly competitive arena of Moto2™, achieving a Grand Prix victory is only one dimension of the story to come out of a race weekend.</p>
+    <p>Recognising the closeness of the competition and the depth of talent in Moto2, Triumph and Dorna run the Triumph Triple Trophy alongside the World Championship to recognise standout performance for each of the season’s rounds.</p>
+    <p>The Triumph Triple Trophy points are awarded to riders at the end of each round: </p>
+    <ul class="red-dot" >
+        <li>Position Progression: 7 points for the rider with most positions gained from starting grid to finish (riders in case of a tie)</li>
+        <li>Pole position: 6 points for the rider on pole</li>
+        <li>Fastest race lap: 5 points for the fastest rider (riders in case of a tie)</li>
+    </ul>
+    <p>The rider who achieves the greatest number of points, at the end of the season, is crowned the winner and awarded a custom Triumph Street Triple 765 RS motorcycle which is powered by the 765cc triple engine from which the Moto2™ powerplant is derived.</p>
+</div>
+
+<div class="moto-card">
+    <div class="row">
+      <div class="col-md-6">
+        <div  style="padding:100px ;">
+          <h3 style="margin-bottom: 30px;">PEDRO ACOSTA WINS THE 2023 TRIUMPH TRIPLE TROPHY </h3>
+        <p style="margin-bottom: 3rem;">
+  
+            The 2023 Triumph Triple Trophy has been awarded to Spain’s Pedro Acosta, after a phenomenal season which saw him clinch the World Champion title, the Triumph Triple Trophy and a seat in the MotoGP category next year. 
+          </p>
+          <button class="btn btn-dark" style="background-color: black; color: white;">Read full story</button>
+
+        </div>
+        
+      </div>
+      <div class="col-md-6">
+  
+        <img src="/static/images/trophy-card.avif" style="width: 800px;">
+        
+       
+      </div>
+    </div>
+    </div>
+
+    <div class="trophy-head" style="position: relative;/*! align-items: center; */display:   grid;padding-left: 500px;/*! padding-right: 500px; */margin-bottom: 3cm;">
+        <h3 style="font-size: xx-large;font-weight: bold;">
+TRIUMPH TRIPLE TROPHY STANDINGS</h3>
+    </div>
+
+    <div class="accordion-item" style="padding-left: 100px;
+  padding-right: 100px;">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button style="width: 100%;
+          text-align: left;
+          background-color: #363939;
+          color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+      
+      STANDINGS 
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+          <div class="accordion-body">
+            <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+               </h3>
+              <p><strong>1st </strong>- Pedro Acosta 37 (ES) <strong>POINTS : 58</strong></p>
+              <p><strong><strong>2nd&nbsp;</strong>- </strong>Fermin Aldeguer 54 (ES)<strong>&nbsp;<strong>POINTS:38</strong></strong></p>
+              <p><strong>3rd&nbsp;</strong>-&nbsp;Taiga Hada 23 (JP)&nbsp;<strong><strong>&nbsp;<strong>POINTS:28</strong></strong></strong></p>
+              <p><strong>3rd&nbsp;</strong>-&nbsp;Taiga Hada 23 (JP)&nbsp;<strong><strong>&nbsp;<strong>POINTS:28</strong></strong></strong></p>
+              <p><strong><strong><strong>4th </strong>-</strong></strong><strong><strong><strong>&nbsp;</strong></strong></strong>Aron Canet<strong><strong><strong>&nbsp; </strong></strong></strong>40 (ES)<strong><strong><strong>&nbsp;<strong>POINTS: 25</strong></strong></strong></strong></p>
+              <p><strong>5th&nbsp;</strong>-&nbsp;Jake Dixon 96 (UK)&nbsp;<strong>POINTS: 24</strong></p>
+              <p>- Alonso Lopez 21 (ES)<strong><strong>&nbsp;POINTS:17</strong></strong></p>
+              <p><strong><strong>7th&nbsp;</strong>-&nbsp;</strong>Sam Lowes 22 (UK)<strong>&nbsp;<strong>POINTS: 22</strong></strong></p>
+              <p><strong>8th -&nbsp;</strong>Dennis Foggia 71 (IT)<strong>&nbsp;<strong>POINTS: 21</strong></strong></p>
+              <p>-&nbsp;Sergio Garcia 11 (ES)&nbsp;<strong>POINTS: 21</strong></p>
+              <p><strong>10th&nbsp;</strong>- Jeremy Alcoba 16 (ES)<strong>&nbsp;<strong>POINTS: 19</strong></strong></p>
+              <p><strong><strong></strong></strong><strong>10th&nbsp;</strong>- Alonso Lopez 21 (ES)<strong><strong><strong>&nbsp;POINTS:17</strong></strong></strong></p>
+              <p><strong>11th</strong>&nbsp;- Celestino Vietti 13 (IT)<strong><strong><strong>&nbsp;<strong>POINTS: 17</strong></strong></strong></strong></p>
+              <p><strong>12th</strong>- Borja Gomez 72 (ES)<strong>&nbsp;<strong>POINTS: 14</strong></strong></p>
+              <p>- Senna Agius 8 (AUS)<strong><strong>&nbsp;<strong>POINTS: 14</strong></strong></strong></p>
+              <p><strong>- </strong>Izan Guevara 28<strong> </strong>(ES)<strong><strong><strong>&nbsp;<strong>POINTS: 14</strong></strong></strong></strong></p>
+              <p><strong><strong><strong><strong><strong>15th -&nbsp;</strong></strong></strong></strong></strong>Ai Ogura (JP)<strong><strong><strong><strong>&nbsp;<strong>POINTS: 7</strong></strong></strong></strong></strong></p>
+
+              <p><strong><strong><strong><strong><strong>16th&nbsp;</strong>-</strong></strong></strong></strong>Tony Arbolino 14 (IT)<strong><strong><strong><strong>&nbsp;<strong>POINTS: 12</strong></strong></strong></strong></strong></p>
+              <p><strong>17th&nbsp;</strong>- Somkiat Chantra 35 (TH)&nbsp;<strong>POINTS: 11</strong></p>
+              <p><strong>18th&nbsp;</strong> David Sanchis 98 (ES)&nbsp;<strong>POINTS: 7</strong></p>
+              <p>- Soichiro Minamimoto 2 (JP)&nbsp;<strong>POINTS: 7</strong></p>
+              <p>- Lorenzo Dalla Porta 19 (IT)&nbsp;<strong>POINTS: 7</strong></p>
+              <p>- Manuel Gonzalez 18 (ES)&nbsp;<strong>POINTS: 7</strong></p>
+              <p>- Alberta Arenas 75 (ES)&nbsp;<strong>POINTS: 7</strong></p>
+              <p>- Alberto Surra 67 (IT)&nbsp;<strong>POINTS: 7</strong></p>
+              <p>- Darryn Binder 15 (IT)&nbsp;<strong>POINTS: 7</strong></p>
+              <p><strong>25th -&nbsp;</strong>Alex Escrig (ES)&nbsp;<strong>POINTS: 7</strong></p>
+              <p><strong>26th&nbsp;</strong>- Filip Salac 12 (CZ)&nbsp;<strong>POINTS: 6</strong></p>
+              <p><strong>27th - </strong>Joe Roberts 16 (US)&nbsp;<strong>POINTS: 6</strong></p>
+            </div>
+      </div>
+    </div>
+</div>
+
+<div class="trophy-head" style="position: relative;/*! align-items: center; */display:   grid;padding-left: 700px;/*! padding-right: 500px; */margin-bottom: 3cm;margin-top: 3cm;">
+    <h3 style="font-size: xx-large;
+    font-weight: bold;">
+2023 RESULTS</h3>
+</div>
+
+<div class="accordion-item" style="padding-left: 100px;
+padding-right: 100px;">
+      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+        <button style="width: 100%;
+        text-align: left;
+        background-color: #363939;
+        color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+    ROUND 01: PORTUGAL 
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+        <div class="accordion-body">
+          <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+             </h3>
+             <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jake Dixon</p>            <p><strong><strong>2nd&nbsp;</strong>- </strong>Fermin Aldeguer 54 (ES)<strong>&nbsp;<strong>POINTS:38</strong></strong></p>
+             <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Filip Salac</p>            <p><strong>3rd&nbsp;</strong>-&nbsp;Taiga Hada 23 (JP)&nbsp;<strong><strong>&nbsp;<strong>POINTS:28</strong></strong></strong></p>
+             <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>: </strong>Pedro Acosta</p>            <p><strong>5th&nbsp;</strong>-&nbsp;Jake Dixon 96 (UK)&nbsp;<strong>POINTS: 24</strong></p>
+             <p>Triumph Triple Trophy Standings After Round 1<br>
+                <br>
+                <strong>1st</strong>: Jake Dixon (7 Points)<br>
+                <br>
+                <strong>2nd</strong>: Filip Salac (6 Points)<br>
+                <br>
+                <strong>3rd</strong>: Pedro Acosta (5 Points)</p>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item" style="padding-left: 100px;
+  padding-right: 100px;">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+          <button style="width: 100%;
+          text-align: left;
+          background-color: #363939;
+          color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+   ROUND 02: ARGENTINA 
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+          <div class="accordion-body">
+            <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+               </h3>
+             
+<p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Sergio Garcia</p>
+<p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+<p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+<p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+<p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>
+
+</div>                                   
+ </div>
+            </div>
+          
+            <div class="accordion-item" style="padding-left: 100px;
+            padding-right: 100px;">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button style="width: 100%;
+                    text-align: left;
+                    background-color: #363939;
+                    color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+         
+         ROUND 03: AMERICAS 
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                    <div class="accordion-body">
+                      <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+                         </h3>
+                       
+                         <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jeremy Alcoba, Tony Arbolino, Borja Gomez, Izan guevara, David Sanchis, Soichiro Minamimoto</p>
+                         <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+                         <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+                         <p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+                         <p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>           
+
+</div>
+</div>
+</div>
+          
+<div class="accordion-item" style="padding-left: 100px;
+            padding-right: 100px;">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                    <button style="width: 100%;
+                    text-align: left;
+                    background-color: #363939;
+                    color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true" aria-controls="panelsStayOpen-collapseSix">
+         
+         ROUND 04: JEREZ
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                    <div class="accordion-body">
+                      <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+                         </h3>
+                       
+                         <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jeremy Alcoba, Tony Arbolino, Borja Gomez, Izan guevara, David Sanchis, Soichiro Minamimoto</p>
+                         <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+                         <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+                         <p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+                         <p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>           
+
+</div>
+</div>
+</div>
+                                             
+<div class="accordion-item" style="padding-left: 100px;
+            padding-right: 100px;">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                    <button style="width: 100%;
+                    text-align: left;
+                    background-color: #363939;
+                    color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="true" aria-controls="panelsStayOpen-collapseSeven">
+         
+         ROUND 05: FRANCE
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                    <div class="accordion-body">
+                      <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+                         </h3>
+                       
+                         <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jeremy Alcoba, Tony Arbolino, Borja Gomez, Izan guevara, David Sanchis, Soichiro Minamimoto</p>
+                         <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+                         <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+                         <p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+                         <p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>           
+
+</div>
+</div>
+</div>
+
+
+<div class="accordion-item" style="padding-left: 100px;
+padding-right: 100px;">
+      <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+        <button style="width: 100%;
+        text-align: left;
+        background-color: #363939;
+        color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="true" aria-controls="panelsStayOpen-collapseEight">
+
+ROUND 06: ITALY
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
+        <div class="accordion-body">
+          <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+             </h3>
+           
+             <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jeremy Alcoba, Tony Arbolino, Borja Gomez, Izan guevara, David Sanchis, Soichiro Minamimoto</p>
+             <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+             <p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>           
+
+</div>
+</div>
+</div>                  
+
+<div class="accordion-item" style="padding-left: 100px;
+padding-right: 100px;">
+      <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+        <button style="width: 100%;
+        text-align: left;
+        background-color: #363939;
+        color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="true" aria-controls="panelsStayOpen-collapseNine">
+
+ROUND 07: GERMANY
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNine">
+        <div class="accordion-body">
+          <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+             </h3>
+           
+             <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jeremy Alcoba, Tony Arbolino, Borja Gomez, Izan guevara, David Sanchis, Soichiro Minamimoto</p>
+             <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+             <p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>           
+
+</div>
+</div>
+</div>  
+
+
+<div class="accordion-item" style="padding-left: 100px;
+padding-right: 100px;">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTen">
+        <button style="width: 100%;
+        text-align: left;
+        background-color: #363939;
+        color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="true" aria-controls="panelsStayOpen-collapseTen">
+
+ROUND 08: ASSEN
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTen">
+        <div class="accordion-body">
+          <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+             </h3>
+           
+             <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jeremy Alcoba, Tony Arbolino, Borja Gomez, Izan guevara, David Sanchis, Soichiro Minamimoto</p>
+             <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+             <p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>           
+
+</div>
+</div>
+</div>        
+
+
+
+
+<div class="accordion-item" style="padding-left: 100px;
+padding-right: 100px;">
+      <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
+        <button style="width: 100%;
+        text-align: left;
+        background-color: #363939;
+        color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="true" aria-controls="panelsStayOpen-collapseEleven">
+
+ROUND 09:KAZAKHSTAN 
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEleven">
+        <div class="accordion-body">
+          <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+             </h3>
+           
+             <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jeremy Alcoba, Tony Arbolino, Borja Gomez, Izan guevara, David Sanchis, Soichiro Minamimoto</p>
+             <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+             <p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>           
+
+</div>
+</div>
+</div> 
+
+
+
+<div class="accordion-item" style="padding-left: 100px;
+padding-right: 100px;">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwelve">
+        <button style="width: 100%;
+        text-align: left;
+        background-color: #363939;
+        color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwelve" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwelve">
+
+ROUND 10: UNITED KINGDOM
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwelve">
+        <div class="accordion-body">
+          <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
+             </h3>
+           
+             <p><strong>Best progression in the race </strong><small><strong>(7 points)</strong></small>: Jeremy Alcoba, Tony Arbolino, Borja Gomez, Izan guevara, David Sanchis, Soichiro Minamimoto</p>
+             <p><strong>Pole position </strong><small><strong>(6 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p><strong>Race fastest lap </strong><small><strong>(5 points)</strong></small><strong>:&nbsp;</strong>Alonso Lopez</p>
+             <p>Triumph Triple Trophy Standings After Round 2</p><p><strong>1st:</strong>&nbsp;Alonso Lopez</p>
+             <p><strong>2nd:&nbsp;</strong>Jake Dixon</p><p><strong>3rd:&nbsp;</strong>Sergio Garcia</p>           
+
+</div>
+</div>
+</div>
+
+
+<div class="engine_vedio" style="position: relative;margin-top: 1cm;margin-top: 2cm;margin-bottom: 2cm;left: 150px;/*! right: 150px; */">
+    <iframe width="1200px" height="600px" src="https://www.youtube.com/embed/EKsb6btKQAg?autoplay=1&mute=1&controls=0&loop=1&playlist=EKsb6btKQAg"  frameborder="0" allow=" autoplay;  encrypted-media; gyroscope; " allowfullscreen></iframe>
+
+</div>
+
+
+
+<div class="moto-card" style="margin-bottom:4cm ;">
+    <div class="row">
+      <div class="col-md-6">
+        <div  style="padding:100px ;">
+          <h3 style="margin-bottom: 30px; font-weight: bold;">
+            2022 Season
+         </h3>
+        <p style="margin-bottom: 3rem;">
+  
+            Jeremy Alcoba topped the Triumph Triple Trophy table after scoring top points for best race progression an impressive six times in the year, making up over 10 places in four of those.
+<br>
+His prize is a new custom-liveried Triumph Street Triple RS powered by the 765cc triple engine from which the Moto2 engine is derived.
+          </p>
+
+        </div>
+        
+      </div>
+      <div class="col-md-6">
+  
+        <img src="/static/images/moto-card6.avif" style="width: 800px;">
+        
+       
+      </div>
+    </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+        <div class="arrow">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="top: -440px; width:0%;left: 1200px; opacity: 1; z-index: 1;">
+                <span class="carousel-control" aria-hidden="true"></span>
+                <span class="sr-only" style="display:contents ;color: #070707;"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/long-arrow-left.png" alt="long-arrow-left"/></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="/*! left: 400px; */right: 4cm;top: -440px; opacity: 1; z-index: 1;">
+                <span class="carousel-control" aria-hidden="true"></span>
+                <span class="sr-only" style="display:contents ;color: #070707;"> <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/long-arrow-right.png" alt="long-arrow-right"/></span>
+            </a>
+        </div>
+        
+        
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+
+                
+                <div class="row" style="background-color: white;">
+                    <div class="col-md-6">
+                        
+                        <iframe width="950px" height="503px" src="https://www.youtube.com/embed/n8QyJfa9ptc?si=rY2elCkBT-LTFU5S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="col-md-6">
+                        <div class="carousel-caption" style="text-align: left; top: 50px;  right: auto; bottom: auto; margin-left:2cm;">
+                            <p style="color:black ;font-size: x-large;font-weight: bold;">1/4</p>
+                            <h1 style="color:black ;font-size: x-large;font-weight: bold;">MotoGP Assen Best Race Progression</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Add similar structure for other carousel items -->
+              <div class="carousel-item"> 
+            <div class="row" style="background-color: white;">
+                <div class="col-md-6">
+                    
+                    <iframe width="950px" height="503px" src="https://www.youtube.com/embed/n8QyJfa9ptc?si=rY2elCkBT-LTFU5S" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen></iframe>                    
+                </div>
+                <div class="col-md-6">
+                    <div class="carousel-caption" style="text-align: left; top: 50px;  right: auto; bottom: auto; margin-left:2cm;">
+                        <p style="color:black ;font-size: x-large;font-weight: bold;">2/4</p>
+                        <h1 style="color:black ;font-size: x-large;font-weight: bold;">MotoGP German GP Best Race Progression</h1>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+            <div class="carousel-item"> 
+                <div class="row" style="background-color: white;">
+                    <div class="col-md-6">
+                        
+                        <iframe width="950px" height="503px" src="https://www.youtube.com/embed/n8QyJfa9ptc?si=rY2elCkBT-LTFU5S" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="col-md-6">
+                        <div class="carousel-caption" style="text-align: left; top: 50px;  right: auto; bottom: auto; margin-left:2cm;">
+                            <p style="color:black ;font-size: x-large;font-weight: bold;">3/4</p>
+                            <h1 style="color:black ;font-size: x-large;font-weight: bold;">MotoGP Second Best Progression</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="carousel-item"> 
+                    <div class="row" style="background-color: white;">
+                        <div class="col-md-6">
+                            
+                            <iframe width="950px" height="503px" src="https://www.youtube.com/embed/n8QyJfa9ptc?si=rY2elCkBT-LTFU5S" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen></iframe>                    
+                        </div>
+                        <div class="col-md-6">
+                            <div class="carousel-caption" style="text-align: left; top: 50px;  right: auto; bottom: auto; margin-left:2cm;">
+                                <p style="color:black ;font-size: x-large;font-weight: bold;">4/4</p>
+                                <h1 style="color:black ;font-size: x-large;font-weight: bold;">MotoGP First Best Progression</h1>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+        </div>
+    
+       
+    </div>
+
+    <div class="moto-card">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="padding-top:100px;padding-left: 200px;">
+                <h3> STREET TRIPLE 765 </h3>
+                <p >Powered by Moto2™ race engine evolution, for the highest performance, highest specification and most agile Street Triple line-up ever.
+                </p>
+                <button class="btn btn-dark" style="background-color: black; color: white;">DISCOVER MORE</button>
+
+                <button class="btn btn-dark" style="background-color: black; color: white;">CONFIGURE</button>
+            </div>
+            
+          </div>
+          <div class="col-md-6">
+      
+            <img src="/static/images/moto-card8.avif" style="width: 800px;">
+            
+           
+          </div>
+        </div>
+        </div>
+    
+        <div class="black-section" style="width:100%; margin-bottom: 0; height: 500px; background-color: #0e0f0f;">
+            <div class="e-icon">
+              <img src="/static/images/insta.webp"style="/*! position: initial; */position: relative;top: 200px;left: 600px;">
+              <h4 style="color: white;position: relative;top: 210px;left: 570px;">instagram</h4>
+              <img src="/static/images/fb.png" style="/*! position: initial; */position: relative;top: 113px;left: 780px;">
+              <h4 style="color: white;position: relative;top: 123px;left: 760px;">facebook</h4>
+            </div>
+          </div>
+
+
+
+  {% endblock %}
