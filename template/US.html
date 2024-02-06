@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index:1;position: sticky; top:0 ;">
+    <a class="navbar-brand" href="#" style="color:red;"><i>TRIUMPH RACING</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Overview <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'MOTO' %}">MOTO2™</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"href="{% url 'PTR' %}">PTR TRIUMPH</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'MXGP' %}">MXGP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'US' %}">US RACING</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+            <button class="btn  btn-danger">RACING NEWS</button>
+ 
+                </li></ul>
+          </li>
+      </form>
+    </div>
+  </nav>
+
+  
+  <div class="container-fluid" style="margin-top:-70px;">
+    
+    <a class="home" style="margin-top:2cm ;" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+        <g transform=""><g fill="#efe6e6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M16,2.59375l-0.71875,0.6875l-13,13l1.4375,1.4375l1.28125,-1.28125v11.5625h9v-10h4v10h9v-11.5625l1.28125,1.28125l1.4375,-1.4375l-13,-13zM16,5.4375l9,9v11.5625h-5v-10h-8v10h-5v-11.5625z"></path></g></g></g>
+        </svg></a>
+        <div style="left: 70px;position: relative;top: 80px; "><a href="{% url 'discover' %}" style="color: rgb(255, 255, 255);"> >  FOR THE RIDE ></a></div>
+        <div style="left: 210px;position: relative;top: 55px; "><a href="{% url 'RACE' %}" style="color: rgb(255, 255, 255);"> >  RACING ></a></div>
+        <div style="left: 310px;position: relative;top: 30px; "><a href="#" style="color: rgb(253, 251, 251);">  US RACING></a></div>
+
+         <img src="/static/images/US.avif" width="1536px" height="700px">
+    
+        <div class="centerf" style="top: 65%; width: 1200px;">
+            
+        <h3 style="color:white ;font-size: 50px;" class="h3" >
+            US RACING
+         </h3>
+         <div class="red-line"></div>
+        
+            
+    </div>
+</div>
+
+<div class="ptr-title">
+    <p>It’s an ambitious project to build an entire racing structure from scratch, but Triumph is all-in and committed to racing Supercross with its new, ground-up developed motocross bike. In 2024, alongside the launch of its OEM Motocross machine, which is a completely new segment for the British brand, Triumph will enter the heat of the battle in the SuperMotocross World championship incorporating the AMA Supercross Championship and the AMA Pro Motocross Series in the 250 categories. With the homologation ruling in place, meaning the majority of components on the race bikes have to be those sold on the mass market, both series naturally require the OEM product to be at the absolute highest level, making it the toughest yet most ideal development ground for its off-road line-up. </p>
+</div>
+
+<div class="us-banner" style="background-image:url('/static/images/us1.avif') ;"></div>
+<div class="ptr-title">
+    <p>Triumph has the know-how of globally renowned athletes such as Ricky Carmichael, who is arguably the greatest-of-all-time US motocross racer with nine AMA Supercross championships and seven AMA Outdoor titles to his name, along with multi-time champion Ivan Tedesco, both of whom have been heavily involved in developing the machine and the race programme. This, combined with Triumph’s engineering know-how, is ensuring the overall off-road project is prepared for the precision and scrutiny of Supercross that will be needed next season. </p>
+    <p></p>
+    <p>The initially two-rider US-based Triumph Racing team will be led by the ultra-experienced Bobby Hewitt and Stephen Westfall, along with industry-greats Dave Arnold and Dudley Crammond. Together, they are all also working closely with the World Championship racing programme based in Belgium to share key testing data, as well as working with the R&D engineers in the Global Headquarters in Hinckley, UK to maximise development flow as Triumph begins a new era. Triumph’s racing ambitions extend to the 450 classes in 2025.</p>
+</div>
+
+<div class="us_tag" style="margin-bottom:2cm ;">
+    <div class="us_red_line"></div>
+      <h1 style="position: relative;text-align: center;margin-top: -38px;font-size: 1.6cm;font-weight: bold;">FORMAT</h1>
+  </div>
+  <div class="ptr-title-3">
+
+</div>
+
+<div class="us-title">
+    <h3>Supercross</h3>
+    <p></p>
+    <p>Supercross is a stadium series travelling around the USA from January to May each season. It enjoys international acclaim for its man-made, technical tracks that are incredibly specialist, with some of the toughest obstacles for racers to tackle; the ‘whoops’ and ‘rhythm’ sections are so synonymous with Supercross success, as are the starts from the gate. The entire series is 17-rounds for the 450SX competitors aboard 450cc machinery, while the 250SX series with 250cc machinery is split into ‘East Coast’ and ‘West Coast’ with eight events for the East Coast, seven events for West Coast, and two East/West Showdown events towards the end of the season. Additionally, a number of the events have ‘Triple Crown’ status, which means they have three ‘Main Events’ instead of the usual one. The Triple Crown format offers full regular championship points for each of the motos, but also a separate Triple Crown Championship (three rounds for 450SX, two and one round for 250SX).
+    </p>
+    <p></p>
+    <p>
+        Supercross takes place usually on a Saturday, with those that qualify reaching the ‘night show’. Riders are grouped for Qualifying 1 + 2 and the fastest 40 of those go through to the next part of the schedule, this timed session also decides the gate pick for the Heat races. Riders for each category compete in one of two Heat Races per class, which are six-minutes plus one lap. Nine riders from each of the Heat races go through to the Main Event, which has 22 gate places. The remaining riders compete in the ‘Last Chance Qualifier’ of five minutes plus 1 lap for the final four gate positions in the ‘Main’.</p>
+        <p></p>
+        <p>
+            The 250SX Main event is 15 minutes plus 1 lap, and the 450SX Main Event is 20 minutes plus 1 lap. Points are awarded from 1st to 22nd position.</p>
+</div>
+
+
+<div class="us-title">
+    <h3>Pro-Motocross</h3>
+    <p>Pro-Motocross is held outside on more ‘natural’ terrain at motocross tracks around the USA with 11 rounds in total. Incorporating jumps, rhythm sections, berms and turns, in sand, loam, hardpack and with a variation in weather, Motocross is more typically like its predecessor sport also known as ‘Scrambling’. The Format for this series is as follows: classes are split into two groups for Practice with a 15 minute session. A Start practice takes place followed by 15 minutes of timed practice, and the top 40 combined go through to the afternoon’s events. Those who do not qualify take part in a Consolation race. Following a sighting lap, the 250 and 450 classes each have two motos of 30 minutes plus Two Laps with the combined result confirming the event winner. Unlike World Championship events, everything takes place on one day.
+
+    </p>
+    <p></p>
+  
+</div>
+<div class="us-title">
+    <h3>SuperMotocross Play-offs</h3>
+    <p></p>
+    <p>Following 17 rounds of Supercross and 11 rounds of Pro Motocross the SuperMotocross World Championship has two Playoffs and then the SuperMotocross World Championship Final. The top 20 athletes in combined Supercross and pro Motocross points will automatically qualify to compete at each round of the SuperMotocross World Championship, which has a huge $10 million prize pot over the season. The final has $5.5 million up for grabs with a guaranteed $1 million to the 450cc champion. 
+    </p>
+    <p></p>
+    <p>
+        Leading into the playoffs, the points will be reset in both classes. The top 20 athletes will be seeded into the playoffs using one event’s worth of Supercross points - 26 for the regular season points leader, 23 for second, 21 for third, 19 for fourth, then single point denominations to the 20th seed, making performance during the regular season crucial for playoff position.</p>
+        <p></p>
+        <p>
+            Playoff1 has the original point structure for the top 22 positions, while Playoff 2 pays out double points and the Final will pay treble the points.
+ </p>
+ <p></p>
+ <p> 
+    The top 20 racers are automatically seeded into the SuperMotocross events, while racers 21st – 30th will compete for the final two gate positions at each round in a Last Chance Qualifier. This format is new for 2023 and race fans are looking forward to seeing the racing ensue!
+    
+     </p>
+</div>
+<div class="teams-card1">
+    <div class="col-md-6 lp">
+        <h3>VISION TO REALITY </h3>
+        <p>The wait is over! Join us as we begin to unveil Triumph's all-new Motocross motorcycle in our three part video series, Vision to Reality.</p>
+        <button class="btn btn-dark" style="background-color: black; color: white;">DISCOVER MORE</button>
+
+    </div>
+   
+    <div class="col-md-6 " style="margin-left: -170px;">
+        <img src="/static/images/MXGP2.avif">
+
+    </div>
+</div>
+
+
+<div  style="padding: 40px;row-gap: 2cm;display: grid;">
+    <div class="row">
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Racing | 1st Dec 2023</h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>PEDRO ACOSTA WINS THE 2023 TRIUMPH TRIPLE TROPHY​
+                </h4></div>
+            </div>
+
+        </div>
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc1.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Epic Adventures | 15th Nov 2023
+                </h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>TRIUMPH UNLEASHES THE TIGER 1200 RALLY PRO RANGE IN AUSTRALIA
+                </h4></div>
+            </div>
+
+        </div>
+        <div class="col-sm-4 " style="overflow:hidden ;" >
+            <div class="imgh" style="padding-bottom: 20px;">
+                <img  src="/static/images/nc2.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+            </div>
+            <div>
+                <h7>Racing | 9th Nov 2023
+
+                </h7>
+
+                <div onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='black'">
+                  <h4>MONSTER ENERGY TRIUMPH RACING RIDERS REVEALED
+                </h4></div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+    
+
+<div class="foot" style="background-color: #dddad7;">
+    <div class="sub" style="text-align: center; display: grid; justify-content: center;">
+  
+      <h3 >keep in touch</h3>
+  
+      <p>Submit your email address below and we'll keep you updated with new and relevant <br>Triumph motorcycle content directly to your inbox.</p>
+  <div class="row" style="justify-content:center ;">
+      <p style="text-align: center; flex-basis:100%; position: relative; left:-181px;">EMAIL</p>
+      <form id="myForm">
+      <input style="width: 11cm;height: 1cm;" type="email" id="email" name="email" placeholder="Enter the email address" required>
+  </div>
+  <div>
+    <button class="rc_b" type="submit">KEEP ME INFORMED</button>
+
+  </div>
+  </form>
+  </div>
+  
+  </div>
+{% endblock %}

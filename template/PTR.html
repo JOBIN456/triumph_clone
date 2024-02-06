@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index:1;position: sticky; top:0 ;">
+    <a class="navbar-brand" href="#" style="color:red;"><i>PTR TRIUMPH</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Overview <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'team' %}">THE TEAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'calender1' %}">CALENDAR</a>
+          </li>
+          
+         
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+            <li class="nav-item">
+                <a class="nav-link" href="#">KEEP ME INFORMED ></a>
+              </li>
+            <button class="btn  btn-danger">STREET TRIPLE 765</button>
+ 
+                </li></ul>
+          </li>
+      </form>
+    </div>
+  </nav>
+
+  
+  <div class="container-fluid" style="margin-top:-70px;">
+    
+    <a class="home" style="margin-top:2cm ;" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+        <g transform=""><g fill="#efe6e6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M16,2.59375l-0.71875,0.6875l-13,13l1.4375,1.4375l1.28125,-1.28125v11.5625h9v-10h4v10h9v-11.5625l1.28125,1.28125l1.4375,-1.4375l-13,-13zM16,5.4375l9,9v11.5625h-5v-10h-8v10h-5v-11.5625z"></path></g></g></g>
+        </svg></a>
+        <div style="left: 70px;position: relative;top: 80px; "><a href="{% url 'discover' %}" style="color: rgb(255, 255, 255);"> >  FOR THE RIDE ></a></div>
+        <div style="left: 210px;position: relative;top: 55px; "><a href="{% url 'RACE' %}" style="color: rgb(255, 255, 255);"> >  RACING ></a></div>
+        <div style="left: 310px;position: relative;top: 30px; "><a href="#" style="color: rgb(253, 251, 251);">   PTR TRIUMPH></a></div>
+
+         <img src="/static/images/PTR.avif" width="1536px" height="700px">
+    
+        <div class="centerf" style="top: 65%; width: 1200px;">
+            <h5>SUPERSPORT WORLD CHAMPIONSHIP</h5>
+            <div class="red-line"></div>
+        <h3 style="color:white ;font-size: 50px;" class="h3" >
+            PTR TRIUMPH 
+         </h3>
+         <div class="red-line"></div>
+        
+            
+    </div>
+</div>
+
+
+<div class="ptr-title">
+    <h3></h3>
+    <p>The FIM Supersport World Championship has spanned three-decades and is widely acknowledged as an ideal platform for the development of emerging talent on the world stage. The championship has been opened up to a wider category of engines, beyond 600cc, under the ‘Next Generation’ balance of performance formula, which Triumph took a lead in helping to establish in British Supersport, before its adoption in the World Championship more recently. Triumph’s entry in the series is in partnership with the experienced PTR team, under the PTR Triumph guise, in a fiercely competitive championship that supports Triumph’s future racing ambitions.</p>
+</div>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+    <div class="arrow">
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="top: -440px; width:0%;left: 1200px; opacity: 1; z-index: 1;">
+            <span class="carousel-control" aria-hidden="true"></span>
+            <span class="sr-only" style="display:contents ;color: #070707;"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/long-arrow-left.png" alt="long-arrow-left"/></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="/*! left: 400px; */right: 4cm;top: -440px; opacity: 1; z-index: 1;">
+            <span class="carousel-control" aria-hidden="true"></span>
+            <span class="sr-only" style="display:contents ;color: #070707;"> <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/long-arrow-right.png" alt="long-arrow-right"/></span>
+        </a>
+    </div>
+    
+    
+    <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+
+            
+            <div class="row" style="background-color: white;">
+                <div class="col-md-6">
+                    
+                    <img width="950px" height="503px" src="/static/images/PTR-CARD.avif">                    
+                </div>
+                <div class="col-md-6">
+                    <div class="carousel-caption" style="text-align: left; top: 50px;  right: auto; bottom: auto; padding-left:2cm;">
+                        <p style="color:black ;font-size: x-large;font-weight: bold;">1/1</p>
+                        <h5 style="color:black ;font-size: medium; line-height: .80cm;">The Triumph Street Triple 765 RS is the base platform that the team uses in this production bike championship, which only allows homologated machinery with strict rules on adaptations, proving the performance credentials of the 765 triple engine and Street Triple RS chassis at the top level of competition. </h5>
+                        <button class="btn btn-dark" style="background-color: black; color: white;">STREET TRIPLE 765 RS</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
+
+    <div class="ptr-title-1">
+        <h3>THE RIDERS</h3>
+    </div>
+
+
+    <div class="ptr-card">
+        <div class="row4">
+            <div class="col-md-6">
+                <img src="/static/images/ptr-card1.avif" style="height: 586px;width: 586px;">
+                <h3><a href="" style="color:#070707">NIKI TUULI</a></h3>
+            </div>
+            <div class="col-md-6" style="margin-left:90px ; ">
+                <img src="/static/images/ptr-card2.avif" style="height: 586px;width: 586px;">
+                <h3><a href="" style="color:#070707">Harry Truelove</a></h3>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="ptr-title-2">
+        <h3>TEAM NEWS</h3>
+    </div>
+<div class="news-ptr">
+
+    <div class="col-sm-4 " style="overflow:hidden ;" >
+        <div class="imgh" style="padding-bottom: 20px;">
+            <img  src="/static/images/nc2.avif" style="height:350px; width:450px;"alt="Card image cap" >
+
+        </div>
+        <div>
+            <h7>Racing | 9th Nov 2023
+
+            </h7>
+
+            <div onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='black'">
+              <h4>MONSTER ENERGY TRIUMPH RACING RIDERS REVEALED
+            </h4></div>
+        </div>
+
+    </div>
+</div>
+<div class="foot" style="background-color: #dddad7;">
+    <div class="sub" style="text-align: center; display: grid; justify-content: center;">
+  
+      <h3 >keep in touch</h3>
+  
+      <p>Submit your email address below and we'll keep you updated with new and relevant <br>Triumph motorcycle content directly to your inbox.</p>
+  <div class="row" style="justify-content:center ;">
+      <p style="text-align: center; flex-basis:100%; position: relative; left:-181px;">EMAIL</p>
+      <form id="myForm">
+      <input style="width: 11cm;height: 1cm;" type="email" id="email" name="email" placeholder="Enter the email address" required>
+  </div>
+  <div>
+    <button class="rc_b" type="submit">KEEP ME INFORMED</button>
+
+  </div>
+  </form>
+  </div>
+  
+  </div>
+
+
+  {% endblock %}

@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Overview <span class="sr-only"></span></a>
+          <a class="nav-link" href="{% url 'discover' %}">Overview <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'news' %}">news</a>
@@ -20,10 +20,10 @@
             <a class="nav-link" href="{% url 'RACE' %}">Racing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Brand</a>
+            <a class="nav-link" href="{% url 'brand1' %}">Brand</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Reviews</a>
+            <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
           </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">

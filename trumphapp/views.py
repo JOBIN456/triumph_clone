@@ -56,4 +56,18 @@ def testing(request):
     return render(request,'testing.html')
 def calender(request):
     return render(request,'calender.html')
+def PTR(request):
+    return render(request,'PTR.html')
+def MXGP(request):
+    return render(request,'MXGP.html')
+def US(request):
+    return render(request,'US.html')
+def team(request):
+    return render(request,'team.html')
+def calender1(request):
+    return render(request,'calender1.html')
 
+def brand1(request):
+    return render(request,'brand1.html')
+def reviews(request):
+    return render(request,'reviews.html')

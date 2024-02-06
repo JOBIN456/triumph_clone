@@ -21,6 +21,15 @@ urlpatterns = [
       path('trophy/',views.trophy,name="trophy"),
       path('testing/',views.testing,name="testing"),
      path('calender/',views.calender,name="calender"),
+     path('PTR/',views.PTR,name="PTR"),
+     path('MXGP/',views.MXGP,name="MXGP"),
+     path('US/',views.US,name="US"),  
+     path('team/',views.team,name="team"),
+     path('calender1/',views.calender1,name="calender1"),
+     path('brand1/',views.brand1,name="brand1"),
+     path('reviews/',views.reviews,name="reviews"),
+
+
 
 
 

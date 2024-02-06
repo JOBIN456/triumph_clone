@@ -2,9 +2,8 @@
 {% load static %}
 
 {% block content %}
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:sticky; top:0; z-index: 5;">
-    <a class="navbar-brand" href="#" style="color:red;"><i>Moto2™</i></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="color:red;"><i>PTR TRIUMPH</i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,26 +11,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'MOTO' %}">Overview <span class="sr-only"></span></a>
+          <a class="nav-link" href="{% url 'PTR' %}">Overview <span class="sr-only"></span></a>
         </li>
         
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'engine' %}">ENGINE</a>
+            <a class="nav-link" href="{% url 'team' %}">THE TEAM</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'trophy' %}">TRIUMPH TRIPLE TROPHY</a>
+            <a class="nav-link" href="{% url 'calender1' %}">CALENDAR</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'testing' %}">TESTING</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'calender' %}">CALENDAR</a>
-          </li>
+          
+         
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-            <button class="btn  btn-danger">STREET TRIPLE</button>
+            <li class="nav-item">
+                <a class="nav-link" href="#">KEEP ME INFORMED ></a>
+              </li>
+            <button class="btn  btn-danger">STREET TRIPLE 765</button>
  
                 </li></ul>
           </li>
@@ -39,6 +37,7 @@
     </div>
   </nav>
 
+  
   <div class="container-fluid" style="margin-top:-70px;">
     
     <a class="home" style="margin-top:2cm ;" href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
@@ -46,29 +45,28 @@
         </svg></a>
         <div style="left: 70px;position: relative;top: 80px; "><a href="{% url 'discover' %}" style="color: rgb(255, 255, 255);"> >  FOR THE RIDE ></a></div>
         <div style="left: 210px;position: relative;top: 55px; "><a href="{% url 'RACE' %}" style="color: rgb(255, 255, 255);"> >  RACING ></a></div>
-        <div style="left: 310px;position: relative;top: 30px; "><a href="{% url 'MOTO' %}" style="color: rgb(253, 251, 251);"> >  Moto2™></a></div>
+        <div style="left: 310px;position: relative;top: 30px; "><a href="#" style="color: rgb(253, 251, 251);">   PTR TRIUMPH></a></div>
 
-         <img src="/static/images/calender.avif" width="1536px" height="700px">
+         <img src="/static/images/calender1.avif" width="1536px" height="700px">
     
-        <div class="centerf" style="top: 75%; width: 1200px;">
-            <h5>MOTO2™</h5>
-            <div class="red-line"></div>
+        <div class="centerf" style="top: 65%; width: 1200px;">
+           
         <h3 style="color:white ;font-size: 50px;" class="h3" >
-            2023 SEASON CALENDAR
+            CALENDER
          </h3>
+         <div class="red-line"></div>
         
             
     </div>
 </div>
 
-
-<div class="calender-head">
-    <div class="c-title">
-        <h3>RACE SUMMARY</h3>
-    </div>
-    
+<div class="ptr-title">
+    <h3></h3>
+    <p>The FIM Supersport World Championship has spanned three-decades and is widely acknowledged as an ideal platform for the development of emerging talent on the world stage. The championship has been opened up to a wider category of engines, beyond 600cc, under the ‘Next Generation’ balance of performance formula, which Triumph took a lead in helping to establish in British Supersport, before its adoption in the World Championship more recently. Triumph’s entry in the series is in partnership with the experienced PTR team, under the PTR Triumph guise, in a fiercely competitive championship that supports Triumph’s future racing ambitions.</p>
 </div>
-
+<div class="ptr-title-1">
+    <h3>2023 CALENDAR</h3>
+</div>
 
 <div class="months">
     <div class="row">
