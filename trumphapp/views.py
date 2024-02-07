@@ -71,3 +71,7 @@ def brand1(request):
     return render(request,'brand1.html')
 def reviews(request):
     return render(request,'reviews.html')
+def dealer(request):
+    return render(request,'dealer.html')
+def customize(request):
+    return render(request,'customize.html')

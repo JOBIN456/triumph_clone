@@ -93,7 +93,7 @@
   display: block;
 }
 .column.sn{
-width: 350px;
+width: 550px;
 text-align: center;
 }
 .column.sg{
@@ -812,4 +812,87 @@ padding-right: 400px;
   background-color: rgb(255, 255, 255);
   position: relative;
   left: 560px;
-}                   
+} 
+
+
+                     /* Brand */
+.brand-card{
+    display: flex;
+    padding-right:20px;
+    padding-left:20px;
+    margin-top: 2cm;
+    margin-bottom: 3cm;
+  }
+
+.brand-image{
+  width: 867px;
+  height: 443px;
+}
+.brand-card-title {
+  width: 600px;
+ 
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 100px;
+}
+
+.brand-card-title h3 {
+  padding-bottom: 20px;
+  font-weight:bold;
+}
+
+
+                                   /* ACCESSORIES */
+
+
+.accesor{
+  height:500px;
+  width:100%;
+  margin-bottom: 5cm;
+}
+
+.acces-text h3{
+  font-size: 68px;
+  color: white;
+  font-weight: bold;
+}
+
+.acces-text button{
+  width: 282px;
+  left: 230px;
+  position: relative;
+}
+
+.acces-text{
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
+
+
+.acces-a{
+
+  display: flex;
+}
+.acces-a a{
+  margin:13px
+}
+.acces-card{
+  margin-bottom: 4cm;
+}
+
+.bikes{
+  display: flex;
+  gap:30px;
+  overflow-x: scroll;
+  /* -bottom:margin 2cm; */
+}
+.bikes .card{
+  width: 18rem;
+}
+.bike:hover{
+  transform: scale(1);
+}

@@ -17,14 +17,24 @@ style="background-color: black; ">
         <div class="row">
           <div class="column sn">
             <h3> MOTORCYCLES</h3>
-            <a href="#">ADVENTURE</a>
+            <div class="btn-group dropright" style="position:relative ;">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position:relative ;">
+                Dropright
+              </button>
+              <div class="dropdown-menu " style="position:absolute;">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <!-- <a href="#">ADVENTURE</a>
             <a href="#">MODERN CLASSICS</a>
             <a href="#">ROADSTERS</a>
             <a href="#">ROCKET 3</a>
             <a href="#">STEALTH EDITION</a>
             <a href="#">SPORT</a>
             <a href="#">CHROME COLLECTION</a>
-            <a href="#"><h10>FINANCE & OFFERS</10></a>
+            <a href="#"><h10>FINANCE & OFFERS</10></a> -->
           </div>
           <div class="column sn">
 
@@ -264,12 +274,12 @@ style="background-color: black; ">
 
       <ul class="navbar-nav ml-auto"> 
         <li class="nav-item"> 
-            <a class="nav-link" href="#" style="color: white;"> 
+            <a class="nav-link" href="{% url 'dealer' %}" style="color: white;"> 
               Dealer
             </a> 
         </li> 
         <li class="nav-item"> 
-            <a class="nav-link" href="#" style="color: white;"> 
+            <a class="nav-link" href="{% url 'customize' %}" style="color: white;"> 
               Customize
             </a> 
         </li> 

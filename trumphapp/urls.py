@@ -28,6 +28,9 @@ urlpatterns = [
      path('calender1/',views.calender1,name="calender1"),
      path('brand1/',views.brand1,name="brand1"),
      path('reviews/',views.reviews,name="reviews"),
+     path('dealer/',views.dealer,name="dealer"),
+     path('customize/',views.customize,name="customize"),
+
 
 
 
