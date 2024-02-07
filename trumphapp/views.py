@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import Bike,Category
+from django.http import JsonResponse
 # Create your views here.
 def home(request):
     return render(request,"home.html")
@@ -74,4 +75,21 @@ def reviews(request):
 def dealer(request):
     return render(request,'dealer.html')
 def customize(request):
-    return render(request,'customize.html')
+    category_names = ['ADVENTURE', 'CLASSICS', 'ROADSTER', 'ROCKET3']
+    adventure_cat = Category.objects.get(name='ADVENTURE')
+    modern_cat = Category.objects.get(name='CLASSICS')
+    road_cat = Category.objects.get(name="ROADSTER")
+    rocket_cat = Category.objects.get(name="ROCKET3")
+    adv_bike = Bike.objects.filter(category=adventure_cat)
+    mod_bike = Bike.objects.filter(category=modern_cat)
+    road_bike = Bike.objects.filter(category=road_cat)
+    rocket_bike = Bike.objects.filter(category=rocket_cat)
+
+    context = {
+        "adv_bike": adv_bike,
+        "mod_bike": mod_bike,
+        "road_bike": road_bike,
+        "rocket_bike": rocket_bike
+    }
+
+    return render(request, 'customize.html', context)

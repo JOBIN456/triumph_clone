@@ -448,6 +448,23 @@
                             </div>
                       
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <div class="acces-card">
                             <div class="row" >
                                 <div class="col-md-3" style="padding: 95px;">
@@ -458,20 +475,24 @@
                                     <button class="btn btn-dark" style="background-color: black; color: white;">VIEW COLECTION</button>
                         
                                 </div>
+
+
+                                
+                                {% for bike in  adv_bike %}
                                 <div class="col-md-9 p-5 bikes" >
                                     <div class="col-md-3 ">
                                           <div class="card  bike">
-                                            <img class="card-img-top" src="/static/images/tiger.avif" alt="Card image cap">
+                                            <img class="card-img-top" src="{{ bike.image.url }}" alt="Card image cap">
                                             <div style="height:2px;background-color:rgb(118, 118, 118);"></div>
                                             <div class="card-body">
-                                                <h3 class="card-title" style="height:20px ;">Card title</h3>
-                                                <h6>price</h6>
+                                                <h3 class="card-title" style="height:20px ;">{{  bike.name }}</h3>
+                                                <h6> ${{ bike.price }}</h6>
                                        
                                                 <p class="card-text">
                                                     <ul>
-                                                        <li>1</li>
-                                                        <li>2</li>
-                                                        <li>3</li>
+                                                        <li>{{ bike.description1 }}</li>
+                                                        <li>{{ bike.description2 }}</li>
+                                                        <li>{{  bike.description3 }}</li>
                                                     </ul>
                                                 </p>
                                                 <div style="height:2px;background-color:rgb(118, 118, 118); width:287px;margin-left: -21px;/*! display: flex; *//*! margin: 0; */"></div>
@@ -484,6 +505,7 @@
                                             </div>
                                           </div>
                                     </div>
+                                    {% endfor %}
                                 <div class="col-md-3">
                                         <div class="card bike">
                                             <img class="card-img-top" src="/static/images/tiger.avif" alt="Card image cap">
