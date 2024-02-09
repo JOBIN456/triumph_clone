@@ -933,8 +933,9 @@ transform: translate(-50%, -50%);
   left:250px;
   width:400px;
   top:10px;
- 
   display: none;
+ 
+  
  }
 .drop-down-bike:focus-within >.adventure-list{
   display: initial;
@@ -969,6 +970,30 @@ display: none;
 
 .listc:hover{
   transform: scale(1);
+}
+
+
+
+.card-img-bike{
+
+padding-right: 150px;
+width:600px;
+height:300px;
+
+
+}
+
+
+.modern-list{
+  position: absolute;
+  left:250px;
+  width:400px;
+  top:10px;
+  display: none;
+}
+
+.drop-down-bike-1:focus-within >.modern-list{
+  display: initial;
 }
 /* .bike_list ul {
   position:relative;
