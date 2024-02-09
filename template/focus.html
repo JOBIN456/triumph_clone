@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.disp{
+    left:400px;
+    position: absolute;
+    display: none;
+  
+}
+
+.drop-down:focus-within > .disp{
+    display: initial;
+}
+.disp1{
+    left:600px;
+    position: absolute;
+    display: none;
+   }
+
+.drop-down1:focus-within >.disp1{
+    display: initial;
+    width:100%;
+}
+
+
+.img-fluid-bike{
+  width:150px;
+  height:100px
+}
+
+
+.bikeName{
+  height:0;
+  font-size: 20px;
+  font-weight:500;
+  line-height: 5px;
+  width:200px;
+} 
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="drop-down">
+                <a href="#"> welcome</a>
+                    <ul class="disp">
+                        <li class="drop-down1">
+                            <button>
+
+                                <div class="card mb-3 border-0 listc" >
+                                    <div class="row g-0">
+                                      <div class="col-md-4">
+                                        <img src="/static/images/tiger-small.avif" class="img-fluid-bike rounded-start" alt="..." >
+                                      </div>
+                                      <div class="col-md-8">
+                                        <div class="card-body">
+                                          <h3 class="card-title bikeName">New tiger 900 Range</h3>                                            
+                                          <p class="card-text"><small class="text-muted">price coming soon</small></p>                                      
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </button>
+                            
+                            
+                            
+                            
+                            
+                           <ul class="disp1">
+                              <li><a href="#">bfhbdf</a></li>
+                               <li><a href="#">jncj</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">hello</a></li>
+                        <li><a href="#">hi</a></li>
+                    </ul>
+                </li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+
+        </ul>
+    </nav>
+</body>
+</html>

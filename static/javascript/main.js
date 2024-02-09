@@ -6,5 +6,9 @@ function zoomOut() {
 }
 
 
+// function toggleDropdown(dropdown) {
+//     dropdown.classList.toggle('active');
+//   }
+
 
 

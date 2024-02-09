@@ -1,13 +1,107 @@
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .dropdown {
+      display: inline-block;
+    }
 
-{% block content %}
-<h1>Bike Information</h1>
-    <button id="fetch-bike-button">Fetch Bike Data</button>
-    <div id="bike-details">
-        <p id="bike-name"></p>
-        <img id="bike-image" src="" alt="Bike Image">
-        <p id="bike-price"></p>
-    </div>
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+    }
 
-{% endblock %}
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+
+    /* Additional styles for better appearance */
+    .dropdown-content {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding: 8px 0;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+     }
+  </style>
+</head>
+<body>
+
+<div class="dropdown" onclick="toggleDropdown(this)">
+  <h3 style="margin-left: -400px;">MOTORCYCLES</h3>
+  <nav class="bike_list">
+    <ul>
+      <li class="dropdown bike">
+        <a href="#" onclick="toggleDropdown(this)">ADVENTURE</a>
+        <ul class="listu dropdown-content">
+          <li class="dropdown-detials">
+            <ul class="d-detials">
+              <li>
+                <a href="#">
+                    <div class="card m-5 border-0 listc" style="width:900px">
+                        <div class="card-header">Header</div>
+                        <div class="row no-gutters">
+                          <div class="col-md-4">
+                            <img src="..." class="card-img" alt="...">
+                          </div>
+                          <div class="col-md-6">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                  <!-- Your card content here -->
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3 style="margin-left: -200px;">ADVENTURE</h3>
+            <a href="#" class="listb">
+                <div class="card mb-3 border-0 listc" >
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="/static/images/tiger-small.avif" class="img-fluid-bike rounded-start" alt="..." >
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h3 class="card-title bikeName">New tiger 900 Range</h3>                                            
+                          <p class="card-text"><small class="text-muted">price coming soon</small></p>                                      
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <!-- Your card content here -->
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  function toggleDropdown(dropdown) {
+    dropdown.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html> -->
