@@ -30,6 +30,7 @@ urlpatterns = [
      path('reviews/',views.reviews,name="reviews"),
      path('dealer/',views.dealer,name="dealer"),
      path('customize/',views.customize,name="customize"),
+     path('view_bike_details/',views.view_bike_details,name="view_bike_details"),
  
 
 

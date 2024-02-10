@@ -80,6 +80,7 @@ def customize(request):
     modern_cat = Category.objects.get(name='CLASSICS')
     road_cat = Category.objects.get(name="ROADSTER")
     rocket_cat = Category.objects.get(name="ROCKET3")
+
     adv_bike = Bike.objects.filter(category=adventure_cat)
     mod_bike = Bike.objects.filter(category=modern_cat)
     road_bike = Bike.objects.filter(category=road_cat)
@@ -93,3 +94,5 @@ def customize(request):
     }
 
     return render(request, 'customize.html', context)
+def view_bike_details(request):
+    return render(request,'view_bike_details.html')

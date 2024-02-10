@@ -9,10 +9,10 @@ class Category(models.Model):
 class Bike(models.Model):
     image = models.ImageField(upload_to='bike_images/')
     name = models.CharField(max_length=200)
-    price = models.IntegerField()
-    description1 = models.TextField()
-    description2 = models.TextField()
-    description3 = models.TextField()
+    price = models.IntegerField(blank=True, null=True)
+    description1 = models.TextField(blank=True)
+    description2 = models.TextField(blank=True)
+    description3 = models.TextField(blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
