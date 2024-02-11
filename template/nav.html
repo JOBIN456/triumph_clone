@@ -256,8 +256,26 @@ style="background-color: black; ">
                           </ul>
                     </li>
                     <li class="drop-down-bike-1"><a href="#">MODEREN CLASSICS</a>
-                      <ul class="modern-list">
-                        <li>happy</li>
+                      <ul class="modern-list" style="overflow-y:auto; height: 800px; width:500px;">
+                        <li>
+                          {% for bike in mod_bike %}
+                          <a href="#">
+                            <div class="card mb-3 border-0 listc" >
+                              <div class="row g-0">
+                                  <div class="col-md-4">
+                                    <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                  </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h3 class="card-title bikeName">{{  bike.name }}</h3>                                            
+                                  <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{ bike.price }}</small></p>                                      
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        {% endfor %}
+                        </li>
                       </ul>
                     </li>
                     <li><a href="#">ROCKET3</a></li>

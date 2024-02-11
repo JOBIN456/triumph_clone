@@ -90,9 +90,14 @@ def customize(request):
         "adv_bike": adv_bike,
         "mod_bike": mod_bike,
         "road_bike": road_bike,
-        "rocket_bike": rocket_bike
+        "rocket_bike": rocket_bike,
+         "adventure_cat":adventure_cat,
+        "road_cat":  road_cat,
+         "rocket_cat": rocket_cat,
+         "modern_cat":  modern_cat,
     }
 
+   
     return render(request, 'customize.html', context)
 def view_bike_details(request):
     return render(request,'view_bike_details.html')

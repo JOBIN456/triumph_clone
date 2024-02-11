@@ -15,14 +15,18 @@
 
 <div class="acces-card">
     <div class="row" >
+        {% if adventure_cat %}
         <div class="col-md-3" style="padding: 95px;">
-            <h3>Adventure</h3>
+            <h3>
+                {{ adventure_cat.name }}
+            </h3>
             <p></p>
-            <p>Open up a world of adventure, with motorbikes built to go the distance, ready to go anywhere and take on anything.</p>
+            <p>{{ adventure_cat.description }}</p>
             <p></p>
-            <button class="btn btn-dark" style="background-color: black; color: white;">VIEW COLECTION</button>
-
+            <button class="btn btn-dark" style="background-color: black; color: white;">VIEW COLLECTION</button>
         </div>
+    {% endif %}
+    
         <div class="col-md-9 p-5 bikes" >
             <div class="col-md-3 ">
                   <div class="card  bike">
@@ -81,14 +85,16 @@
         </div>
         <div class="acces-card">
             <div class="row" >
+                {% if modern_cat %}
                 <div class="col-md-3" style="padding: 95px;">
-                    <h3>Classics</h3>
+                    <h3>{{ modern_cat.name }}</h3>
                     <p></p>
-                    <p>The legendary Bonneville bloodline is built into our Modern Classics, with an unparalleled performance history, racing success and cultural impact.</p>
+                    <p>{{ modern_cat.description }}</p>
                     <p></p>
                     <button class="btn btn-dark" style="background-color: black; color: white;">VIEW COLECTION</button>
         
                 </div>
+                {% endif %}
                 <div class="col-md-9 p-5 bikes" >
                   {% for bike in mod_bike %}
                   <div class="col-md-3 ">
@@ -123,16 +129,23 @@
                     </div>
               
                 </div>
-                <div class="acces-card">
-                    <div class="row" >
-                        <div class="col-md-3" style="padding: 95px;">
-                            <h3>Roadsters</h3>
-                            <p></p>
-                            <p>Triumph’s game-changing bikes and incredible signature triple engines are built for power, torque and instant responsiveness.</p>
-                            <p></p>
-                            <button class="btn btn-dark" style="background-color: black; color: white;">VIEW COLECTION</button>
+               
+                    <div class="acces-card">
+                        <div class="row" >
+                            {% if road_cat %}
+                            <div class="col-md-3" style="padding: 95px;">
+                                <h3>
+                                    {{ road_cat.name }}
+                                </h3>
+                                <p></p>
+                                <p>{{ road_cat.description }}</p>
+                                <p></p>
+                                <button class="btn btn-dark" style="background-color: black; color: white;">VIEW COLLECTION</button>
+                            </div>
+                        {% endif %}
                 
-                        </div>
+                
+                      
                         <div class="col-md-9 p-5 bikes" >
                           {% for bike in road_bike %}
                           <div class="col-md-3 ">
@@ -171,16 +184,17 @@
 
                         <div class="acces-card">
                             <div class="row" >
+                                {% if rocket_cat %}
                                 <div class="col-md-3" style="padding: 95px;">
-                                    <h3>ROCKET 3</h3>
+                                    <h3>{{rocket_cat.name}}</h3>
                                     <p></p>
-                                    <p>Open up a world of adventure, with motorbikes built to go the distance, ready to go anywhere and take on anything</p>
+                                    <p>{{ rocket_cat.description  }}</p>
                                     <p></p>
                                     <button class="btn btn-dark" style="background-color: black; color: white;">VIEW COLECTION</button>
                         
                                 </div>
 
-
+                                {% endif %}
                                 
                              
                                 <div class="col-md-9 p-5 bikes" >
