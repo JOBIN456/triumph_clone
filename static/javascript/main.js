@@ -12,3 +12,8 @@ function zoomOut() {
 
 
 
+    // function toggleAdventureInfo() {
+    //     const adventureInfo = document.querySelector('.adventure-info');
+    //     adventureInfo.classList.toggle('show');
+    // }
+

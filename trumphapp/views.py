@@ -1,6 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Bike,Category
-from django.http import JsonResponse
 # Create your views here.
 def home(request):
     return render(request,"home.html")
@@ -83,6 +82,7 @@ def customize(request):
 
     adv_bike = Bike.objects.filter(category=adventure_cat)
     mod_bike = Bike.objects.filter(category=modern_cat)
+    print(mod_bike)
     road_bike = Bike.objects.filter(category=road_cat)
     rocket_bike = Bike.objects.filter(category=rocket_cat)
 
@@ -99,5 +99,47 @@ def customize(request):
 
    
     return render(request, 'customize.html', context)
+# def nav(request):
+    
+
+#     adv_bike = Bike.objects.filter(Category='ADVENTURE')
+#     mod_bike = Bike.objects.filter(Category='CLASSICS')
+#     road_bike = Bike.objects.filter(Category='ROADSTER')
+#     rocket_bike = Bike.objects.filter(Category='ROCKET3')
+
+#     context = {
+#         "adv_bike": adv_bike,
+#         "mod_bike": mod_bike,
+#         "road_bike": road_bike,
+#         "rocket_bike": rocket_bike,
+       
+#     }
+
+#     return render(request, 'nav.html', context)
+
+# def nav(request):
+#     adventure_category = Category.objects.get(name='ADVENTURE')
+#     adventure_bikes = Bike.objects.filter(category=adventure_category)
+#     print(adventure_bikes)
+
+#     classics_category = Category.objects.get(name='CLASSICS')
+#     classics_bikes = Bike.objects.filter(category=classics_category)
+
+#     roadster_category = Category.objects.get(name='ROADSTER')
+#     roadster_bikes = Bike.objects.filter(category=roadster_category)
+
+#     rocket3_category = Category.objects.get(name='ROCKET3')
+#     rocket3_bikes = Bike.objects.filter(category=rocket3_category)
+
+#     context = {
+#         "adventure_bikes": adventure_bikes,
+#         "classics_bikes": classics_bikes,
+#         "roadster_bikes": roadster_bikes,
+#         "rocket3_bikes": rocket3_bikes,
+#     }
+
+#     return render(request, 'base.html', context)
+
+
 def view_bike_details(request):
     return render(request,'view_bike_details.html')
