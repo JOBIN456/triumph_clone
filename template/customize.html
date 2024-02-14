@@ -45,7 +45,7 @@
                         <div class="acces-a">
                             <a href="#" style="color:rgb(249, 6, 6)">CONFIGURE</a>
                             <div style="width:1px;background-color: rgb(117, 117, 117);margin-top: 7px;"></div>
-                            <a href="{% url 'view_bike_details' %}" style="color:black">VIEW DETAILS</a>
+                            <a href="#" style="color:black">VIEW DETAILS</a>
                         </div>
 
                     </div>
@@ -72,8 +72,7 @@
                             <div class="acces-a">
                                 <a href="#" style="color:rgb(249, 6, 6)">CONFIGURE</a>
                                 <div style="width:1px;background-color: rgb(117, 117, 117);margin-top: 7px;"></div>
-                                <a href="#" style="color:black">VIEW DETAILS</a>
-                            </div>
+                                <a href="{% url 'view_bike_details' bike_name=bike.name %}" style="color:black">VIEW DETAILS</a>                            </div>
     
                         </div>
                       </div>

@@ -8,7 +8,7 @@ urlpatterns = [
      path('owner/',views.owner,name="owner"),
      path('your_trumph/',views.your_trumph,name="your_trumph"),
      path('discover/',views.discover,name="discover"),
-     path('access/',views.access,name="access"),
+   
      path('news/',views.news,name="news"),
      path('brand/',views.brand,name="brand"),
      path('inspiration/',views.inspiration,name="inspiration"),
@@ -31,8 +31,8 @@ urlpatterns = [
      path('reviews/',views.reviews,name="reviews"),
      path('dealer/',views.dealer,name="dealer"),
      path('customize/',views.customize,name="customize"),
-     path('view_bike_details/',views.view_bike_details,name="view_bike_details"),
- 
+     path('bike_details/<str:bike_name>/',views.view_bike_details, name='view_bike_details'), 
+     path('model/<str:bike_name1>/',views.model,name="model"),
 
 
 

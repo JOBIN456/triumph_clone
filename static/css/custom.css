@@ -1135,5 +1135,39 @@ background: linear-gradient(90deg, rgba(215,5,5,1) 0%, rgba(246,18,18,1) 54%, rg
 .v-title-1{
   margin-top: 3cm;
   margin-bottom:3cm;
-  padding-left: 500px;
-padding-right: 500px;}
+  padding-left: 600px;
+padding-right: 600px;}
+
+
+
+#myVideo {
+  position:relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.right_nav{
+
+  width: 650px;
+  border-radius: 10px;
+  position: relative;
+  
+  height: 800px;
+}
+.right_nav ul li {
+  text-decoration: none;
+  position: relative;
+  list-style-type: none;
+  left: 1212px;
+  top: 100px;
+  margin-bottom: 50px;
+  
+}
+
+.red-black{
+  width:40px;
+  height: 40px;
+  border-radius:50%;
+}

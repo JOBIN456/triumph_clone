@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404
-from .models import Bike,Category
+from .models import Bike,Category,BikeDetails
 # Create your views here.
 def home(request):
     return render(request,"home.html")
@@ -15,8 +15,6 @@ def your_trumph(request):
 def discover(request):
     return render(request,'discover.html')
 
-def access(request):
-    return render(request,'access.html')
 
 def news(request):
     return render(request,'news.html')
@@ -141,5 +139,11 @@ def customize(request):
 #     return render(request, 'base.html', context)
 
 
-def view_bike_details(request):
-    return render(request,'view_bike_details.html')
+def view_bike_details(request,bike_name):
+     bike_detail = get_object_or_404(BikeDetails, name=bike_name)
+     return render(request, 'view_bike_details.html', {'bike_detail': bike_detail})
+
+def model(request,bike_name1):
+    bike_detail = get_object_or_404(BikeDetails, name=bike_name1)
+
+    return render(request,'model.html',{'bike_detail': bike_detail})
