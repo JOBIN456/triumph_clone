@@ -143,7 +143,25 @@ def view_bike_details(request,bike_name):
      bike_detail = get_object_or_404(BikeDetails, name=bike_name)
      return render(request, 'view_bike_details.html', {'bike_detail': bike_detail})
 
-def model(request,bike_name1):
-    bike_detail = get_object_or_404(BikeDetails, name=bike_name1)
+def model(request,bike_name):
+    bike_detail = get_object_or_404(BikeDetails, name=bike_name)
 
     return render(request,'model.html',{'bike_detail': bike_detail})
+
+
+def specification(request,bike_name):
+    bike_detail = get_object_or_404(BikeDetails, name=bike_name)
+
+    return render(request,'specification.html',{'bike_detail': bike_detail})
+
+
+def reason(request,bike_name):
+    bike_detail = get_object_or_404(BikeDetails, name=bike_name)
+
+    return render(request,'reason.html',{'bike_detail': bike_detail})
+
+
+def access(request,bike_name):
+    bike_detail = get_object_or_404(BikeDetails, name=bike_name)
+
+    return render(request,'access.html',{'bike_detail': bike_detail})

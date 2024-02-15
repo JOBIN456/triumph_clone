@@ -32,9 +32,10 @@ urlpatterns = [
      path('dealer/',views.dealer,name="dealer"),
      path('customize/',views.customize,name="customize"),
      path('bike_details/<str:bike_name>/',views.view_bike_details, name='view_bike_details'), 
-     path('model/<str:bike_name1>/',views.model,name="model"),
-
-
+     path('model/<str:bike_name>/',views.model,name="model"),
+     path('specification/<str:bike_name>/',views.specification,name="specification"),
+     path('reason/<str:bike_name>/',views.reason,name="reason"),
+     path('access/<str:bike_name>/',views.access,name="access"),
 
 
 

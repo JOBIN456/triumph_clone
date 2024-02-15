@@ -139,5 +139,81 @@ class BikeDetails(models.Model):
     c_para1=models.TextField(blank=True)
     c_para2=models.TextField(blank=True)
 
+    reason_image=models.ImageField(upload_to='bike_images/',null=True)
+
+    reason_para1=models.TextField(blank=True)
+    reason_para2=models.TextField(blank=True)
+    reason_para3=models.TextField(blank=True)
+    reason_para4=models.TextField(blank=True)
+    reason_para5=models.TextField(blank=True)
+    reason_para6=models.TextField(blank=True)
+    reason_para7=models.TextField(blank=True)
+    reason_para8=models.TextField(blank=True)
+    reason_para9=models.TextField(blank=True)
+    reason_para10=models.TextField(blank=True)
+    reason_para11=models.TextField(blank=True)
+    reason_para12=models.TextField(blank=True)
+
+
+    reason_tittle1=models.TextField(blank=True)
+    reason_tittle2=models.TextField(blank=True)
+    reason_tittle3=models.TextField(blank=True)
+    reason_tittle4=models.TextField(blank=True)
+    reason_tittle5=models.TextField(blank=True)
+    reason_tittle6=models.TextField(blank=True)
+    reason_tittle7=models.TextField(blank=True)
+    reason_tittle8=models.TextField(blank=True)
+
+    reason_video = models.FileField(upload_to='videos_uploaded',null=True,validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
+    reason_image1=models.ImageField(upload_to='bike_images/',null=True)
+    reason_image2=models.ImageField(upload_to='bike_images/',null=True)
+    reason_image3=models.ImageField(upload_to='bike_images/',null=True)
+
+
+
+    access_para1=models.TextField(blank=True)
+    access_para2=models.TextField(blank=True)
+    access_para3=models.TextField(blank=True)
+    access_para4=models.TextField(blank=True)
+    access_para5=models.TextField(blank=True)
+    access_para6=models.TextField(blank=True)
+    access_para6=models.TextField(blank=True)
+    access_para8=models.TextField(blank=True)
+    access_para9=models.TextField(blank=True)
+    access_para10=models.TextField(blank=True)
+    access_para11=models.TextField(blank=True)
+    access_para12=models.TextField(blank=True)
+
+
+    bold_tittle1=models.TextField(blank=True)
+    bold_tittle2=models.TextField(blank=True)
+    bold_tittle3=models.TextField(blank=True)
+    bold_tittle4=models.TextField(blank=True)
+
+    access_li1=models.TextField(blank=True)
+    access_li2=models.TextField(blank=True)
+    access_li3=models.TextField(blank=True)
+    access_li4=models.TextField(blank=True)
+    access_li5=models.TextField(blank=True)
+    access_li6=models.TextField(blank=True)
+    access_li7=models.TextField(blank=True)
+    access_li8=models.TextField(blank=True)
+    access_li9=models.TextField(blank=True)
+    access_li10=models.TextField(blank=True)
+    access_li11=models.TextField(blank=True)
+    access_li12=models.TextField(blank=True)
+    access_li13=models.TextField(blank=True)
+    access_li14=models.TextField(blank=True)
+    access_li15=models.TextField(blank=True)
+    access_li16=models.TextField(blank=True)
+    access_li17=models.TextField(blank=True)
+
+
+    access_image1=models.ImageField(upload_to='bike_images/',null=True)
+    access_image2=models.ImageField(upload_to='bike_images/',null=True)
+    access_image3=models.ImageField(upload_to='bike_images/',null=True)
+    access_image4=models.ImageField(upload_to='bike_images/',null=True)
+    access_image5=models.ImageField(upload_to='bike_images/',null=True)
+    access_image6=models.ImageField(upload_to='bike_images/',null=True)
     def __str__(self):
         return self.name

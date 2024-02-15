@@ -15,16 +15,16 @@
         </li>
         
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'model' bike_name1=bike_detail.name %}">MODEL</a>
+            <a class="nav-link" href="{% url 'model' bike_name=bike_detail.name %}">MODEL</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">SPECIFICATION</a>
+            <a class="nav-link" href="{% url 'specification' bike_name=bike_detail.name %}">SPECIFICATION</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">REASON TO RIDE</a>
+            <a class="nav-link" href="{% url 'reason' bike_name=bike_detail.name %}">REASON TO RIDE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ACCESSORIES</a>
+            <a class="nav-link" href="{% url 'access' bike_name=bike_detail.name %}">ACCESSORIES</a>
           </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -64,7 +64,7 @@
   <h3 style="width: 576px;"><b>
     CONFIDENCE INSPIRING CAPABILITY </b></h3>
     <p></p>
-    <p>{{ bike_detail.paragraph }}</p>
+    <p style="display:flex;justify-content: center;">{{ bike_detail.paragraph }}</p>
       <div class="bike-h-image">
           <img src="{{ bike_detail.small_image.url }}" alt="image">
       </div>

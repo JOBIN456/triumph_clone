@@ -1,0 +1,496 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:sticky; top:0; z-index: 5;">
+    <a class="navbar-brand" href="#" style="color:red;"><i>{{ bike_detail.name }}</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'view_bike_details' bike_name=bike_detail.name  %}">Overview <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'model' bike_name=bike_detail.name %}">MODEL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'specification' bike_name=bike_detail.name  %}">SPECIFICATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'reason' bike_name=bike_detail.name %}">REASON TO RIDE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'access' bike_name=bike_detail.name %}">ACCESSORIES</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto"> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">Customize ></a>
+          </li>
+
+        <li class="nav-item">
+            <button class="btn  btn-danger">ENQUIRE NOW</button>
+                </li></ul>
+          </li>
+      </form>
+    </div>
+  </nav>
+
+
+  <div class="dark-tittle">
+    <h3>SPECIFICATIONS</h3>
+  </div>
+  <div class="team-accordion">
+    <div class="accordion-item" style="padding-left: 100px;
+    padding-right: 100px;">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button style="width: 100%;
+            text-align: left;
+            background-color: #363939;
+            color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+
+      
+                      Engine & Transmission
+          
+            </button>
+          </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+                  <div class="row">
+                      <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                        <p>Type </p>
+                      </div>
+                      <div class="col-md-9">
+                          <p> {{ bike_detail.type  }}</p> 
+                      </div>    
+                  </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Capacity </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Capacity  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Bore </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Bore  }}</p> 
+                    </div>    
+                </div>
+                <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Stroke </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Stroke  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Compression </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Compression  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Max Power EC </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Max_Power_EC  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Max Torque EC  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Max_Torque_EC  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> System  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.System   }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Exhaust </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Exhauste  }}</p> 
+                    </div>    
+                  </div>
+                <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                  <div class="row">
+                      <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                        <p> Final Drive  </p>
+                      </div>
+                      <div class="col-md-9">
+                          <p> {{ bike_detail.Final_Drive  }}</p> 
+                      </div>    
+                  </div>
+                <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                  <div class="row">
+                      <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                        <p>Clutch </p>
+                      </div>
+                      <div class="col-md-9">
+                          <p> {{ bike_detail.Clutch  }}</p> 
+                      </div>    
+                  </div>
+                <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                  <div class="row">
+                      <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                        <p>Gearbox </p>
+                      </div>
+                      <div class="col-md-9">
+                          <p> {{ bike_detail.Gearbox  }}</p> 
+                      </div>    
+                  </div>
+              </div>
+        </div>
+      </div>
+      <div class="accordion-item" style="padding-left: 100px;
+    padding-right: 100px;">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button style="width: 100%;
+            text-align: left;
+            background-color: #363939;
+            color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+
+      
+                      CHASSIS
+          
+            </button>
+          </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+            <div class="accordion-body">
+                  <div class="row">
+                      <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                        <p>Frame </p>
+                      </div>
+                      <div class="col-md-9">
+                          <p> {{ bike_detail.Frame  }}</p> 
+                      </div>    
+                  </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Swingarm </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Swingarm  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Front Wheel </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Front_Wheel  }}</p> 
+                    </div>    
+                </div>
+                <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Rear Wheel  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Rear_Wheel   }}</p> 
+                    </div>    
+                </div>
+
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Front Tyre  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Front_Tyre  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Rear Tyre  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Rear_Tyre  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Front Suspension  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Front_Suspension  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Rear Suspension </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Rear_Suspension   }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Front Brakes</p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Front_Brakes  }}</p> 
+                    </div>    
+                  </div>
+                <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                  <div class="row">
+                      <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                        <p> Rear Brakes  </p>
+                      </div>
+                      <div class="col-md-9">
+                          <p> {{ bike_detail.Rear_Brakes  }}</p> 
+                      </div>    
+                  </div>
+                <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                  <div class="row">
+                      <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                        <p>Instrument Display and Functions </p>
+                      </div>
+                      <div class="col-md-9">
+                          <p> {{ bike_detail.Instrument  }}</p> 
+                      </div>    
+                  </div>
+                
+              </div>
+        </div>
+      </div>
+
+
+
+      <div class="accordion-item" style="padding-left: 100px;padding-right: 100px;">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button style="width: 100%;
+            text-align: left;
+            background-color: #363939;
+            color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+
+      
+                      DIMENSIONS & WEIGHTS
+          
+            </button>
+          </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+            <div class="accordion-body">
+                  <div class="row">
+                      <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                        <p>Width Handlebars  </p>
+                      </div>
+                      <div class="col-md-9">
+                          <p> {{ bike_detail.Handlebars  }}</p> 
+                      </div>    
+                  </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Height Without Mirror  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Height  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Front Wheel </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Front_Wheel  }}</p> 
+                    </div>    
+                </div>
+                <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Seat Height </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Seat_Height   }}</p> 
+                    </div>    
+                </div>
+
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Wheelbase </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Wheelbase  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Rake  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Rake  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Trail   </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Trail  }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Tank Capacity</p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Tank   }}</p> 
+                    </div>    
+                </div>
+              <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p> Wet Weight </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Wet_Weight  }}</p> 
+                    </div>    
+                  </div>
+                
+                
+              </div>
+        </div>
+      </div>
+
+
+
+      <div class="accordion-item" style="padding-left: 100px;padding-right: 100px;">
+        <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+          <button style="width: 100%;
+          text-align: left;
+          background-color: #363939;
+          color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true" aria-controls="panelsStayOpen-collapseSix">
+
+    
+                 FUEL CONSUMPTION
+        
+          </button>
+        </h2>
+  <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+          <div class="accordion-body">
+                <div class="row">
+                    <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                      <p>Fuel Consumption  </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p> {{ bike_detail.Fuel_Consumption  }}</p> 
+                    </div>    
+                </div>
+            <div class="black-long-line" style="height:1px; width:100%; background-color:black"></div>
+              <div class="row">
+                  <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                    <p>CO2 Figures  </p>
+                  </div>
+                  <div class="col-md-9">
+                      <p> {{ bike_detail.CO2_Figures  }}</p> 
+                  </div>    
+              </div>
+            
+              
+              
+            </div>
+      </div>
+    </div>
+
+    <div class="accordion-item" style="padding-left: 100px;padding-right: 100px;">
+      <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+        <button style="width: 100%;
+        text-align: left;
+        background-color: #363939;
+        color: aliceblue;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="true" aria-controls="panelsStayOpen-collapseSeven">
+
+  
+              SERVICE
+      
+        </button>
+      </h2>
+<div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+        <div class="accordion-body">
+              <div class="row">
+                  <div class="col-md-2" style="background-color:rgb(245, 241, 241);margin-left: 15px;" >
+                    <p>Service Interval </p>
+                  </div>
+                  <div class="col-md-9">
+                      <p> {{ bike_detail.Service_Interval  }}</p> 
+                  </div>    
+              </div>
+          </div>
+    </div>
+  </div>
+
+  </div>
+  <div class="foot" style="background-color: #cecece;">
+    <div class="sub" style="text-align: center; display: grid; justify-content: center;">
+  
+      <h3 >keep in touch</h3>
+  
+      <p>Submit your email address below and we'll keep you updated with new and relevant <br>Triumph motorcycle content directly to your inbox.</p>
+  <div class="row" style="justify-content:center ;">
+      <p style="text-align: center; flex-basis:100%; position: relative; left:-181px;">EMAIL</p>
+      <form id="myForm">
+      <input style="width: 11cm;height: 1cm;" type="email" id="email" name="email" placeholder="Enter the email address" required>
+  </div>
+  <div>
+    <button class="rc_b" type="submit">KEEP ME INFORMED</button>
+  </div>
+  </form>
+  </div>
+  
+  </div>
+  <div class="container-fluid" style="background-color: black; height:70px; margin-bottom: 100px;">
+    <div class="row m" >
+    <div class="col-md-6">
+      <h3 style="text-align:center; color: white; font-size:x-medium;"><img src="/static/images/equilizer.png" width="40px" length="40px"> CONFIGURE</h3>
+  
+    </div>
+    <div class="col-md-6">
+      <h3 style="text-align:center; color: white; font-size:x-medium;"><img src="/static/images/icon2.png" width="40px" length="40px">TEST RIDE</h3>
+  
+  
+    </div>
+    </div>
+    </div>
+{% endblock %}
