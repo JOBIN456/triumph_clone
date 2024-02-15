@@ -51,10 +51,12 @@ class BikeDetails(models.Model):
     miles=models.IntegerField(blank=True, null=True)
 
 
-    bike = models.ForeignKey(Bike, on_delete=models.CASCADE,null=True)
-    carousel_image=models.ImageField(upload_to='bike_images/',null=True)
-    carousel_image2=models.ImageField(upload_to='bike_images/',null=True)
-    carousel_image3=models.ImageField(upload_to='bike_images/',null=True)
+    bike = models.ForeignKey(Bike, on_delete=models.CASCADE,null=True ,blank=True)
+    carousel_image=models.ImageField(upload_to='bike_images/',null=True ,blank=True )
+    carousel_image=models.ImageField(upload_to='bike_images/',null=True  ,blank=True )
+    carousel_image=models.ImageField(upload_to='bike_images/',null=True  ,blank=True)
+    carousel_image2=models.ImageField(upload_to='bike_images/',null=True,blank=True)
+    carousel_image3=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
 
     carousel_title1=models.TextField(blank=True)
     carousel_title2=models.TextField(blank=True)
@@ -111,11 +113,11 @@ class BikeDetails(models.Model):
     Connectivity =models.CharField(max_length=800,blank=True) 
     Lighting =models.CharField(max_length=800,blank=True) 
 
-    mc_image1=models.ImageField(upload_to='bike_images/',null=True)
-    mc_image2=models.ImageField(upload_to='bike_images/',null=True)
-    mc_image3=models.ImageField(upload_to='bike_images/',null=True)
-    mc_image4=models.ImageField(upload_to='bike_images/',null=True)
-    mc_image5=models.ImageField(upload_to='bike_images/',null=True)
+    mc_image1=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    mc_image2=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    mc_image3=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    mc_image4=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    mc_image5=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
 
     mc_tittle1=models.TextField(blank=True)
     mc_tittle2=models.TextField(blank=True)
@@ -130,8 +132,8 @@ class BikeDetails(models.Model):
     mc_para5=models.TextField(blank=True)
 
 
-    c_image1=models.ImageField(upload_to='bike_images/',null=True)
-    c_image2=models.ImageField(upload_to='bike_images/',null=True)
+    c_image1=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    c_image2=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
 
     c_tittle1=models.TextField(blank=True)
     c_tittle2=models.TextField(blank=True)
@@ -139,7 +141,7 @@ class BikeDetails(models.Model):
     c_para1=models.TextField(blank=True)
     c_para2=models.TextField(blank=True)
 
-    reason_image=models.ImageField(upload_to='bike_images/',null=True)
+    reason_image=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
 
     reason_para1=models.TextField(blank=True)
     reason_para2=models.TextField(blank=True)
@@ -164,10 +166,10 @@ class BikeDetails(models.Model):
     reason_tittle7=models.TextField(blank=True)
     reason_tittle8=models.TextField(blank=True)
 
-    reason_video = models.FileField(upload_to='videos_uploaded',null=True,validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
-    reason_image1=models.ImageField(upload_to='bike_images/',null=True)
-    reason_image2=models.ImageField(upload_to='bike_images/',null=True)
-    reason_image3=models.ImageField(upload_to='bike_images/',null=True)
+    reason_video = models.FileField(upload_to='videos_uploaded',null=True,validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])] ,blank=True)
+    reason_image1=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    reason_image2=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    reason_image3=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
 
 
 
@@ -209,11 +211,11 @@ class BikeDetails(models.Model):
     access_li17=models.TextField(blank=True)
 
 
-    access_image1=models.ImageField(upload_to='bike_images/',null=True)
-    access_image2=models.ImageField(upload_to='bike_images/',null=True)
-    access_image3=models.ImageField(upload_to='bike_images/',null=True)
-    access_image4=models.ImageField(upload_to='bike_images/',null=True)
-    access_image5=models.ImageField(upload_to='bike_images/',null=True)
-    access_image6=models.ImageField(upload_to='bike_images/',null=True)
+    access_image1=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    access_image2=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    access_image3=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    access_image4=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    access_image5=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
+    access_image6=models.ImageField(upload_to='bike_images/',null=True ,blank=True)
     def __str__(self):
         return self.name
