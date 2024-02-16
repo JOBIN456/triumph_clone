@@ -41,6 +41,9 @@
     </div>
   </nav>
 
+
+  
+
   <nav class="right_nav">
     <ul>
         <li><a href="#"><img class="red-black" src="/static/images/redblack.avif"></a></li>
@@ -53,6 +56,7 @@
   </nav>
   <div class="dark-tittle">
     <h3>SPECIFICATIONS</h3>
+  </div>
   </div>
 
   <div class="team-accordion">
@@ -657,7 +661,7 @@
             <div class="row" style="background-color: white;">
                 <div class="col-md-6" style="padding-left:50px ;">
                     
-                  <img style="width: 900px;height: 100%;padding-right: 200px;" src="{{ bike_detail.mc_image1.url  }}">
+                  <img style="width: 900px;height: 100%;padding-right: 200px;" src="/media/{{ bike_detail.mc_image1  }}">
                 </div>
                 <div class="col-md-6">
                   <h4 style="color:rgb(85, 84, 84) ;">1/5</h4>
@@ -665,7 +669,7 @@
                       <h1>  </h1>
                       <h1>   </h1>
                       <h1 style="color: #070707;">{{ bike_detail.mc_tittle1 }}</h1>
-                      <p style="color:black ;">{{ bike_detail.mc_para1 }}</p>
+                      <p style="color:black ;padding-right:40px ;" >{{ bike_detail.mc_para1 }}</p>
                         <p>  </p>
                     </div>
                 </div>
@@ -676,14 +680,14 @@
         <div class="carousel-item">
             <div class="row" style="background-color: white;">
                 <div class="col-md-6" style="padding-left:50px ;">
-                  <img style="width: 900px;height: 100%;padding-right: 200px;" src="{{ bike_detail.mc_image2.url  }}">                </div>
+                  <img style="width: 900px;height: 100%;padding-right: 200px;" src="/media/{{ bike_detail.mc_image2  }}">                </div>
                 <div class="col-md-6">
                   <h4 style="color:rgb(85, 84, 84) ;">2/5</h4>
   
                   <div class="carousel-caption" style="text-align: left; top: 20; left: 0; right: auto; bottom: auto;">
     
                     <h1 style="color: #070707;">{{ bike_detail.mc_tittle2 }}</h1>
-                    <p style="color:black ;">{{ bike_detail.mc_para2 }}</p>
+                    <p style="color:black ; padding-right:40px ;">{{ bike_detail.mc_para2 }}</p>
                 </div>
                 
                 </div>
@@ -692,7 +696,7 @@
         <div class="carousel-item">
           <div class="row" style="background-color: white;">
               <div class="col-md-6" style="padding-left:50px ;">
-                <img style="width: 900px;height: 100%;padding-right: 200px;" src="{{ bike_detail.mc_image3.url  }}">
+                <img style="width: 900px;height: 100%;padding-right: 200px;" src="/media/{{ bike_detail.mc_image3  }}">
               </div>
               <div class="col-md-6">
                 <h4 style="color:rgb(85, 84, 84) ;">3/5</h4>
@@ -700,7 +704,7 @@
                 <div class="carousel-caption" style="text-align: left; top: 20; left: 0; right: auto; bottom: auto;">
   
                   <h1 style="color: #070707;">{{ bike_detail.mc_tittle3 }}</h1>
-                  <p style="color:black ;">{{ bike_detail.mc_para3 }}</p>
+                  <p style="color:black ;padding-right:40px;">{{ bike_detail.mc_para3 }}</p>
               </div>
               
               </div>
@@ -709,7 +713,7 @@
       <div class="carousel-item">
         <div class="row" style="background-color: white;">
             <div class="col-md-6" style="padding-left:50px ;">
-              <img style="width: 900px;height: 100%;padding-right: 200px;" src="{{ bike_detail.mc_image4.url  }}">
+              <img style="width: 900px;height: 100%;padding-right: 200px;" src="/media/{{ bike_detail.mc_image4  }}">
             </div>
             <div class="col-md-6">
               <h4 style="color:rgb(85, 84, 84) ;">4/5</h4>
@@ -717,7 +721,7 @@
               <div class="carousel-caption" style="text-align: left; top: 20; left: 0; right: auto; bottom: auto;">
 
                 <h1 style="color: #070707;">{{ bike_detail.mc_tittle4 }}</h1>
-                <p style="color:black ;">{{ bike_detail.mc_para4 }}</p>
+                <p style="color:black ;padding-right:40px ;">{{ bike_detail.mc_para4 }}</p>
             </div>
             
             </div>
@@ -726,7 +730,7 @@
     <div class="carousel-item">
       <div class="row" style="background-color: white;">
           <div class="col-md-6" style="padding-left:50px ;">
-            <img style="width: 900px;height: 100%;padding-right: 200px;" src="{{ bike_detail.mc_image5.url  }}">
+            <img style="width: 900px;height: 100%;padding-right: 200px;" src="/media/{{ bike_detail.mc_image5  }}">
           </div>
           <div class="col-md-6">
             <h4 style="color:rgb(85, 84, 84) ;">5/5</h4>
@@ -734,7 +738,7 @@
             <div class="carousel-caption" style="text-align: left; top: 20; left: 0; right: auto; bottom: auto;">
 
               <h1 style="color: #070707;">{{ bike_detail.mc_tittle5 }}</h1>
-              <p style="color:black ;">{{ bike_detail.mc_para5 }}</p>
+              <p style="color:black ;padding-right:40px ;">{{ bike_detail.mc_para5 }}</p>
           </div>
           
           </div>
@@ -754,7 +758,7 @@
   </div>
   <div class="row" style="margin-top:10cm ;">
     <div class="col-md-6" style="padding-left: 46px; padding-right: 0px;">
-        <img  style="width:100%;" src="{{ bike_detail.c_image1.url  }}">
+        <img  style="width:100%;" src="/media/{{ bike_detail.c_image1  }}">
     </div>
     
     <div class="col-md-6 h" >
@@ -773,9 +777,12 @@
     </div>
     
     <div class="col-md-6" style="padding-left: 0px;">
-      <img style="width: 100%;" src="{{ bike_detail.c_image2.url  }}">
+      <img style="width: 100%;" src="/media/{{ bike_detail.c_image2  }}">
     </div>
   </div>
+
+
+
 
   <div class="t_f_1"  style="margin-bottom:200px ;">
     <div class="row">
@@ -852,4 +859,5 @@
       </div>
       </div>
       </div>
+   
 {% endblock %}

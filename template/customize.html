@@ -30,7 +30,7 @@
     {% endif %}
     
         <div class="col-md-9 p-5 bikes" >
-            <div class="col-md-3 ">
+            <!-- <div class="col-md-3 ">
                   <div class="card  bike">
                     <img class="card-img-top" src="/static/images/T9.avif" alt="Card image cap">
                     <div style="height:2px;background-color:rgb(118, 118, 118);"></div>
@@ -50,12 +50,12 @@
 
                     </div>
                   </div>
-            </div>
+            </div> -->
             {% for bike in  adv_bike %}
           
                 <div class="col-md-3 ">
                       <div class="card  bike">
-                        <img class="card-img-top" src="{{ bike.image.url }}" alt="Card image cap">
+                        <img class="card-img-top" src="/media/{{ bike.image }}" alt="Card image cap">
                         <div style="height:2px;background-color:rgb(118, 118, 118);"></div>
                         <div class="card-body">
                             <h3 class="card-title" style="height:20px ; text-align: center; font-size: 20px;"><b>{{  bike.name }}</b></h3>
@@ -117,7 +117,7 @@
                           <div class="acces-a">
                               <a href="#" style="color:rgb(249, 6, 6)">CONFIGURE</a>
                               <div style="width:1px;background-color: rgb(117, 117, 117);margin-top: 7px;"></div>
-                              <a href="#" style="color:black">VIEW DETAILS</a>
+                              <a href="{% url 'view_bike_details' bike_name=bike.name %}"  style="color:black">VIEW DETAILS</a>
                           </div>
   
                       </div>
@@ -168,7 +168,7 @@
                                   <div class="acces-a">
                                       <a href="#" style="color:rgb(249, 6, 6)">CONFIGURE</a>
                                       <div style="width:1px;background-color: rgb(117, 117, 117);margin-top: 7px;"></div>
-                                      <a href="#" style="color:black">VIEW DETAILS</a>
+                                      <a href="{% url 'view_bike_details' bike_name=bike.name %}" style="color:black">VIEW DETAILS</a>
                                   </div>
           
                               </div>
@@ -219,7 +219,7 @@
                                           <div class="acces-a">
                                               <a href="#" style="color:rgb(249, 6, 6)">CONFIGURE</a>
                                               <div style="width:1px;background-color: rgb(117, 117, 117);margin-top: 7px;"></div>
-                                              <a href="#" style="color:black">VIEW DETAILS</a>
+                                              <a href="{% url 'view_bike_details' bike_name=bike.name %}" style="color:black">VIEW DETAILS</a>
                                           </div>
                   
                                       </div>

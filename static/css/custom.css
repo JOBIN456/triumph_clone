@@ -1268,3 +1268,8 @@ padding-right: 600px;}
   padding-right: 400px;
   margin-bottom:10px;
 }
+.acces-center{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

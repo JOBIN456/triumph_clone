@@ -50,10 +50,6 @@
     </div>
       </div>
 
-      <p class="r_tittle-1">{{ bike_detail.access_para1 }}</p>
-      <p class="r_tittle-1">{{ bike_detail.access_para2 }}</p>
-
-
       <div class="moto_tag" style="margin-bottom:2cm ;margin-top: 2cm;">
         <div class="moto_red_line"></div>
           <h1 style="position: relative;text-align: center;margin-top: -38px;font-size: 1.6cm;font-weight: bold;">{{ bike_detail.bold_tittle1 }}
@@ -184,10 +180,12 @@
             
           </div>
           <div class="col-md-6">
+            <img src="{{ bike_detail.card_image.url }}">
             <!-- "{{ bike_detail.reason_video.url }}" -->
-            <video autoplay loop >
-                <source src="{{ bike_detail.reason_video.url }}" type="video/webm" >
-            </video>
+            <!-- <video autoplay loop >
+              
+                <source src="{{ bike_detail.card_image.url }}" type="video/webm" >
+            </video> -->
             
            
           </div>
@@ -224,4 +222,6 @@
           </div>
           </div>
           </div>
+       
+
 {% endblock %}
