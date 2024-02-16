@@ -507,7 +507,7 @@
 </div>
 
 
-
+{% if bike_detail.name == 'TIGER 660' %}
 <div class="team-accordion">
   <div class="accordion-item" style="padding-left: 100px;padding-right: 100px;">
     <h2 class="accordion-header" id="panelsStayOpen-headingNine">
@@ -627,7 +627,7 @@
 </div>
 </div>
 
-<div class="accordion-item" style="padding-left: 100px;padding-right: 100px;">
+<div class="accordion-item" style="padding-left: 100px;padding-right: 100px; ">
   <h2 class="accordion-header" id="panelsStayOpen-headingEight">
     <button style="width: 100%;
     text-align: left;
@@ -653,9 +653,9 @@
 </div>
 </div>
   </div>
+{% endif %}
 
-
-  <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" data-interval="8000"  >
+  <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" data-interval="8000"  style="margin-top: 200px;">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="row" style="background-color: white;">

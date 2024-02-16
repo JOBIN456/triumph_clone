@@ -165,7 +165,7 @@
           </h1>
       </div>
       <p class="r_tittle-1">{{ bike_detail.access_para10 }}</p>
-      <div class="r-image"  style="background-image:url('/static/images/reason1.jpg') ;margin-top: 100px;"></div>
+      <div class="r-image"  style="background-image:url('{{ bike_detail.access_image5.url }}') ;margin-top: 100px;"></div>
       <div class="moto-card">
         <div class="row">
           <div class="col-md-6">
@@ -181,11 +181,7 @@
           </div>
           <div class="col-md-6">
             <img src="{{ bike_detail.card_image.url }}">
-            <!-- "{{ bike_detail.reason_video.url }}" -->
-            <!-- <video autoplay loop >
-              
-                <source src="{{ bike_detail.card_image.url }}" type="video/webm" >
-            </video> -->
+            
             
            
           </div>
