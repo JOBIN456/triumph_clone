@@ -133,6 +133,7 @@ style="background-color: black; ">
                         <li class="drop-down-bike-display" style="margin-bottom:50px ;">      
                           <a href="#">
                             {% for bike in adventure_bikes %}
+                            
 
                               {% if bike.name == 'TIGER 660' %}
                                 <div class="card mb-3 border-0 listc" >
@@ -164,7 +165,7 @@ style="background-color: black; ">
                                   <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
                                   <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
                                   <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
-                                  <p><b>{{bike.miles}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+                                  <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
                             <div>
                                   <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
                             </div>
@@ -180,17 +181,22 @@ style="background-color: black; ">
                     </li>
                     {% endif %}
                     {% endfor %}
+                    {% for bike in adventure_bikes %}
+
+                   
+
+                    {% if bike.name == 'TIGER 850 SPORT' %}
                     <li class="drop-down-bike-display" style="margin-bottom:50px ;">
                       <a href="#">
                       <div class="card mb-3 border-0 listc" >
                         <div class="row g-0">
                             <div class="col-md-4">
-                              <img src="/static/images/T85.avif" class="img-fluid-bike rounded-start" alt="..." >
+                              <img src="{{bike.image.url}}" class="img-fluid-bike rounded-start" alt="..." >
                             </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h3 class="card-title bikeName">TIGER 850 SPORT</h3>                                            
-                            <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ 11,95,000.00</small></p>                                      
+                            <h3 class="card-title bikeName">{{bike.name}}</h3>                                            
+                            <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
                           </div>
                         </div>
                       </div>
@@ -199,25 +205,25 @@ style="background-color: black; ">
                   <ul class="adventure-info">
                     <li>
                       <div class="card m-5 border-0 listc" style="width:900px">
-                        <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;"> TIGER 850 SPORT </div>
+                        <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;"> {{bike.name}} </div>
                         <div class="row">
                           <div class="col-md-4">
                             <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
-                            <h5 style="text-align:left ;"><b> ₹ 11,95,000.00 </b></h5>
+                            <h5 style="text-align:left ;"><b> ₹ {{bike.price}} </b></h5>
 
-                              <img src="/static/images/T85B.avif" class="card-img-bike" alt="...">
+                              <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
                           </div>
                           <div class="col-md-6" style="height:500px;  width:400px ">
                             <div class="card-body" style="text-align:center;">
-                              <p><b>888</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
-                              <p><b>85</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
-                              <p><b>82</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
-                              <p><b>60+</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">ACCESSORIES</small></p>
+                              <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                              <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                              <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                              <p><b>{{bike.accesories}}+</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">ACCESSORIES</small></p>
                         <div>
                               <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
                         </div>
                         <div>
-                              <button style="padding: 10px 20px; background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; width:200px;">VIEW DETAILS</button>
+                          <a href="{% url 'view_bike_details' bike_name='TIGER 850 SPORT' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
                         </div>   
                             </div>
                           </div>
@@ -226,17 +232,22 @@ style="background-color: black; ">
                     </li>
                 </ul>
                 </li>
+                {% endif %}
+                {% endfor %}
+
+                {% for bike in adventure_bikes %}
+                {% if bike.name == 'TIGER 1200' %}
                 <li class="drop-down-bike-display" style="margin-bottom:50px ;">
                   <a href="#">
                   <div class="card mb-3 border-0 listc" >
                     <div class="row g-0">
                         <div class="col-md-4">
-                          <img src="/static/images/T1200.avif" class="img-fluid-bike rounded-start" alt="..." >
+                          <img src="{{bike.image.url}}" class="img-fluid-bike rounded-start" alt="..." >
                         </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h3 class="card-title bikeName">TIGER 1200</h3>                                            
-                        <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ 19,19,000.00</small></p>                                      
+                        <h3 class="card-title bikeName">{{bike.name}}</h3>                                            
+                        <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
                       </div>
                     </div>
                   </div>
@@ -249,21 +260,21 @@ style="background-color: black; ">
                     <div class="row">
                       <div class="col-md-4">
                         <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
-                        <h5 style="text-align:left ;"><b> ₹ 19,19,000.00 </b></h5>
+                        <h5 style="text-align:left ;"><b> ₹ {{bike.price}} </b></h5>
 
-                          <img src="/static/images/T1200B.avif" class="card-img-bike" alt="...">
+                          <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
                       </div>
                       <div class="col-md-6" style="height:500px;  width:400px ">
                         <div class="card-body" style="text-align:center;">
-                          <p><b>1160</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
-                          <p><b>150</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
-                          <p><b>130</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
-                          <p><b>3</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">YEAR WARRANTY</small></p>
+                          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                          <p><b>{{bike.year}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">YEAR WARRANTY</small></p>
                     <div>
                           <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
                     </div>
                     <div>
-                          <button style="padding: 10px 20px; background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; width:200px;">VIEW DETAILS</button>
+                      <a href="{% url 'view_bike_details' bike_name='TIGER 1200' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
                     </div>   
                         </div>
                       </div>
@@ -275,105 +286,1123 @@ style="background-color: black; ">
                             
                           </ul>
                     </li>
-                    <li class="drop-down-bike-1">
+                    {% endif %}
+                    {% endfor %}
+
+
+
+
+                    <li class="drop-down-bike">
                       <a href="#">MODERN CLASSICS</a>
-                      <ul class="modern-list">
-                        <li class="drop-down-bike-display">
-                          <div class="mod-list" style="width: 400px; height: 600px; overflow-y: scroll;">
-                           
-                    {%  for bi in classics_bikes %}
-                            <a href= "#" >
-                              <div class="card mb-3 border-0 listc">
-                                <div class="row g-0">
-                                  <div class="col-md-4">
-                                    <img src="{{ bi.image.url }}" class="img-fluid-bike rounded-start" alt="Bike Image">
+                      {%  for bike in classics_bikes %}
+                      {% if bike.name ==  'SPEED 400'  %}
+                          <ul class="adventure-list">
+                            <li  class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              <a class="fmg" href="#">
+                                <div class="card mb-3 border-0 listc" >
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                          <img src="{{bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                        </div>
+                                    <div class="col-md-8">
+                                      <div class="card-body">
+                                        <h3 class="card-title bikeName">{{bike.name}}</h3>                                            
+                                        <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                      </div>
                                   </div>
-                                  <div class="col-md-8">
-                                    <div class="card-body">
-                                      <h3 class="card-title bikeName">{{ bi.name }}</h3>
-                                      <p class="card-text" style="width: 200px;"><small class="text-muted">Price from ₹ {{ bi.price }}</small></p>
+                                </div>
+                               
+                                </div></a>   
+                                <ul class="adventure-info" style="margin-bottom:50px ;">
+                                    <li>
+                                      <div class="card m-5 border-0 listc" style="width:900px">
+                                        <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name }}</div>
+                                        <div class="row">
+                                          <div class="col-md-4">
+                                            <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                            <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                                  <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                                          </div>
+                                          <div class="col-md-6" style="height:500px;  width:400px ">
+                                            <div class="card-body" style="text-align:center;">
+                                              <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                              <p><b>{{ bike.torque }}</b> &nbsp;<small class="text-muted">NM PEAK TORQUE</small></p>
+                                              <p><b>{{ bike.engine }}</b>&nbsp; <small class="text-muted">SERIES ENGINE</small></p>
+                                              <p><b>{{ bike.accesories }}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">	DEDICATED ACCESSORIES</small></p>
+                                        <div>
+                                              
+                                            <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                                              
+                                        </div>
+                                        <div>
+                                          <a href="{% url 'view_bike_details' bike_name='SPEED 400' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                                        </div>   
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </li>
+                                </ul>
+                         
+                             
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                            <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+                              <a href="#">
+                             
+                                
+                                {%  for bike in classics_bikes %}
+                                {% if bike.name ==  'SCRAMBLER 400 X'  %}
+                                    <div class="card mb-3 border-0 listc" >
+                                      <div class="row g-0">
+                                          <div class="col-md-4">
+                                            <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                                              <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>      
+                          </a>
+                  
+                         <ul class="adventure-info" style="margin-bottom:50px ;">
+                            <li>
+                              <div class="card m-5 border-0 listc" style="width:900px">
+                                <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                    <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                                  </div>
+                                  <div class="col-md-6" style="height:500px;  width:400px ">
+                                    <div class="card-body" style="text-align:center;">
+                                      <p style="text-align:center;"><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                      <p style="text-align:center;"><b>{{ bike.torque }}</b> &nbsp;<small class="text-muted">NM PEAK TORQUE</small></p>
+                                      <p style="text-align:center;"><b>{{ bike.engine }}</b>&nbsp; <small class="text-muted">SERIES ENGINE</small></p>
+                                      <p style="text-align:center;"><b>{{ bike.accesories }}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">	DEDICATED ACCESSORIES</small></p>
+                                <div>
+                                      
+                                    <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                                      
+                                </div>
+                                <div>
+                                  <a href="{% url 'view_bike_details' bike_name='SCRAMBLER 400 X' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                                </div>   
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </a>
-                            
-                    {% endfor %}
-                          </div>
-                    <ul class="adventure-info">
-                      <li>
-                     
-                        {% if bi.name ==  'SPEED 400'  %}
-                        <div class="card m-5 border-0 listc" style="width:900px">
-                          <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;"> {{ bi.name }}</div>
-                          <div class="row">
-                            <div class="col-md-4">
-                              <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
-                              <h5 style="text-align:left ;"><b> ₹ {{ bi.price }} </b></h5>
-      
-                                <img src="/static/images/T1200B.avif" class="card-img-bike" alt="...">
-                            </div>
-                            <div class="col-md-6" style="height:500px;  width:400px ">
-                              <div class="card-body" style="text-align:center;">
-                                <p><b>{{ bi.cc_engine }}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
-                                <p><b>{{ bi.torque }}</b> &nbsp;<small class="text-muted">NM PEAK TORQUE</small></p>
-                                <p><b>{{ bi.engine }}</b>&nbsp; <small class="text-muted">SERIES ENGINE</small></p>
-                                <p><b>{{ bi.accesories }}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">	DEDICATED ACCESSORIES</small></p>
-                          <div>
-                                <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
-                          </div>
-                          <div>
-                                <button style="padding: 10px 20px; background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; width:200px;">VIEW DETAILS</button>
-                          </div>   
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                       
-                        {% elif bi.name == 'SCRAMBLER 400X' %}
-                        <div class="card m-5 border-0 listc" style="width:900px">
-                          <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;"> {{ bi.name }}</div>
-                          <div class="row">
-                            <div class="col-md-4">
-                              <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
-                              <h5 style="text-align:left ;"><b> ₹ {{ bi.price }} </b></h5>
-      
-                                <img src="/static/images/T1200B.avif" class="card-img-bike" alt="...">
-                            </div>
-                            <div class="col-md-6" style="height:500px;  width:400px ">
-                              <div class="card-body" style="text-align:center;">
-                                <p><b>{{ bi.cc_engine }}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
-                                <p><b>{{ bi.torque }}</b> &nbsp;<small class="text-muted">NM PEAK TORQUE</small></p>
-                                <p><b>{{ bi.engine }}</b>&nbsp; <small class="text-muted">SERIES ENGINE</small></p>
-                                <p><b>{{ bi.accesories }}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">	DEDICATED ACCESSORIES</small></p>
-                          <div>
-                                <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
-                          </div>
-                          <div>
-                                <button style="padding: 10px 20px; background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; width:200px;">VIEW DETAILS</button>
-                          </div>   
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        {% endif %}
-
-
-
-                      </li>
-                  </ul>
-                       
+                            </li>
+                        </ul>
                         </li>
-                      </ul>
+                        {% endif %}
+                        {% endfor %}
+                        <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+                          <a href="#">
+                         
+                            
+                            {%  for bike in classics_bikes %}
+                            {% if bike.name ==  'SCRAMBLER 1200'  %}
+                                <div class="card mb-3 border-0 listc" >
+                                  <div class="row g-0">
+                                      <div class="col-md-4">
+                                        <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                      </div>
+                                      <div class="col-md-8">
+                                        <div class="card-body">
+                                          <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                                          <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>      
+                      </a>
+              
+                     <ul class="adventure-info" style="margin-bottom:50px ;">
+                        <li>
+                          <div class="card m-5 border-0 listc" style="width:900px">
+                            <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                              </div>
+                              <div class="col-md-6" style="height:500px;  width:400px ">
+                                <div class="card-body" style="text-align:center;">
+                                  <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                  <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                                  <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                                  <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+                            <div>
+                                  
+                                <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                                  
+                            </div>
+                            <div>
+                              <a href="{% url 'view_bike_details' bike_name='SCRAMBLER 1200' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                            </div>   
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
                     </li>
+                    {% endif %}
+                    {% endfor %}
+                    <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+                      <a href="#">
+                     
+                        
+                        {%  for bike in classics_bikes %}
+                        {% if bike.name ==  'SPEED TWIN 900'  %}
+                            <div class="card mb-3 border-0 listc" >
+                              <div class="row g-0">
+                                  <div class="col-md-4">
+                                    <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                  </div>
+                                  <div class="col-md-8">
+                                    <div class="card-body">
+                                      <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                                      <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>      
+                  </a>
+          
+                 <ul class="adventure-info" style="margin-bottom:50px ;">
+                    <li>
+                      <div class="card m-5 border-0 listc" style="width:900px">
+                        <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                            <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                          </div>
+                          <div class="col-md-6" style="height:500px;  width:400px ">
+                            <div class="card-body" style="text-align:center;">
+                              <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                              <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                              <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                              <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+                        <div>
+                              
+                            <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                              
+                        </div>
+                        <div>
+                          <a href="{% url 'view_bike_details' bike_name='SPEED TWIN 900' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                        </div>   
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+                </li>
+                {% endif %}
+                {% endfor %}
+                <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+                  <a href="#">
+                 
+                    
+                    {%  for bike in classics_bikes %}
+                    {% if bike.name ==  'BONNEVILLE T100'  %}
+                        <div class="card mb-3 border-0 listc" >
+                          <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                                  <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                </div>
+                              </div>
+                          </div>
+                        </div>      
+              </a>
+      
+             <ul class="adventure-info" style="margin-bottom:50px ;">
+                <li>
+                  <div class="card m-5 border-0 listc" style="width:900px">
+                    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                        <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                     
+                         <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                      </div>
+                      <div class="col-md-6" style="height:500px;  width:400px ">
+                        <div class="card-body" style="text-align:center;">
+                          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                          <p><b>{{ bike.accesories }}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">	DEDICATED ACCESSORIES</small></p>
+                          <div>
+                          
+                        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                          
+                    </div>
+                    <div>
+                      <a href="{% url 'view_bike_details' bike_name='BONNEVILLE T100' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                    </div>   
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+            </li>
+
+            {% endif %}
+            {% endfor %}
+
+            <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+              <a href="#">
+             
+                
+                {%  for bike in classics_bikes %}
+                {% if bike.name ==  'BONNEVILLE T120'  %}
+                    <div class="card mb-3 border-0 listc" >
+                      <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                              <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                            </div>
+                          </div>
+                      </div>
+                    </div>      
+          </a>
+  
+         <ul class="adventure-info" style="margin-bottom:50px ;">
+            <li>
+              <div class="card m-5 border-0 listc" style="width:900px">
+                <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                    <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                     
+                     <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                  </div>
+                  <div class="col-md-6" style="height:500px;  width:400px ">
+                    <div class="card-body" style="text-align:center;">
+                      <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                      <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                      <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                      <p><b>{{ bike.accesories }}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">	DEDICATED ACCESSORIES</small></p>
+                      <div>
                       
+                    <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                      
+                </div>
+                <div>
+                  <a href="{% url 'view_bike_details' bike_name='BONNEVILLE T120' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                </div>   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+        </li>
+
+        {% endif %}
+        {% endfor %}
+
+        <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+          <a href="#">
+         
+            
+            {%  for bike in classics_bikes %}
+            {% if bike.name ==  'SCRAMBLER 900'  %}
+                <div class="card mb-3 border-0 listc" >
+                  <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                          <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                        </div>
+                      </div>
+                  </div>
+                </div>      
+      </a>
+
+     <ul class="adventure-info" style="margin-bottom:50px ;">
+        <li>
+          <div class="card m-5 border-0 listc" style="width:900px">
+            <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+            <div class="row">
+              <div class="col-md-4">
+                <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+              </div>
+              <div class="col-md-6" style="height:500px;  width:400px ">
+                <div class="card-body" style="text-align:center;">
+                  <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                  <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                  <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                  <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+            <div>
+                  
+                <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                  
+            </div>
+            <div>
+              <a href="{% url 'view_bike_details' bike_name='SCRAMBLER 900' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+            </div>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+    </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+    <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+      <a href="#">
+     
+        
+        {%  for bike in classics_bikes %}
+        {% if bike.name ==  'SPEED TWIN 1200'  %}
+            <div class="card mb-3 border-0 listc" >
+              <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                      <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                    </div>
+                  </div>
+              </div>
+            </div>      
+  </a>
+
+ <ul class="adventure-info" style="margin-bottom:50px ;">
+    <li>
+      <div class="card m-5 border-0 listc" style="width:900px">
+        <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+            <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+          </div>
+          <div class="col-md-6" style="height:500px;  width:400px ">
+            <div class="card-body" style="text-align:center;">
+              <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+              <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+              <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+              <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+        <div>
+              
+            <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+              
+        </div>
+        <div>
+          <a href="{% url 'view_bike_details' bike_name='SPEED TWIN 1200' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+        </div>   
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+</ul>
+</li>
+{% endif %}
+{% endfor %}
+<li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+  <a href="#">
+ 
+    
+    {%  for bike in classics_bikes %}
+    {% if bike.name ==  'BONNEVILLE BOBBER'  %}
+        <div class="card mb-3 border-0 listc" >
+          <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                  <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                </div>
+              </div>
+          </div>
+        </div>      
+</a>
+
+<ul class="adventure-info" style="margin-bottom:50px ;">
+<li>
+  <div class="card m-5 border-0 listc" style="width:900px">
+    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+        <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+      </div>
+      <div class="col-md-6" style="height:500px;  width:400px ">
+        <div class="card-body" style="text-align:center;">
+          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+          <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+    <div>
+          
+        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+          
+    </div>
+    <div>
+      <a href="{% url 'view_bike_details' bike_name='BONNEVILLE BOBBER' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+    </div>   
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+</ul>
+</li>
+{% endif %}
+{% endfor %}
+
+</ul>
+ </li>
+          
+                         
+ <li class="drop-down-bike">
+  <a href="#">ROADASTER</a>
+  {%  for bike in roadster_bikes %}
+  {% if bike.name ==  'TRIDENT 660'  %}
+      <ul class="adventure-list">
+        <li  class="drop-down-bike-display" style="margin-bottom:50px ;">
+          <a class="fmg" href="#">
+            <div class="card mb-3 border-0 listc" >
+                <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="{{bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                    </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h3 class="card-title bikeName">{{bike.name}}</h3>                                            
+                    <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                  </div>
+              </div>
+            </div>
+           
+            </div></a>   
+            <ul class="adventure-info" style="margin-bottom:50px ;">
+                <li>
+                  <div class="card m-5 border-0 listc" style="width:900px">
+                    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name }}</div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                        <h5 style="text-align:left ;"><b> ₹ {{bike.price}} </b></h5>                                                  <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                      </div>
+                      <div class="col-md-6" style="height:500px;  width:400px ">
+                        <div class="card-body" style="text-align:center;">
+                          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                          <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+                    <div>
+                          
+                        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                          
+                    </div>
+                    <div>
+                      <a href="{% url 'view_bike_details' bike_name='TRIDENT 660' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                    </div>   
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+     
+         
+        </li>
+        {% endif %}
+        {% endfor %}
+        <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+          <a href="#">
+         
+            
+            {%  for bike in roadster_bikes %}
+            {% if bike.name ==  'STREET TRIPLE 765'  %}
+                <div class="card mb-3 border-0 listc" >
+                  <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                          <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                        </div>
+                      </div>
+                  </div>
+                </div>      
+        </a>
+        
+        <ul class="adventure-info" style="margin-bottom:50px ;">
+        <li>
+          <div class="card m-5 border-0 listc" style="width:900px">
+            <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+            <div class="row">
+              <div class="col-md-4">
+                <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+              </div>
+              <div class="col-md-6" style="height:500px;  width:400px ">
+                <div class="card-body" style="text-align:center;">
+                  <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                  <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                  <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                  <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+            <div>
+                  
+                <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                  
+            </div>
+            <div>
+              <a href="{% url 'view_bike_details' bike_name='STREET TRIPLE 765' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+            </div>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        </ul>
+        </li>
+        {% endif %}
+        {% endfor %}
+        <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+          <a href="#">
+         
+            
+            {%  for bike in roadster_bikes %}
+            {% if bike.name ==  'SPEED TRIPLE 1200 RS'  %}
+                <div class="card mb-3 border-0 listc" >
+                  <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                          <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                        </div>
+                      </div>
+                  </div>
+                </div>      
+        </a>
+        
+        <ul class="adventure-info" style="margin-bottom:50px ;">
+        <li>
+          <div class="card m-5 border-0 listc" style="width:900px">
+            <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name}}</div>
+            <div class="row">
+              <div class="col-md-4">
+                <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+              </div>
+              <div class="col-md-6" style="height:500px;  width:400px ">
+                <div class="card-body" style="text-align:center;">
+                  <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                  <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                  <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                  <p><b>{{bike.kg_wet}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">KG WET WEIGHT</small></p>
+            <div>
+                  
+                <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                  
+            </div>
+            <div>
+              <a href="{% url 'view_bike_details' bike_name='SPEED TRIPLE 1200 RS' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+            </div>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        </ul>
+        </li>
+        {% endif %}
+        {% endfor %}
+        
+        
+      </ul>
+ </li>
+ <li class="drop-down-bike">
+  <a href="#">ROCKET 3</a>
+  {%  for bike in rocket3_bikes %}
+  {% if bike.name ==  'ROCKET 3'  %}
+      <ul class="adventure-list">
+        <li  class="drop-down-bike-display" style="margin-bottom:50px ;">
+          <a class="fmg" href="#">
+            <div class="card mb-3 border-0 listc" >
+                <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="{{bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                    </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h3 class="card-title bikeName">{{bike.name}}</h3>                                            
+                    <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                  </div>
+              </div>
+            </div>
+           
+            </div></a>   
+            <ul class="adventure-info" style="margin-bottom:50px ;">
+                <li>
+                  <div class="card m-5 border-0 listc" style="width:900px">
+                    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name }}</div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                        <h5 style="text-align:left ;"><b> ₹ {{bike.price}} </b></h5>                                                 
+                         <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                      </div>
+                      <div class="col-md-6" style="height:500px;  width:400px ">
+                        <div class="card-body" style="text-align:center;">
+                          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                          <p><b>{{bike.kg_lighter}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">KG LITER</small></p>
+                    <div>
+                          
+                        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                          
+                    </div>
+                    <div>
+                      <a href="{% url 'view_bike_details' bike_name='ROCKET 3' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                    </div>   
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+     
+         
+        </li>
+        {% endif %}
+        {% endfor %}
+       
+        </ul>
+        </li>
+       
+        <li class="drop-down-bike">
+          <a href="#">STEALTH EDITION</a>
+          {%  for bike in stealth_bikes %}
+          {% if bike.name ==  'STEALTH EDITIONS'  %}
+              <ul class="adventure-list">
+                <li  class="drop-down-bike-display" style="margin-bottom:50px ;">
+                  <a class="fmg" href="#">
+                    <div class="card mb-3 border-0 listc" >
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                              <img src="{{bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                            </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h3 class="card-title bikeName">{{bike.name}}</h3>                                            
+                            <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                          </div>
+                      </div>
+                    </div>
                    
-                    
-                    
-                    <li><a href="#">ROCKET3</a></li>
-                    <li><a href="#">STEALTH EDITION</a></li>
-                    <li><a href="#">SPORTS</a></li>
-                    <li><a href="#">CHROME COLLECTION</a></li>
+                    </div></a>   
+                    <ul class="adventure-info" style="margin-bottom:50px ;">
+                        <li>
+                          <div class="card m-5 border-0 listc" style="width:900px">
+                            <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name }}</div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                <h5 style="text-align:left ;"><b> ₹ {{bike.price}} </b></h5>                                                 
+                                 <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                              </div>
+                              <div class="col-md-6" style="height:500px;  width:400px ">
+                                <div class="card-body" style="text-align:center;">
+                                  <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                  <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                                  <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                                  <p><b>{{bike.kg_lighter}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">KG LITER</small></p>
+                            <div>
+                                  
+                                  
+                            </div>
+                            <div>
+                              <a href="#' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                            </div>   
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
+             
+                 
+                </li>
+                {% endif %}
+                {% endfor %}
+               
+                </ul>
+                </li>
+                <li class="drop-down-bike">
+                  <a href="#">SPORTS</a>
+                  {%  for bike in sport_bikes %}
+                  {% if bike.name ==  'ALL-NEW DAYTONA 660'  %}
+                      <ul class="adventure-list">
+                        <li  class="drop-down-bike-display" style="margin-bottom:50px ;">
+                          <a class="fmg" href="#">
+                            <div class="card mb-3 border-0 listc" >
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                      <img src="{{bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                    </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h3 class="card-title bikeName">{{bike.name}}</h3>                                            
+                                    <p class="card-text"><small class="text-muted">price coming soon</small></p>                                      
+                                  </div>
+                              </div>
+                            </div>
+                           
+                            </div></a>   
+                            <ul class="adventure-info" style="margin-bottom:50px ;">
+                                <li>
+                                  <div class="card m-5 border-0 listc" style="width:900px">
+                                    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left;">{{bike.name }}</div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <h5 class="card-titlegh" style="text-align:left ;"><b> Price Coming Soon</b></h5>
+                                                
+                                         <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                                      </div>
+                                      <div class="col-md-6" style="height:500px;  width:400px ">
+                                        <div class="card-body" style="text-align:center;">
+                                          <p><b>{{bike.cylinders}}</b> &nbsp; &nbsp; <small class="text-muted" >CYLINDER </small></p>
+                                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                                          <p><b>{{bike.rpm}}</b>&nbsp; <small class="text-muted">RPM</small></p>
+                                          <p><b>{{bike.nm}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">NM </small></p>
+                                    <div>
+                                          
+                                        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                                          
+                                    </div>
+                                    <div>
+                                      <a href="{% url 'view_bike_details' bike_name='ALL-NEW DAYTONA 660' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                                    </div>   
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                            </ul>
+                     
+                         
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                       
+                        </ul>
+                        </li>
+                        <li class="drop-down-bike">
+                          <a href="#">CHROME COLLECTIONS</a>
+                          {%  for bike in chrome_bikes %}
+                          {% if bike.name ==  'SPEED TWIN 900 CHROME EDITION'  %}
+                              <ul class="adventure-list">
+                                <li  class="drop-down-bike-display" style="margin-bottom:50px ;">
+                                  <a class="fmg" href="#">
+                                    <div class="card mb-3 border-0 listc" >
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                              <img src="{{bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                            </div>
+                                        <div class="col-md-8" style="padding-left:30px ;">
+                                          <div class="card-body">
+                                            <h3 class="card-title bikeName">{{bike.name}}</h3>                                            
+                                            <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                          </div>
+                                      </div>
+                                    </div>
+                                   
+                                    </div></a>   
+                                    <ul class="adventure-info" style="margin-bottom:50px ;">
+                                        <li>
+                                          <div class="card m-5 border-0 listc" style="width:900px">
+                                            <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left; height: 200px; width:600px">{{bike.name }}</div>
+                                            <div class="row">
+                                              <div class="col-md-4">
+                                                <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                                <h5 style="text-align:left ;"><b> ₹ {{bike.price}} </b></h5>                                                 
+                                                 <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                                              </div>
+                                              <div class="col-md-6" style="height:500px;  width:400px ">
+                                                <div class="card-body" style="text-align:center;">
+                                                  <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                                  <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                                                  <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                                                  <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+                                            <div>
+                                                  
+                                                  
+                                            </div>
+                                            <div>
+                                              <a href="{% url 'view_bike_details' bike_name='SPEED TWIN 900' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                                            </div>   
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                    </ul>
+                             
+                                 
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                                <li class="drop-down-bike-display" style="margin-bottom:50px ;">
+                              
+                                  <a href="#">
+                                 
+                                    
+                                    {%  for bike in chrome_bikes %}
+                                    {% if bike.name ==  'BONNEVILLE BOBBER CHROME EDITION'  %}
+                                        <div class="card mb-3 border-0 listc" >
+                                          <div class="row g-0">
+                                              <div class="col-md-4">
+                                                <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                              </div>
+                                              <div class="col-md-8" style="padding-left:30px ;">
+                                                <div class="card-body">
+                                                  <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                                                  <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </div>      
+                                </a>
+                                
+                                <ul class="adventure-info" style="margin-bottom:50px ;">
+                                <li>
+                                  <div class="card m-5 border-0 listc" style="width:900px">
+                                    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left; height: 200px; width:600px">{{bike.name}}</div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                        <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                                      </div>
+                                      <div class="col-md-6" style="height:500px;  width:400px ">
+                                        <div class="card-body" style="text-align:center;">
+                                          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                                          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                                          <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+                                          <div>
+                                          
+                                        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                                          
+                                    </div>
+                                    <div>
+                                      <a href="{% url 'view_bike_details' bike_name='BONNEVILLE BOBBER' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                                    </div>   
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                </ul>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                              
+                               
+                                <li class="drop-down-bike-display" style="margin-bottom:50px;">
+                                  <a href="#"> 
+                                    {%  for bike in chrome_bikes %}
+                                    {% if bike.name ==  'BONNEVILLE SPEEDMASTER CHROME EDITION'%}
+                                        <div class="card mb-3 border-0 listc" >
+                                          <div class="row g-0">
+                                              <div class="col-md-4">
+                                                <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                              </div>
+                                              <div class="col-md-8" style="padding-left:30px ;">
+                                                <div class="card-body">
+                                                  <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                                                  <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </div>      
+                                </a>
+                                
+                                <ul class="adventure-info" style="margin-bottom:50px ;">
+                                <li>
+                                  <div class="card m-5 border-0 listc" style="width:900px">
+                                    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left; height: 200px; width:900px;">{{bike.name}}</div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                        <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                                      </div>
+                                      <div class="col-md-6" style="height:500px;  width:400px ">
+                                        <div class="card-body" style="text-align:center;">
+                                          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                                          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                                          <p><b>{{bike.mile_service}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">MILE SERVICE</small></p>
+                                    <div>
+                                          
+                                        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                                          
+                                    </div>
+                                    <div>
+                                      <a href="{% url 'view_bike_details' bike_name='BONNEVILLE SPEEDMASTER' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                                    </div>   
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                </ul>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                                <li class="drop-down-bike-display" style="margin-bottom:50px;">
+                                  <a href="#"> 
+                                    {%  for bike in chrome_bikes %}
+                                    {% if bike.name ==  'ROCKET 3 R CHROME EDITION'%}
+                                        <div class="card mb-3 border-0 listc" >
+                                          <div class="row g-0">
+                                              <div class="col-md-4">
+                                                <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                              </div>
+                                              <div class="col-md-8" style="padding-left:30px ;">
+                                                <div class="card-body">
+                                                  <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                                                  <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </div>      
+                                </a>
+                                
+                                <ul class="adventure-info" style="margin-bottom:50px ;">
+                                <li>
+                                  <div class="card m-5 border-0 listc" style="width:900px">
+                                    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left; height: 200px; width:600px;">{{bike.name}}</div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                        <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                                      </div>
+                                      <div class="col-md-6" style="height:500px;  width:400px ">
+                                        <div class="card-body" style="text-align:center;">
+                                          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                                          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                                          <p><b>{{bike.kg_lighter}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">KG WET WEIGHT</small></p>
+                                    <div>
+                                          
+                                        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                                          
+                                    </div>
+                                    <div>
+                                      <a href="{% url 'view_bike_details' bike_name='ROCKET 3' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                                    </div>   
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                </ul>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+
+                                <li class="drop-down-bike-display" style="margin-bottom:50px;">
+                                  <a href="#"> 
+                                    {%  for bike in chrome_bikes %}
+                                    {% if bike.name ==  'ROCKET 3 GT CHROME EDITION'%}
+                                        <div class="card mb-3 border-0 listc" >
+                                          <div class="row g-0">
+                                              <div class="col-md-4">
+                                                <img src="{{ bike.image.url }}" class="img-fluid-bike rounded-start" alt="..." >
+                                              </div>
+                                              <div class="col-md-8" style="padding-left:30px ;">
+                                                <div class="card-body">
+                                                  <h3 class="card-title bikeName">{{ bike.name }}</h3>                                            
+                                                  <p class="card-text" style="width:200px"><small class="text-muted">price from ₹ {{bike.price}}</small></p>                                      
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </div>      
+                                </a>
+                                
+                                <ul class="adventure-info" style="margin-bottom:50px ;">
+                                <li>
+                                  <div class="card m-5 border-0 listc" style="width:900px">
+                                    <div class="card-header" style="background-color:white ;font-size: 50px;font-weight: bold;color: #747474; text-align: left; height: 200px; width:600px;">{{bike.name}}</div>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <h5 class="card-titlegh" style="text-align:left ;"><small> price from </small></h5>
+                                        <h5 style="text-align:left ;"><b> ₹ {{bike.price }} </b></h5>                                      <img src="{{bike.image.url}}" class="card-img-bike" alt="...">
+                                      </div>
+                                      <div class="col-md-6" style="height:500px;  width:400px ">
+                                        <div class="card-body" style="text-align:center;">
+                                          <p><b>{{bike.cc_engine}}</b> &nbsp; &nbsp; <small class="text-muted" >CC ENGINE</small></p>
+                                          <p><b>{{bike.ps_peak_power}}</b> &nbsp;<small class="text-muted">PS PEAK POWER</small></p>
+                                          <p><b>{{bike.torque}}</b>&nbsp; <small class="text-muted">NM PEAK TORQUE</small></p>
+                                          <p><b>{{bike.kg_lighter}}</b>&nbsp; &nbsp; &nbsp;<small class="text-muted">KG WET WEIGHT</small></p>
+                                    <div>
+                                          
+                                        <button  style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #f40c0c; color: #ffffff; width:200px; margin-bottom: 4px;"> Customize</button>
+                                          
+                                    </div>
+                                    <div>
+                                      <a href="{% url 'view_bike_details' bike_name='ROCKET 3' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; width: 200px; text-align: center;">VIEW DETAILS</a>
+                                    </div>   
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                </ul>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                                </ul>
+                                </li>
+        
+   
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
