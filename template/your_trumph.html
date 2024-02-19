@@ -20,8 +20,8 @@
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-                    <a class="nav-link" href="#"> 
-                      Dealer
+                    <a class="nav-link" href="{% url 'dealer' %}"> 
+                       FIND A DEALER 
                     </a> 
                 </li></ul>
           </li>
@@ -42,8 +42,8 @@
         <div class="col-md-6 h">
             <h3>TAKING CARE OF YOUR BIKE </h3>
             <p>When designing and developing our bikes, we think about everything around riding and looking after you and your bike. Alongside the bike, we create all the right services, accessories and support packages to compliment and care for your ride.</p>
-            <button class="btn  btn-danger">SAFETY CHECKS</button>
-        </div>
+            <a href="{% url 'owner' %}" class="btn btn-danger" role="button">SAFETY CHECKS</a>
+          </div>
         <div class="col-md-6">
             <img src="/static/images/tc_card.avif" width="800px">
         </div>
@@ -57,20 +57,25 @@
                 <h4>OIL AND TYRES </h4></div>
           </div>
         
-        <div class="col-md ">
-          <div class="card" style="width:28rem;height: 38rem">
-            <img class="card-img-top" src="/static/images/oil-selector.avif" style="height:350px ;"alt="Card image cap">
-            <div class="card-body">
-              <div class="card-title">
-                <h4>
-                    OIL SELECTOR</h4></div>
-              <p class="card-text">Use our online oil selector tool to find the official Triumph-approved and tested oils for your bike.</p>
+        <div class="col-md">
+            <div class="card" style="width: 28rem; height: 38rem">
+              <img class="card-img-top" src="/static/images/oil-selector.avif" style="height: 350px;" alt="Card image cap">
+              <div class="card-body">
+                <div class="card-title">
+                  <h4>OIL SELECTOR</h4>
+                </div>
+                <p class="card-text">Use our online oil selector tool to find the official Triumph-approved and tested oils for your bike.</p>
+              </div>
             </div>
-          </div>
+       
         </div>
+        
     
         <div class="col-md">
+          <a href="{% static 'pdf/tyre.pdf' %}" download="tyre.pdf" style="text-decoration: none; color: inherit;">
+
             <div class="card" style="width:28rem;height: 38rem">
+
               <img class="card-img-top" src="/static/images/tyre.avif" style="height:350px ;" alt="Card image cap">
               <div class="card-body">
                 <div class="card-body">
@@ -81,12 +86,13 @@
               </div>
             </div>
           </div>
+        </a>
         </div>
  
     </div> 
 </div>
 <div class="tf_2">
-    <div class="row">
+    <div class="row" style="padding: 50px;">
         <div class="col-md-6">
             <img src="/static/images/tc_card2.avif">
         </div>
@@ -94,15 +100,16 @@
         <div class="col-md-6 h">
             <h3>24-MONTH WARRANTY  </h3>
             <p>A Triumph 24-month Warranty gives you peace of mind and the added reassurance in the unlikely event of something happening to your bike we have you covered.*Subject to terms and conditions.</p>
-            <button class="btn  btn-danger">DISCOVER MORE</button>
-        </div>
+            <a href="/static/pdf/warranty.pdf" download="warranty.pdf">
+              <button class="btn btn-danger">DOWNLOAD T&CS</button>
+          </a>        </div>
       </div>
       <div class="row">
         <div class="col-md-6 h">
 
             <h3>ROADSIDE ASSISTANCE</h3>
             <p>Triumph Assist is a breakdown assistance package developed by Triumph and the RAC which has been designed specifically to give you peace of mind and help when you need it the most. It includes different levels of cover to ensure you’re looked after if the unexpected were to happen in the UK and on the continent.</p>
-            <button class="btn  btn-danger">DISCOVER MORE</button>
+            <a href="{% url 'owner' %}" class="btn btn-danger">DISCOVER MORE</a>
             
         </div>
         

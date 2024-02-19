@@ -20,8 +20,8 @@
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-                    <a class="nav-link" href="#"> 
-                      Dealer
+          <a class="nav-link" href="{% url 'dealer' %}"> 
+            Dealer
                     </a> 
                 </li></ul>
           </li>
@@ -29,7 +29,7 @@
     </div>
   </nav>
 
- <div class="container-fluid" style="height:700px;">
+ <div class="container-fluid" style="height:700px; ">
     <video class="video-fluid" autoplay loop  muted>
         <source src="/static/images/t.mp4" type="video/mp4">
       </video>
@@ -42,15 +42,15 @@
     
   <div class="container-fluid" style="padding:20px;">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-left: 100px;">
             <img src="/static/images/totalcare.avif" width="650px">
 
         </div>
         <div class="col-md-6 h">
             <h3>ONLINE SERVICE BOOKINGS </h3>
             <p>You can now quickly and easily book your service online 24/7. It takes just 2 minutes to enter your details and schedule a date and time that suits you, whilst seeing the actual service cost up front.</p>
-            <button class="btn  btn-danger">FIND A DEALER</button>
-        </div>
+            <a href="{% url 'dealer' %}" class="btn btn-danger" role="button">FIND A DEALER</a>
+          </div>
 
     </div>
   </div>
@@ -77,15 +77,17 @@
         <h3>BOOK YOUR SERVICE ONLINE  </h3>
         <p>You can now quickly and easily book your service online 24/7. It takes just 2 minutes to enter your details and schedule a date and time that suits you, whilst seeing the actual service cost up front.
             </p>
-        <button class="btn  btn-danger">FIND A DEALER</button>
+            <a href="{% url 'dealer' %}" class="btn btn-danger" role="button">FIND A DEALER</a>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 h">
         <h3>EXTENDED WARRANTY </h3>
         <p>A Triumph Extended Warranty gives you peace of mind and reassurance with a 2 year extension of the factory warranty.</p>
-        <button class="btn  btn-danger">DOWNLOAD T&CS</button>
-    </div>
+        <a href="/static/pdf/warranty.pdf" download="warranty.pdf">
+          <button class="btn btn-danger">DOWNLOAD T&CS</button>
+      </a>
+          </div>
     <div class="col-md-6">
         <video class="video-fluid" autoplay loop  muted>
             <source src="/static/images/tcard1.mp4" type="video/mp4">
@@ -103,8 +105,9 @@
     <div class="col-md-6 h">
         <h3>SERVICE PACKAGES </h3>
         <p>Triumph Service Packages offer you a tailored and affordable way to pay for your servicing upfront whilst protecting you from any rise in servicing costs. </p>
-        <button class="btn  btn-danger">DISCOVER MORE</button>
-        <button class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">Find a Dealer</button>
+        <a  href="{% url 'owner' %}"class="btn  btn-danger">DISCOVER MORE</a>
+        <a href="{% url 'dealer' %}" class="btn btn-dark" style="background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; display: inline-block;">Find a Dealer</a>
+
       </div>
   </div>    
   <div class="row">
@@ -117,15 +120,15 @@
     <div class="col-md-6 h">
         <h3>ROADSIDE ASSISTANCE </h3>
         <p>In the unlikely event of something going wrong with your Triumph motorcycle, Roadside Assistance cover leaves you safe in the knowledge that you will never be left stranded.</p>
-        <button class="btn  btn-danger">DISCOVER MORE</button>
+        <a href="{% url 'dealer' %}" class="btn btn-dark" style="background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; display: inline-block;">Find a Dealer</a>
     </div>
   </div>   
   <div class="row">
     <div class="col-md-6 h">
         <h3>BIKE HEALTH CHECK </h3>
         <p>To maximise the safety of your ride we offer a mandatory Bike Health Check each time you visit a Triumph dealership, as part of the periodic maintenance service - highlighting any problems that we've spotted.</p>
-        <button class="btn  btn-danger">FIND A DEALER</button>
-    </div>
+        <a href="{% url 'dealer' %}" class="btn btn-danger" role="button">FIND A DEALER</a>
+      </div>
     <div class="col-md-6">
         <video class="video-fluid" autoplay loop  muted>
             <source src="/static/images/tcard4.mp4" type="video/mp4">
@@ -142,11 +145,11 @@
     <div class="col-md-6 h">
       <h3>GENUINE PARTS </h3>
         <p>Triumph Genuine Parts are key to maintaining the performance and preserving the value of your motorcycle whilst also offering you the reassurance of a 2 year warranty.</p>
-        <button class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">Find a Dealer</button>
-    </div>
+        <a href="{% url 'dealer' %}" class="btn btn-dark" style="background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer; padding: 10px 20px; display: inline-block;">Find a Dealer</a>
+      </div>
   </div>
 
-  <div class="row">
+  <div class="row" style="padding-left: 50px;padding-right: 50px;">
     <div class="col-md-6 h">
       <h3>OUR PROMISE TO YOU </h3>
       <ul class="red-dot">
@@ -159,7 +162,7 @@
         <li>Genuine Triumph Parts and Accessories</li>
       </ul>
     </div>
-    <div class="col-md-6 h" style="padding-left: 49px;">
+    <div class="col-md-6 m" style="padding-left: 49px;">
 
       <iframe width="700px" height="500px" src="https://www.youtube.com/embed/EKsb6btKQAg?autoplay=1&mute=1&controls=0&loop=1&playlist=EKsb6btKQAg" frameborder="0" allow="autoplay; encrypted-media; gyroscope;  web-share" allowfullscreen></iframe>    
     </div>

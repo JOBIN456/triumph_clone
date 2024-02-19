@@ -1544,25 +1544,26 @@ style="background-color: black; ">
           <div class="column sng">
             <h3>  TOTAL CARE</h3>
             <div class="dropdown-divider"></div>
-            <a href="#">Extended Warranty</a>
-            <a href="#">Service Package</a>
-            <a href="#">Roadside Assistance</a>
-            <a href="#">
+            <a href="/static/pdf/warranty.pdf" download="warranty.pdf">Extended Warranty</a>
+            
+            <a href="{% url 'owner' %}">Service Package</a>
+            <a href="{% url 'owner' %}">Roadside Assistance</a>
+            <a href="{% url 'owner' %}">
               Bike Health Check
               </a>
-            <a href="#">Customer Promise></a>
-            <a href="#">Genuine Parts</a>
+            <a href="{% url 'owner' %}">Customer Promise></a>
+            <a href="{% url 'owner' %}">Genuine Parts</a>
           </div>
           <div class="column sng">
             <h3> YOUR TRIUMPH</h3>
             <div class="dropdown-divider"></div>
-            <a href="#">
+            <a href="{% url 'your_trumph' %}">
               Tyre Selector</a>
-            <a href="#">Oil Recommendations</a>
-            <a href="#">Warranty and Assistance</a>
-            <a href="#">My Triumph App</a>
-            <a href="#">what3words</a>
-            <a href="#">FIND OUT MORE ></a>
+            <a href="{% url 'your_trumph' %}">Oil Recommendations</a>
+            <a href="{% url 'your_trumph' %}">Warranty and Assistance</a>
+            <a href="{% url 'your_trumph' %}">My Triumph App</a>
+            <a href="{% url 'your_trumph' %}">what3words</a>
+            <a href="{% url 'your_trumph' %}">FIND OUT MORE ></a>
            
             
           </div>
@@ -1571,7 +1572,7 @@ style="background-color: black; ">
             <div class="dropdown-divider"></div>
             <a href="#">Recalls</a>
             <a href="#">Contact Us</a>
-            <a href="#">FIND A DEALER ></a>
+            <a href="{% url 'dealer' %}">FIND A DEALER ></a>
             
             
           </div>
@@ -1599,38 +1600,36 @@ style="background-color: black; ">
           <div class="column pp">
             <h3>  NEWS</h3>
             <div class="dropdown-divider"></div>
-            <a href="#">Latest News</a>
-            <a href="#">Motorcycles</a>
-            <a href="#">Brand</a>
-            <a href="#">Racing
+            <a href="{% url 'news' %}">Latest News</a>
+            <a href="{% url 'motorcycles' %}">Motorcycles</a>
+            <a href="{% url 'brand' %}">Brand</a>
+            <a href="{% url 'racing' %}">Racing
               </a>
-            <a href="#">Epic Adventures></a>
-            <a href="#">OVERVIEW ></a>
+            <a href="{% url 'epic_a' %}">Epic Adventures></a>
+            <a href="{% url 'news' %}">OVERVIEW ></a>
           </div>
           <div class="column pp">
             <h3> RACING</h3>
             <div class="dropdown-divider"></div>
-            <a href="#">
-              Tyre Selector</a>
-            <a href="#">
-              Motocross and Enduro</a>
-            <a href="#">MXGP</a>
-            <a href="#">US RACING</a>
-            <a href="#">Moto2™</a>
-            <a href="#">PTR Triumph></a>
-            <a href="#">OVERVIEW ></a>
+            
+           
+            <a href="{% url 'MXGP' %}">MXGP</a>
+            <a href="{% url 'US' %}">US RACING</a>
+            <a href="{% url 'MOTO' %}">Moto2™</a>
+            <a href="{% url 'PTR' %}">PTR Triumph></a>
+            <a href="{% url 'RACE' %}">OVERVIEW ></a>
            </div>
           <div class="column pp">
             <h3>BRAND</h3>
             <div class="dropdown-divider"></div>
             <a href="#">
               James Bond Partnership</a>
-            <a href="#">Triumph & Gibson</a>
-            <a href="#">Distinguished Gentleman's Ride ></a>
-            <a href="#">Triumph and Breitling</a>
-            <a href="#">120 Years Celebration</a>
-            <a href="#">Timeline</a>
-            <a href="#">OVERVIEW ></a>
+            <a href="{% url 'discover' %}">Triumph & Gibson</a>
+            <a href="{% url 'discover' %}">Distinguished Gentleman's Ride ></a>
+            <a href="{% url 'discover' %}">Triumph and Breitling</a>
+            <a href="{% url 'discover' %}">120 Years Celebration</a>
+            <a href="{% url 'discover' %}">Timeline</a>
+            <a href="{% url 'brand1' %}">OVERVIEW ></a>
           </div>
          <div class="column pp">
             <h3>EXPERIENCES</h3>
@@ -1681,24 +1680,99 @@ style="background-color: black; ">
                 <i class="fa fa-caret-down"></i>
             </a>
     
-            <div class="dropdown-content" style="right: 0; width: 250px;">
-                <div class="row">
-                    <div class="column">
-                        <h3>Select Your Region</h3>
-                        <div class="btn-group dropright">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropright
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
+            <div class="dropdown-content" style="right: 0; width:100%; height: 600px;">
+                <nav class="country">
+                  <h2 style="margin-left:50px ;"> SELECT YOUR REGION </h2>
+                  <ul>
+                    <li class="country-list"><a href="#">AFRICA</a>
+
+                            <ul class="country-inlist">
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> SOUTH AFRICA</a> 
+                            </ul>
+
+                    </li>
+                    <li class="country-list" ><a href="#">AMERICA</a>
+                      <ul class="country-inlist">
+                        <div class="row">
+                          <div class="col" style="width:450px ;">
+                            <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> ARGENTINA</a> </li>
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> BRAZIL</a> </li>
+                                <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> CANADA FR</a></li>
+                                  <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">COLOMBIA</a> </li>
+ 
+                          </div>
+                          <div class="col">
+                            <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> BOLIVIA</a> </li>
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">CANADA EN</a> </li>
+                                <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">CHILE</a></li>
+                                  <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">COST RICA</a> </li>
+ 
+                          </div>
                         </div>
-                    </div>
-                </div>
+                      </ul>
+                      
+                    
+                    </li>
+                    <li class="country-list"><a href="#">ASIA</a>
+                      <ul class="country-inlist">
+                        <div class="row">
+                          <div class="col" style="width:450px ;">
+                            <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> AUSTRALIA  </a> </li>
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> INDONESIA</a> </li>
+                                <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> JAPAN</a></li>
+                                  <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">THAILAND</a> </li>
+ 
+                          </div>
+                          <div class="col">
+                            <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">MALAYSIA</a> </li>
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> SINGAPORE</a> </li>
+                                <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">INDIA</a></li>
+                                  <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> TAIWAN</a> </li>
+ 
+                          </div>
+                        </div>       
+                        
+
+                      </ul>
+                    
+                    </li>
+                    <li class="country-list"><a href="#">MIDDLE EAST</a>
+                      <ul class="country-inlist">
+                        <div class="row">
+                          <div class="col" style="width:450px ;">
+                            <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> BAHRAIN</a> </li>
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> QATAR</a> </li>
+                                
+ 
+                          </div>
+                          <div class="col">
+                            <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> ISRAEL</a> </li>
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> UAE</a> </li>
+                               
+ 
+                          </div>
+                        </div>        </ul>
+                    </li>
+                    <li class="country-list"><a href="#">EUROPE</a>
+                      <ul class="country-inlist">
+                        <div class="row">
+                          <div class="col" style="width:450px ;">
+                            <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">AUSTRIA</a> </li>
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">GERMANY</a> </li>
+                                <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">FINLAND</a></li>
+                                  <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> FRANCE</a> </li>
+ 
+                          </div>
+                          <div class="col">
+                            <li><a href="#"><img src="/static/images/ic.png" width="30" height="30">ITALY</a> </li>
+                              <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> IRELAND</a> </li>
+                                <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> GREECE</a></li>
+                                  <li><a href="#"><img src="/static/images/ic.png" width="30" height="30"> MALTA</a> </li>
+ 
+                          </div>
+                        </div>                      </ul></li>
+                  </ul>
+                </nav>
             </div>
         </div>
     </li>
