@@ -30,7 +30,7 @@
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-            <button class="btn  btn-danger">STREET TRIPLE</button>
+          <a href="{% url 'view_bike_details' bike_name='STREET TRIPLE 765' %}" class="btn  btn-danger">STREET TRIPLE </a>
  
                 </li></ul>
           </li>
@@ -545,9 +545,9 @@ His prize is a new custom-liveried Triumph Street Triple RS powered by the 765cc
                 <h3> STREET TRIPLE 765 </h3>
                 <p >Powered by Moto2™ race engine evolution, for the highest performance, highest specification and most agile Street Triple line-up ever.
                 </p>
-                <button class="btn btn-dark" style="background-color: black; color: white;">DISCOVER MORE</button>
+                <a href="{% url 'view_bike_details' bike_name='STREET TRIPLE 765' %}" class="btn btn-dark" style="background-color: black; color: white;">DISCOVER MORE</a>
 
-                <button class="btn btn-dark" style="background-color: black; color: white;">CONFIGURE</button>
+                <a href="{% url 'customize' %}"class="btn btn-dark" style="background-color: black; color: white;">CONFIGURE</a>
             </div>
             
           </div>
@@ -562,10 +562,15 @@ His prize is a new custom-liveried Triumph Street Triple RS powered by the 765cc
     
         <div class="black-section" style="width:100%; margin-bottom: 0; height: 500px; background-color: #0e0f0f;">
             <div class="e-icon">
-              <img src="/static/images/insta.webp"style="/*! position: initial; */position: relative;top: 200px;left: 600px;">
+              <a href="https://www.instagram.com/officialtriumph/?hl=en" style="text-decoration: none; color:#070707">
+                <img src="/static/images/insta.webp"style="/*! position: initial; */position: relative;top: 200px;left: 600px;">
               <h4 style="color: white;position: relative;top: 210px;left: 570px;">instagram</h4>
+              </a>
+              <a href="https://www.facebook.com/OfficialTriumphUK/" style="text-decoration: none; color:#070707">
+
               <img src="/static/images/fb.png" style="/*! position: initial; */position: relative;top: 113px;left: 780px;">
               <h4 style="color: white;position: relative;top: 123px;left: 760px;">facebook</h4>
+              </a>
             </div>
           </div>
 

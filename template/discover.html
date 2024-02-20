@@ -29,7 +29,7 @@
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-            <button class="btn  btn-danger">KEEP INFORMED</button>
+            <a  href="{% url 'keep' %}" class="btn  btn-danger">KEEP INFORMED</a>
  
                 </li></ul>
           </li>
@@ -67,7 +67,7 @@
         <h3 style="color:white ;">Explore the latest news articles from Triumph</h3>
 
         <h1 style="color:white ;">TRIUMPH NEWS</h1>
-        <button class="btn btn-primary" style="color: aliceblue;">EXPLORE</button>
+        <a  href="{% url 'news' %}"class="btn btn-primary" style="color: aliceblue;">EXPLORE</a>
         
     </div></div>
 
@@ -75,17 +75,22 @@
         <div class="row">
             <div class="col-md">
               <div class="card" style="width:28rem;height: 38rem;">
-                <img class="card-img-top" src="/static/images/ovcard.avif" style="height:350px ;" alt="Card image cap">
-                <div class="card-body">
-                  <div class="card-title">
-                    <h4>RACING</h4></div>
-                  <p class="card-text">Race winning. Record breaking. History making. <br>Find out about Triumph racing past and present.  </p>
-                  <h4> DISCOVER MORE -></h4>
-                </div>
+                <a href="{% url 'RACE' %}" style="text-decoration: none;color:black">
+                  <img class="card-img-top" src="/static/images/ovcard.avif" style="height:350px ;" alt="Card image cap">
+                  <div class="card-body">
+                    <div class="card-title">
+                      <h4>RACING</h4></div>
+                    <p class="card-text">Race winning. Record breaking. History making. <br>Find out about Triumph racing past and present.  </p>
+                    <h4> DISCOVER MORE -></h4>
+                  </div>
+                </a>
+               
               </div>
             </div>
             <div class="col-md">
               <div class="card" style="width:28rem;height: 38rem">
+                <a href="{% url 'reviews' %}" style="text-decoration: none;color:black">
+
                 <img class="card-img-top" src="/static/images/ovcard1.avif" style="height:350px ;"alt="Card image cap">
                 <div class="card-body">
                   <div class="card-title">
@@ -94,10 +99,13 @@
                   <h4> DISCOVER MORE -></h4>
 
                 </div>
+                </a>
               </div>
             </div>
             <div class="col-md">
               <div class="card" style="width:28rem;height: 38rem">
+                <a href="{% url 'brand1' %}" style="text-decoration: none;color:black">
+
                 <img class="card-img-top" src="/static/images/ovcard3.avif" style="height:350px ;" alt="Card image cap">
                 <div class="card-body">
                 
@@ -107,6 +115,7 @@
                   <h4> DISCOVER MORE -></h4>
 
                 </div>
+                </a>
               </div>
             </div>
           </div>

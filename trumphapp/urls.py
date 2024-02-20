@@ -36,6 +36,7 @@ urlpatterns = [
      path('specification/<str:bike_name>/',views.specification,name="specification"),
      path('reason/<str:bike_name>/',views.reason,name="reason"),
      path('access/<str:bike_name>/',views.access,name="access"),
+     path('keep/',views.keep,name="keep"),
 
 
 

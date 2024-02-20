@@ -30,7 +30,7 @@
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-            <button class="btn  btn-danger">STREET TRIPLE</button>
+          <a href="{% url 'view_bike_details' bike_name='STREET TRIPLE 765' %}" class="btn  btn-danger">STREET TRIPLE </a>
  
                 </li></ul>
           </li>
@@ -175,7 +175,6 @@
 
         Exclusive footage filmed at Triumph Motorcycles’ Hinckley, U.K. factory demonstrated the 2018 Moto2™ prototype in action on an early rolling road test.  
         </p>
-        <button class="btn btn-danger">DISCOVER MORE</button>
       </div>
       
     </div>
@@ -198,9 +197,9 @@
           <h3> STREET TRIPLE 765 </h3>
           <p >Powered by Moto2™ race engine evolution, for the highest performance, highest specification and most agile Street Triple line-up ever.
           </p>
-          <button class="btn btn-danger">DISCOVER MORE</button>
-          <button class="btn btn-dark" style="background-color: black; color: white;">VIEW DETAILS</button>
+          <a href="{% url 'view_bike_details' bike_name='STREET TRIPLE 765' %}" class="btn btn-danger">DISCOVER MORE</a>
 
+          <a href="{% url 'customize' %}" class="btn btn-dark" style="background-color: black; color: white;">VIEW DETAILS</a>
         </div>
       </div>
   </div>

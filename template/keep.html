@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="color:red;"><i>FOR THE RIDE</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'discover' %}">Overview <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'news' %}">news</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'RACE' %}">Racing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'brand1' %}">Brand</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item">
+            <button class="btn  btn-danger">KEEP INFORMED</button>
+ 
+                </li></ul>
+          </li>
+      </form>
+    </div>
+  </nav>
+
+
+
+
+  <div class="foot" style="background-color: #ffffff;height: 800px;margin-top: 3cm;">
+    <div class="sub" style="text-align: center; display: grid; justify-content: center;">
+  
+      <h3 >keep in touch</h3>
+  
+      <p>Submit your email address below and we'll keep you updated with new and relevant <br>Triumph motorcycle content directly to your inbox.</p>
+  <div class="row" style="justify-content:center ;">
+      <p style="text-align: center; flex-basis:100%; position: relative; left:-181px;">EMAIL</p>
+      <form id="myForm">
+      <input style="width: 11cm;height: 1cm;" type="email" id="email" name="email" placeholder="Enter the email address" required>
+  </div>
+  <div>
+    <button class="rc_b" type="submit">KEEP ME INFORMED</button>
+
+  </div>
+  </form>
+  </div>
+  
+  </div>
+{% endblock %}

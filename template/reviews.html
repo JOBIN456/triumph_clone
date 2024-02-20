@@ -29,7 +29,7 @@
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-            <button class="btn  btn-danger">KEEP INFORMED</button>
+          <a  href="{% url 'keep' %}" class="btn  btn-danger">KEEP INFORMED</a>
  
                 </li></ul>
           </li>
@@ -64,7 +64,7 @@
 
 </div>
 <div class="tiger-title" style="padding-left: 152px;padding-top: 29px;  margin-bottom: 4cm;" >
-    <h3><a href="#"  onMouseOver="this.style.color='red'"
+    <h3><a href="{% url 'view_bike_details' bike_name='TIGER 900' %}" onMouseOver="this.style.color='red'"
         onMouseOut="this.style.color='black'">Tiger 900</a></h3>
 </div>
 </div>
@@ -85,7 +85,7 @@ padding-right: 100px; margin-bottom: 4cm;">
         <div class="accordion-body">
           <h3 style="margin-top: 1cm;margin-bottom: 1cm;">
              </h3>
-             <h3><a href="#"  onMouseOver="this.style.color='red'"
+             <h3><a href="{% url 'view_bike_details' bike_name='TIGER 900' %}"  onMouseOver="this.style.color='red'"
                 onMouseOut="this.style.color='black'">Tiger 900</a></h3>
           </div>
     </div>

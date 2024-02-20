@@ -30,7 +30,7 @@
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-            <button class="btn  btn-danger">STREET TRIPLE</button>
+            <a href="{% url 'view_bike_details' bike_name='STREET TRIPLE 765' %}" class="btn  btn-danger">STREET TRIPLE </a>
  
                 </li></ul>
           </li>
@@ -220,7 +220,8 @@ A new World Champion in Enea Bastianini, crowned from a title fight that went to
   
            The Triumph-engineered 140PS+ race-tuned 765cc Triple engine exclusively powers the Moto2™ World Championship.
           </p>
-          <button class="btn btn-danger">DISCOVER MORE</button>
+          <a href="{% url 'engine' %}" class="btn btn-danger">DISCOVER MORE</a>
+
         </div>
         
       </div>
@@ -243,7 +244,7 @@ A new World Champion in Enea Bastianini, crowned from a title fight that went to
             <h3>TRIUMPH TRIPLE TROPHY</h3>
             <p >To celebrate the closeness of the competition in Moto2™, Triumph and Dorna run the ‘Triumph Triple Trophy #PoweredByTriumph’.
             </p>
-            <button class="btn btn-danger">DISCOVER MORE</button>
+            <a href="{% url 'trophy' %}" class="btn btn-danger">DISCOVER MORE</a>
  
           </div>
         </div>
@@ -268,7 +269,7 @@ A new World Champion in Enea Bastianini, crowned from a title fight that went to
       </ul>
 
 
-            <button class="btn btn-danger">DISCOVER MORE</button>
+            
           </div>
         </div>
         <div class="col-md-6">
@@ -290,8 +291,9 @@ A new World Champion in Enea Bastianini, crowned from a title fight that went to
               <h3> STREET TRIPLE 765 </h3>
               <p >Powered by Moto2™ race engine evolution, for the highest performance, highest specification and most agile Street Triple line-up ever.
               </p>
-              <button class="btn btn-danger">DISCOVER MORE</button>
-              <button class="btn btn-dark" style="background-color: black; color: white;">VIEW DETAILS</button>
+              <a href="{% url 'view_bike_details' bike_name='STREET TRIPLE 765' %}" class="btn btn-danger">DISCOVER MORE</a>
+
+              <a href="{% url 'customize' %}" class="btn btn-dark" style="background-color: black; color: white;">VIEW DETAILS</a>
  
             </div>
           </div>

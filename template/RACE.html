@@ -30,7 +30,7 @@
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav ml-auto"> 
         <li class="nav-item">
-            <button class="btn  btn-danger">RACING NEWS</button>
+            <a href="{% url 'racing' %}" class="btn  btn-danger">RACING NEWS</a>
  
                 </li></ul>
           </li>
@@ -65,7 +65,7 @@
             <p>The 2023 Moto2™ season marks the start of Triumph's fifth season powering Moto2 as Exclusive Engine Supplier.</p>
         </div>
         <div>
-            <button class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</button>
+            <a href="{% url 'MOTO'  %}" class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</a>
         </div>
 
     </div>
@@ -79,7 +79,8 @@
       <p>The FIM Supersport World Championship is a production-based series that is widely acknowledged as an ideal platform for emerging talent on the world stage.</p>
   </div>
   <div>
-      <button class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</button>
+    <a href="{% url 'PTR'  %}" class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</a>
+
   </div>
 
 </div>
@@ -96,7 +97,8 @@
       <p>Triumph Racing will launch its assault on the SuperMotocross World Championship in 2024 with a two-rider line-up in the 250cc category. With AMA Supercross’ 17 rounds, including eight rounds for 250cc racers, combined with the AMA Pro Motocross ‘outdoor’ championship plus two ‘play-offs’ and a final, it is one of the most intense racing series on the planet. </p>
   </div>
   <div>
-      <button class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</button>
+    <a href="{% url 'US'  %}" class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</a>
+
   </div>
 
 </div>
@@ -110,7 +112,8 @@
 <p>The FIM MXGP Motocross World Championship takes place over 19-rounds on all types of terrain from sand to hard-pack. The series, which allows full-factory machinery, enjoys some of the most competitive racing in the world from Belgium to Indonesia, Argentina to Italy. Triumph Racing will enter the 250cc MX2 category in 2024 with a two-rider team.</p>
 </div>
 <div>
-<button class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</button>
+  <a href="{% url 'MXGP'  %}" class="btn btn-dark" style=" background-color: #070707; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;">DISCOVER MORE</a>
+
 </div>
 
 </div>
@@ -193,8 +196,8 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="1" style="display:contents;">TRACK SUPER SPORTS</li>
       
     </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
+    <div class="carousel-inner" >
+      <div class="carousel-item active" style="background-color:white ;">
         <div class="row">
           <div class="col-md-6">
             <img class="d-block w-100 imgh" src="/static/images/rac-slide.avif" alt="First slide" style="height: 700px;width: 600px;">
@@ -211,7 +214,7 @@
         </div>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" style="background-color:white ;">
         <div class="row">
           <div class="col-md-6">
             <img class="d-block w-100 imgh" src="/static/images/race-slide2.avif" alt="Third slide" style="height: 700px;width: 600px;">
@@ -245,7 +248,7 @@
   </div>
 </div>
 
-<div class="foot" style="background-color: #dddad7;">
+<div class="foot" style="background-color:white;">
   <div class="sub" style="text-align: center; display: grid; justify-content: center;">
 
     <h3 >keep in touch</h3>
