@@ -44,7 +44,7 @@
 
   
 
-  <nav class="right_nav">
+  <!-- <nav class="right_nav">
     <ul>
         <li><a href="#"><img class="red-black" src="/static/images/redblack.avif"></a></li>
         <li><a href="#"><img class="red-black" src="/static/images/bbb.avif"></a></li>
@@ -53,8 +53,8 @@
 
     </ul>
 
-  </nav>
-  <div class="dark-tittle">
+  </nav> -->
+  <div class="dark-tittle" style="margin-top:200px ;">
     <h3>SPECIFICATIONS</h3>
   </div>
   </div>
@@ -764,7 +764,6 @@
     <div class="col-md-6 h" >
         <h3>{{ bike_detail.c_tittle1 }}</h3>
         <p style="color:black ;">{{ bike_detail.c_para1 }}</p>        
-        <button class="btn  btn-danger">DISCOVER MORE</button>
     </div>
   </div>
   <div class="row" style="margin-top:-2cm ;">
@@ -772,7 +771,6 @@
 
       <h3>{{ bike_detail.c_tittle2 }}</h3>
       <p style="color:black ;">{{ bike_detail.c_para2 }}</p>        
-        <button class="btn  btn-danger">DISCOVER MORE</button>
         
     </div>
     
@@ -793,6 +791,8 @@
         
         <div class="col-md ">
           <div class="card" style="width:28rem;height: 38rem">
+            <a href="{% url 'access' bike_name=bike_detail.name %}" style="text-decoration:none ; color:#070707" >
+
             <img class="card-img-top" src="/static/images/BK.avif" style="height:350px ;"alt="Card image cap">
             <div class="card-body">
               <div class="card-title" style="height: 40px;">
@@ -803,11 +803,14 @@
               <p class="card-text">Everyday road adventures just got more accessible.</p>
               <h4>DISCOVER MORE -></h4>
             </div>
+            </a>
           </div>
         </div>
     
         <div class="col-md">
             <div class="card" style="width:28rem;height: 38rem">
+              <a href="{% url 'reason' bike_name=bike_detail.name %}" style="text-decoration:none ; color:#070707" >
+
               <img class="card-img-top" src="/static/images/BK2.avif" style="height:350px ;" alt="Card image cap">
               <div class="card-body">
                
@@ -819,6 +822,7 @@
                       <p class="card-text">Find your perfect set up.</p>
                     <h4>DISCOVER MORE -></h4>
               </div>
+              </a>
             </div>
           </div>
         </div>
@@ -827,10 +831,10 @@
     
     
 
-    <div class="foot" style="background-color: #cecece;">
+    <div class="foot" style="background-color: #ffffff;">
       <div class="sub" style="text-align: center; display: grid; justify-content: center;">
     
-        <h3 >keep in touch</h3>
+        <h3 > The New {{bike_detail.name}}</h3>
     
         <p>Submit your email address below and we'll keep you updated with new and relevant <br>Triumph motorcycle content directly to your inbox.</p>
     <div class="row" style="justify-content:center ;">

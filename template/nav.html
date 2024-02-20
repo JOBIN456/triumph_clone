@@ -298,7 +298,7 @@ style="background-color: black; ">
                       onMouseOut="this.style.color='black'">MODERN CLASSICS</a>
                       {%  for bike in classics_bikes %}
                       {% if bike.name ==  'SPEED 400'  %}
-                          <ul class="adventure-list">
+                          <ul class="adventure-list" >
                             <li  class="drop-down-bike-display" style="margin-bottom:50px ;">
                               <a class="fmg" href="#">
                                 <div class="card mb-3 border-0 listc" >
@@ -1477,7 +1477,7 @@ style="background-color: black; ">
             <a href="{% url 'view_bike_details' bike_name='TIGER SPORT 660' %}">Tiger Sport 660</a>
             <a href="{% url 'view_bike_details' bike_name='ROCKET 3' %}">Rocket 3</a>
             <a href="{% url 'view_bike_details' bike_name='SPEED TWIN 900' %}">Speed Twin 900</a>
-            <a href="#">CONFIGURE > </a>
+            <a href="{% url 'customize' %}">CONFIGURE > </a>
             
           </div>
           <div class="column sn">
@@ -1485,13 +1485,13 @@ style="background-color: black; ">
             <div class="dropdown-divider"></div>
             <a href="#">My Triumph App</a>
             <a href="#">Muc-Off</a>
-            <a href="#">FIND A DEALER ></a>
+            <a href="{% url 'dealer' %}">FIND A DEALER ></a>
             
             
           </div>
           <div class="column sn">
             <img src="/static/images/accesories.avif">
-            <a href="#">CUSTOMIZE ></a>
+            <a href="{% url 'customize' %}">CUSTOMIZE ></a>
 
           </div>
         </div>
