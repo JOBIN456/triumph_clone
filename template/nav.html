@@ -298,7 +298,8 @@ style="background-color: black; ">
                       onMouseOut="this.style.color='black'">MODERN CLASSICS</a>
                       {%  for bike in classics_bikes %}
                       {% if bike.name ==  'SPEED 400'  %}
-                          <ul class="adventure-list" >
+                          <ul class="adventure-list">
+
                             <li  class="drop-down-bike-display" style="margin-bottom:50px ;">
                               <a class="fmg" href="#">
                                 <div class="card mb-3 border-0 listc" >
@@ -789,6 +790,7 @@ style="background-color: black; ">
 {% endfor %}
 
 </ul>
+
  </li>
           
                          
@@ -1645,7 +1647,7 @@ style="background-color: black; ">
               Factory Visitor Experience</a>
             <a href="#">Adventure Riding Experience</a>
             <a href="#">Distinguished Gentleman's Ride ></a>
-            <a href="#">OVERVIEW ></a>  
+            <a href="{% url 'discover' %}">OVERVIEW ></a>  
           </div>
             <div class="column pp">
             <img src="/static/images/discover1.avif" height="400px">

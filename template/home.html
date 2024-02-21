@@ -63,11 +63,12 @@
            
           <div class="container-fluid" style="background-color: black; height:70px;">
             <div class="row m">
-            <div class="col-sm-6">
-              <h3 style="text-align:center; color: white; font-size:x-medium;"><img src="/static/images/icon1.png" width="20px" length="20px"> ENQUIRE NO</h3>
+            <div class="col-sm-6" style="margin-top: 10px;">
+              <h3 style="text-align:center; color: white; font-size:x-medium;"><img src="/static/images/icon1.png" width="20px" length="20px"> ENQUIRE NOW</h3>
             </div>
-            <div class="col-sm-6">
-              <h3 style="text-align:center; color: white; font-size:x-medium;"><img src="/static/images/icon2.png" width="20px" length="20px"> BOOK NO</h3>
+            <div style="height:43px; width:2px; background-color: #fffefe;margin-top: 12px;"></div>        
+            <div class="col-sm-5" style="margin-top: 10px;">
+              <h3 style="text-align:center; color: white; font-size:x-medium;"><img src="/static/images/icon2.png" width="20px" length="20px"> BOOK NOW</h3>
             </div>
             </div>
             </div>
@@ -82,41 +83,56 @@
           <div class="container-fluid" style="padding:50px ;">
             <div class="row">
               <div class="col-md">
-                <div class="card" style="width:28rem;height: 38rem;">
+                <div class="card h-bike" style="width:28rem;height: 38rem; border: 0;">
                   <a style="text-decoration:none; color:#070707" href="{% url 'customize' %}">
-                    <img class="card-img-top" src="/static/images/bike.webp" style="height:350px ;" alt="Card image cap">
-                  <div class="card-body">
-                    <div class="card-title">
+              
+                    <img class="card-img-top disp" src="/static/images/bike.webp" style="height:350px ;" alt="Card image cap">
+                    <div class="dispear">
+                      <h3 style="color:white ;">EXPLORE MODELS  </h3>  
+                    <h3  style="color: white; text-align: center;">&#8594;</span></h3>            
+                    </div>
+                    
+                        <div class="card-body">
+                    <div class="card-title disp1">
                       <h4>THE TRIUMPH OF YOUR DREAMS</h4></div>
-                    <p class="card-text">TRIUMPH OWNERS -></p>
+                    <p class="card-text disp2" >TRIUMPH OWNERS  <span style="font-size: 2em;" >&#8594;</span> </p>
                   </div>
                   </a>
                   
                 </div>
               </div>
               <div class="col-md">
-                <div class="card" style="width:28rem;height: 38rem">
+                <div class="card h-bike" style="width:28rem;height: 38rem;  border: 0;">
                   <a style="text-decoration:none; color:#070707" href="#">
-                    <img class="card-img-top" src="/static/images/bike1.webp" style="height:350px ;"alt="Card image cap">
+                    <img class="card-img-top disp" src="/static/images/bike1.webp" style="height:350px ;"alt="Card image cap">
+                    <div class="dispear">
+                      <h3 style="color:white ;">OFFER AND FINANCE  </h3>  
+                    <h3  style="color: white; text-align: center;">&#8594;</span></h3>            
+                    </div>
                     <div class="card-body">
-                      <div class="card-title">
+                   
+                      <div class="card-title disp1">
                         <h4>OFFERING YOU THR PERFECT RIDE</h4></div>
-                      <p class="card-text">OFFER AND FINANCE -></p>
+                      <p class="card-text disp2">OFFER AND FINANCE <span style="font-size: 2em;" >&#8594;</span> </p>
                     </div>
                   </a>
                   
                 </div>
               </div>
               <div class="col-md">
-                <div class="card" style="width:28rem;height: 38rem">
+                <div class="card h-bike" style="width:28rem;height: 38rem; border: 0;">
                   <a style="text-decoration:none; color:#070707" href="{% url 'owner' %}">
 
-                  <img class="card-img-top" src="/static/images/slide.jpg" style="height:350px ;" alt="Card image cap">
+                  <img class="card-img-top disp" src="/static/images/slide.jpg" style="height:350px ;" alt="Card image cap">
+                  <div class="dispear">
+                    <h3 style="color:white ;">TRIUMPH OWNERS</h3>  
+                  <h3  style="color: white; text-align: center;">&#8594;</span></h3>            
+                  </div>
                   <div class="card-body">
                    
-                      <div class="card-title">
+                      <div class="card-title disp1">
                         <h4>PROVIDING TOTAL PEACE OF MIND</h4></div>
-                    <p class="card-text">TRIUMPH OWNERS -></p>
+                    <p class="card-text disp2" >TRIUMPH OWNERS <span style="font-size: 2em;" >&#8594;</span> </p>
                   </div>
                   </a>
                 </div>
@@ -131,7 +147,7 @@
 <img src="/static/images/banner.avif" style="height:600px ; width: 1600px;">
 <div class="center-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #ffffff;">
   <h1>CONFIGURE YOUR PERFECT RIDE</h1>
-  <a href="{% url 'customize' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer;">Let's Go</a>
+  <a href="{% url 'customize' %}" style="display: inline-block; padding: 10px 20px; background-color: #070707; color: #ffffff; text-decoration: none; border: none; border-radius: 5px; cursor: pointer;width: 284px;">Let's Go</a>
 </div>
 </div>
 
@@ -140,19 +156,20 @@
   <h1 style="text-align: center;" >DISCOVER OUR LATEST MODEL</h1>
  </div>
 
- <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" data-interval="8000">
+ <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" data-interval="0">
   <div class="carousel-inner">
       <div class="carousel-item active">
           <div class="row" style="background-color: white;">
               <div class="col-md-6">
                   
-                  <img class="d-block w-100" src="/static/images/slidev2.avif" alt="First slide">
+                  <img class="d-block" src="/static/images/slidev2.avif" alt="First slide" style="width: 955px;height: 535px;">
               </div>
               <div class="col-md-6">
-                  <div class="carousel-caption" style="text-align: left; top: 0; left: 0; right: auto; bottom: auto;">
-                      <h1 style="color:black ;">SPEED 400</h1>
-                      <p style="color:black  ;padding-right: 100px;">Born into a peerless bloodline, the Speed 400 has Triumph’s unique Modern Classic roadster design in its DNA.</p>
-                      <a href="{% url 'view_bike_details' bike_name='SPEED 400' %}" class="btn btn-drk" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">VIEW DETAILS</a>
+                <h5 style="color:#727272;left: 222px;position: relative;top: 20px;">01/02</h5>
+                  <div class="carousel-caption" style="text-align: left; top: 30px; left: 241px; right: auto; bottom: auto;">
+                      <h1 style="color: #070707;font-weight: 600;font-size: 1.5rem;">SPEED 400</h1>
+                      <p style="color:black  ; padding-top: 11px;padding-right: 192px;">Born into a peerless bloodline, the Speed 400 has Triumph’s unique Modern Classic roadster design in its DNA.</p>
+                      <a href="{% url 'view_bike_details' bike_name='SPEED 400' %}" class="btn btn-drk" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 0; cursor: pointer;">VIEW DETAILS</a>
                     </div>
               </div>
           </div>
@@ -162,14 +179,15 @@
       <div class="carousel-item">
           <div class="row" style="background-color: white;">
               <div class="col-md-6">
-                  <img class="d-block w-100" src="/static/images/slidev.avif" alt="Second slide">
+                  <img class="d-block" src="/static/images/slidev.avif" alt="Second slide" style="width: 955px;height: 535px;">
               </div>
               <div class="col-md-6">
-                <div class="carousel-caption" style="text-align: left; top: 0; left: 0; right: auto; bottom: auto;">
+                <h5 style="color:#727272;left: 222px;position: relative;top: 20px;">02/02</h5>
+                <div class="carousel-caption" style="text-align: left; top: 30px; left: 241px; right: auto; bottom: auto;">
   
-                  <h1 style="color: #070707;">Scrambler 400 X</h1>
-                  <p style="color: #070707;">Beautifully balanced, effortlessly agile. The Scrambler 400 X is built for all riders, and all terrains.</p>
-                  <a href="{% url 'view_bike_details' bike_name='SCRAMBLER 400 X' %}" class="btn btn-drk" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">VIEW DETAILS</a>
+                  <h1 style="color: #070707;font-weight: 600;font-size: 1.5rem;">SCRAMBLER 400 X</h1>
+                  <p style="color: #070707;padding-top: 11px;padding-right: 192px;">Beautifully balanced, effortlessly agile. The Scrambler 400 X is built for all riders, and all terrains.</p>
+                  <a href="{% url 'view_bike_details' bike_name='SCRAMBLER 400 X' %}" class="btn btn-drk" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 0; cursor: pointer;">VIEW DETAILS</a>
                 </div>
               
               </div>
@@ -178,11 +196,11 @@
 
    
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev" style="top: -440px; width:0%;left: 1200px; opacity: 1;">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev" style="top: -477px; width:0%;left: 1356px; opacity: 1;">
     <span class="carousel-control" aria-hidden="true"></span>
     <span class="sr-only" style="display:contents ;color: #070707;"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/long-arrow-left.png" alt="long-arrow-left"/></span>
 </a>
-<a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next" style="/*! left: 400px; */right: 4cm;top: -440px; opacity: 1;">
+<a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next" style="right: 0.8cm;top: -477px; opacity: 1;">
     <span class="carousel-control" aria-hidden="true"></span>
     <span class="sr-only" style="display:contents ;color: #070707;"> <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/long-arrow-right.png" alt="long-arrow-right"/></span>
 </a>
@@ -195,45 +213,45 @@
 
 
 
-          <div class="container" style="height:50px ;"></div>
-<div class="row" style="height:460px ; padding:50px;">
-  <div class="col-sm-4" style="text-align:center; top:20%;"><h2>TRIUMPH CLOTHING </h2>
-    <p>Our clothing collection is designed by riders, for riders. You get authentic, individual style - built for the ride... and beyond.
+<div class="row"  style="height:460px ; padding-left:50px;padding-right: 50px;" >
+  <div class="col-sm-4" style=" top:20%;left: 4%;">
+    <h2 style="font-weight: 589;font-size: 1.45rem;">TRIUMPH CLOTHING </h2>
+    <p style="text-align: justify;padding-right: 123px;padding-bottom: 18px;padding-top: 14px;">Our clothing collection is designed by riders, for riders. You get authentic, individual style - built for the ride... and beyond.
     </p>
-    <a href="{% url 'clothes' %}" class="btn btn-dark" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">EXPLORE</a>
+    <a href="{% url 'clothes' %}" class="btn btn-dark" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 0; cursor: pointer;">EXPLORE</a>
   </div>
-  <div class="col-sm-4">  <img src="/static/images/ban.avif" style="height:460px; width:860px">
+  <div class="col-sm-4">  <img src="/static/images/ban.avif" style="height:498px; width:886px;">
   </div>
 </div>     
-<div class="container" style="height:100px ;"></div>
-<div class=" container" style="height:160px ;">
-  <h1 style="text-align: center;" >DISCOVER TRIMUPH</h1>
+<div class=" container" style="height:160px ;margin-top:4cm;">
+  <h1 style="text-align: center;font-weight: 600;" >DISCOVER TRIUMPH</h1>
 </div>
 
-<div class="row" style="padding:20px;">
+<div class="row" style="padding-left: 40px;padding-right: 40px; padding-bottom: 34px;">
   <div class="col-sm-6">
-    <img src="/static/images/D1.avif" height="600px" width="600px">
-    <h2>READ THE LATEST TRIUMPH NEWS</h2>
+    <img src="/static/images/D1.avif" height="461px" width="686px">
+    <h2 style="padding-top: 20px;padding-bottom: 40px;font-weight: 600;">READ THE LATEST TRIUMPH NEWS</h2>
     <a href="{% url 'news' %}" class="btn btn-dark" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">EXPLORE</a>
 
   </div>
   <div class="col-sm-6">
-    <img src="/static/images/D2.avif" height="600px" width="650px">
-    <h2>RACE WINNING. RECORD BREAKING. HISTORY MAKING.</h2>
+    <img src="/static/images/D2.avif" height="461px" width="686px">
+    <h2 style="padding-top: 20px;padding-bottom: 10px;font-weight: 600;">RACE WINNING. RECORD BREAKING. HISTORY MAKING.</h2>
     <a href="{% url 'RACE' %}" class="btn btn-dark" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">RACING</a>
 
   </div>
 </div>
-<div class="row"  style="padding:20px;"><div class="col-sm-6">
-  <img src="/static/images/D3.avif" height="600px" width="650px">
-  <h2>ENGAGING AND IMMERSIVE MOTORCYCLE EXPERIENCES </h2>
+<div class="row" style="padding-left: 40px;padding-right: 40px;padding-bottom: 34px;">
+  <div class="col-sm-6">
+  <img src="/static/images/D3.avif" height="461px" width="686px">
+  <h2 style="padding-top: 20px;padding-bottom: 10px;font-weight: 600;">ENGAGING AND IMMERSIVE MOTORCYCLE EXPERIENCES </h2>
   <a href="{% url 'discover' %}" class="btn btn-dark" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">EXPERIENCES</a>
 
 
 </div>
 <div class="col-sm-6">
-  <img src="/static/images/D4.avif" height="600px" width="650px">
-  <h2>INDEPENDENT TRIUMPH PRODUCT REVIEWS </h2>
+  <img src="/static/images/D4.avif" height="461px" width="686px">
+  <h2 style="padding-top: 20px;padding-bottom: 40px;font-weight: 600;">INDEPENDENT TRIUMPH PRODUCT REVIEWS </h2>
   <a href="{% url 'reviews' %}" class="btn btn-dark" style="background-color: black; color: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">EXPERIENCES
   
   </a>

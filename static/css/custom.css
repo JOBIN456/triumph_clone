@@ -146,7 +146,7 @@
 .card-title{
   height: 100px;
   font-size: small;
-  
+  font-weight:bold;
 }
 
 .card{
@@ -1313,4 +1313,58 @@ padding-right: 500px;}
 
 .country-list:focus-within > .country-inlist{
 display: initial;
+}
+
+.confg-buttons{
+  height:800px;
+}
+
+.config-details{
+  height:100px;
+  border-style: initial;
+  background-color: #ccc;
+}
+
+
+.config-details a{
+  text-decoration: none;
+  color:black;
+  width:200px;
+  height:200px;
+}
+.h-bike{
+
+  background: #fff;
+  
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+
+cursor: pointer;
+}
+
+.h-bike:hover{
+  transform: scale(1.05);
+  box-shadow: #444;
+}
+.dispear{
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 20%;
+}
+.h-bike:hover .dispear{
+  display:inline;
+}
+
+.h-bike:hover .disp{
+  box-shadow: 0px 50px 0px rgb(194, 192, 192), 0px -50px 0px rgb(194, 192, 192);}
+.disp1{
+  padding-top:100px;
+  padding-bottom:50px;
+}
+.h-bike:hover .disp1{
+  opacity: 0.38;
+}
+
+.h-bike:hover .disp2{
+  opacity: 0.38;
 }

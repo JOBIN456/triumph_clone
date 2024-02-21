@@ -167,3 +167,7 @@ def access(request,bike_name):
     return render(request,'access.html',{'bike_detail': bike_detail})
 def keep(request):
     return render(request,'keep.html')
+
+# def config(request,bike_name):
+#     bike_detail = get_object_or_404(BikeDetails, name=bike_name)
+#     return render(request,'config.html',{'bike_detail':bike_detail})

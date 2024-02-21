@@ -217,7 +217,7 @@
                                           </p>
                                           <div style="height:2px;background-color:rgb(118, 118, 118); width:287px;margin-left: -21px;/*! display: flex; *//*! margin: 0; */"></div>
                                           <div class="acces-a">
-                                              <a href="#" style="color:rgb(249, 6, 6)">CONFIGURE</a>
+                                              <a href="{% url 'config' bike_name=bike.name %}" style="color:rgb(249, 6, 6)">CONFIGURE</a>
                                               <div style="width:1px;background-color: rgb(117, 117, 117);margin-top: 7px;"></div>
                                               <a href="{% url 'view_bike_details' bike_name=bike.name %}" style="color:black">VIEW DETAILS</a>
                                           </div>
